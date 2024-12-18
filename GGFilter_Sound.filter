@@ -87,7 +87,7 @@ Show # Qualidade de itens
 	SetBorderColor 100 100 0 255
 	SetBackgroundColor 255 255 0 255
 	
-	Show # GEMA Skill
+Show # GEMA Skill
 	BaseType == "Uncut Skill Gem"
 	SetFontSize 30
 	SetTextColor 200 0 0 255
