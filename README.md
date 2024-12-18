@@ -1,2 +1,2 @@
 # NeverMoreFilter
-Filtro da Comunidade do VigiaBR no PoE 2 
+Filtro da Comunidade do PoE 2 
