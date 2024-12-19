@@ -37,12 +37,19 @@ Show # Patuá
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 0 0 0 255
 	
-Show # Aneis
-	BaseType == "Iron Ring" "Gold Ring" "Unset Ring" "Sapphire Ring" "Lazuli Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Prismatic Ring" "Pearl Ring" "Ring"
+Show # Aneis Fendas
+	BaseType == "Breach Ring"
 	SetFontSize 30
 	# SetTextColor 0 0 0  255
 	# SetBorderColor 0 0 0 255
 	SetBackgroundColor 0 70 90 255
+
+Show # Aneis
+	BaseType == "Iron Ring" "Gold Ring" "Unset Ring" "Sapphire Ring" "Lazuli Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Prismatic Ring" "Pearl Ring" "Ring"
+	SetFontSize 30
+	# SetTextColor 0 0 0  255
+	# SetBorderColor 160 58 189 255
+	SetBackgroundColor 132 58 189 255
 
 Show # Amuletos
 	BaseType == "Crimson Amulet" "Gold Amulet" "Azure Amulet" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Lunar Amulet" "Bloodstone Amulet" "Stellar Amulet" "Solar Amulet"
