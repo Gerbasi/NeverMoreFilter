@@ -73,8 +73,8 @@ Show # RARIDADE TIER 0
 	Class == "Stackable Currency"
 	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
 	SetFontSize 50
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255
+	SetTextColor 255 0 200 255
+	SetBorderColor 255 0 200 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
 	PlayEffect Red
@@ -84,9 +84,9 @@ Show # TIER 1
 	Class == "Stackable Currency"
 	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
 	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 90 35 255
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 255 0 200 255
 	PlayAlertSound 4 300
 	PlayEffect Yellow
 	MinimapIcon 0 Orange Circle
@@ -103,33 +103,14 @@ Show # TIER 1
 	
 Show # TIER 2
 	Class == "Stackable Currency"
-	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb"
-	SetFontSize 36
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 249 150 25 255
+	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
+	SetFontSize 30
+	SetTextColor 255 0 200 255
+	SetBorderColor 255 0 200 255
+	SetBackgroundColor 0 0 0 255
+	PlayAlertSound 3 300
 	PlayEffect White
 	MinimapIcon 2 Orange Circle
-	
-Show # TIER 3
-	Class == "Stackable Currency"
-	BaseType "Artificer's Orb" "Glassblower's Bauble"
-	SetFontSize 30
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 213 159 0 255
-	PlayEffect White
-	MinimapIcon 2 Yellow Circle
-	
-Show # TIER 3 - VAAL ORB
-	Class == "Stackable Currency"
-	BaseType "Vaal Orb"
-	SetFontSize 30
-	SetTextColor 0 0 0 255
-	SetBorderColor 240 10 35 255
-	SetBackgroundColor 213 159 0 255
-	PlayEffect White
-	MinimapIcon 2 Yellow Circle
 	
 Show # TIER 4
 	Class == "Stackable Currency"
@@ -137,27 +118,26 @@ Show # TIER 4
 	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
-	SetBackgroundColor 210 178 135 255
+	SetBackgroundColor 80 0 60 255
 	MinimapIcon 2 White Circle
 
 Show # TIER 5 - Shards I
 	Class == "Stackable Currency"
 	BaseType "Regal Shard" "Chance Shard"
-	SetFontSize 30
-	SetBorderColor 180 158 135 255
-#	SetBorderColor 222 184 135 205
+	SetFontSize 32
+	SetBackgroundColor 80 0 60 255
 	
 Show # TIER 5 - Shards II
 	Class == "Stackable Currency"
 	BaseType "Transmutation Shard" "Artificer's Shard"
 	SetFontSize 26
-	SetBackgroundColor 20 20 0 200
+	SetBackgroundColor 80 0 60 255
 
 Show # $type->currency $tier->t1exalted
 	BaseType == "Scroll of Wisdom"
 	SetFontSize 26
 	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255
+	#SetBorderColor 255 0 0 255
 	SetBackgroundColor 0 0 0 255
 	
 # GEMAS	
@@ -298,7 +278,7 @@ Show # GEMA
 
 
 Show # Moeda de Sanctum e Ultimatum
-	BaseType == "Djinn Barya" "Inscribed Ultimatum"
+	Class == "Trial Coins" "Inscribed Ultimatum"
 	SetFontSize 35
 	SetTextColor 0 80 100 255
 	SetBorderColor 0 80 100 255
