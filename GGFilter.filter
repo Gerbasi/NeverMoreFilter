@@ -29,9 +29,9 @@ Show # Charms
 	#BaseType == "Staunching Charm" "Thawing Charm" "Antidote Charm" "Dousing Charm" "Grounding Charm" "Stone Charm" "Silver Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm" "Golden Charm"
 	Class "Charms"
 	SetFontSize 30
-	SetTextColor 200 70 70  255
+	# SetTextColor 200 70 70  255
 	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 0 0 255
+	SetBackgroundColor 200 70 70 255
 	
 Show # Aneis
 	BaseType == "Iron Ring" "Gold Ring" "Unset Ring" "Sapphire Ring" "Lazuli Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Prismatic Ring" "Pearl Ring" "Ring"
@@ -79,41 +79,141 @@ Show # High Level Flasks
 
 Show # $type->currency $tier->t1exalted
 	BaseType == "Scroll of Wisdom"
-	SetFontSize 25
+	SetFontSize 26
 	SetTextColor 255 0 0 255
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 0 0 0 255
 	
 Show # Qualidade de itens
 	BaseType == "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 25
+	SetFontSize 26
 	SetTextColor 100 100 0 255
 	SetBorderColor 100 100 0 255
 	SetBackgroundColor 255 255 0 255
-	
-	Show # GEMA Skill
+
+Show # Gemas uncut de skill tier > 18
 	BaseType == "Uncut Skill Gem"
-	SetFontSize 30
+	ItemLevel > 18
+	SetFontSize 40
 	SetTextColor 200 0 0 255
+	SetBorderColor 200 0 0 255	
+	SetBackgroundColor 255 255 255 255	
+	PlayEffect Red 
+	MinimapIcon 2 Red Star 
+
+Show # Gemas uncut de skill tier > 12
+	BaseType == "Uncut Skill Gem"
+	ItemLevel > 12
+	SetFontSize 36
+	SetTextColor 150 0 0 255
+	SetBorderColor 150 0 0 255	
+	SetBackgroundColor 200 200 200 255
+	PlayEffect Red 
+	MinimapIcon 1 Red Star 
+
+Show # Gemas uncut de skill tier > 6
+	BaseType == "Uncut Skill Gem"
+	ItemLevel > 6
+	SetFontSize 32
+	SetTextColor 255 0 0 255	
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 100 100 100 255
+	MinimapIcon 0 Red Star
+
+Show # Gemas uncut de skill tier > 1
+	BaseType == "Uncut Skill Gem"
+	ItemLevel >= 1
+	SetFontSize 26
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 50 50 50 255
+	MinimapIcon 0 Red Star
+
+# Todas as gemas uncut de skill
+#Show # GEMA Skill 
+#	BaseType == "Uncut Skill Gem"
+#	SetFontSize 40
+#	SetTextColor 200 0 0 255
+#	SetBackgroundColor 255 255 255 255
+#	PlayEffect Red
+#	MinimapIcon 2 Red Star
+
+
+Show # Gemas uncut de Spirit tier > 18
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 18
+	SetFontSize 40
+	SetTextColor 0 200 0 255
+	SetBorderColor 0 200 0 255
 	SetBackgroundColor 255 255 255 255
-	PlayEffect Green
+	MinimapIcon 2 Green Star
+
+Show # Gemas uncut de Spirit tier > 12
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 12
+	SetFontSize 36
+	SetTextColor 0 150 0 255
+	SetBorderColor 0 150 0 255
+	SetBackgroundColor 200 200 200 255
 	MinimapIcon 1 Green Star
 
-Show # GEMA Spirit 
+Show # Gemas uncut de Spirit tier > 6
 	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 6
 	SetFontSize 30
-	SetTextColor 0 200 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayEffect Green
-	MinimapIcon 1 Green Star
-	
-Show # GEMA Suporte
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 100 100 100 255
+
+
+Show # Gemas uncut de Spirit tier > 1
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel >= 1
+	SetFontSize 26
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 50 50 50 255
+
+
+# Mostrar todas as gemas uncut de spirit
+#Show # GEMA Spirit
+#	BaseType == "Uncut Spirit Gem"
+#	SetFontSize 40
+#	SetTextColor 0 200 0 255
+#	SetBackgroundColor 255 255 255 255
+#	PlayEffect Green
+#	MinimapIcon 2 Green Star
+
+
+Show # GEMA Suporte uncut tier 3
 	BaseType == "Uncut Support Gem"
-	SetFontSize 30
+	ItemLevel >= 3
+	SetFontSize 40
 	SetTextColor 0 0 200 255
+	SetBorderColor 0 0 200 255
 	SetBackgroundColor 255 255 255 255
-	PlayEffect Green
-	MinimapIcon 1 Green Star
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+
+Show # GEMA Suporte uncut tier 2
+	BaseType == "Uncut Support Gem"
+	ItemLevel >= 2
+	SetFontSize 36
+	SetTextColor 0 0 150 255
+	SetBorderColor 0 0 150 255
+	SetBackgroundColor 200 200 200 255
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star
+
+Show # GEMA Suporte uncut tier 1
+	BaseType == "Uncut Support Gem"
+	ItemLevel >= 1
+	SetFontSize 30
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
+	SetBackgroundColor 80 80 80 255
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star	
 
 Show # GEMA
 	BaseType == "Ruby" "Sapphire" "Emerald"
@@ -185,6 +285,46 @@ Show # Greater Essences
 	PlayAlertSound 2 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle	
+
+Show # Tablets
+	BaseType = "Tablet"
+	SetFontSize 35
+	# SetTextColor 230 255 0 255
+	SetBorderColor 230 255 0 255
+	SetBackgroundColor 100 10 0 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 2 Red Square
+
+Show # Waystones tier 15+
+	BaseType = "Waystone"
+	WaystoneTier > 14
+	SetFontSize 40
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 0 0 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 2 Red Square
+
+Show # Waystones tier 10+
+	BaseType = "Waystone"
+	WaystoneTier > 9
+	SetFontSize 35
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 100 0 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 1 Red Square
+
+Show # Waystones tier 1+
+	BaseType = "Waystone"
+	WaystoneTier >= 1
+	SetFontSize 30
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 100 100 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
 
 Show # Waystones and Tablets
 	BaseType = "Waystone" "Tablet"
