@@ -2,80 +2,89 @@
 #Criado por Gerbasi
 #Expandido por Guinnyn
 
-#	14/12/2024 - 
-#		Adicionados filtros para reforçar Flasks de alto nível, Anéis/Amuletos/Cintos, Shards, moeda da Sanctum (Djinn Barya). 
-#		Adicionados Essências, Gemas (Ruby/Emerald/Sapphire), Waystones
-#	15/12/2024 - 
-#		Alteradas cores de Waystone, Anéis/Cintos/Gemas/Amuletos agora têm texto com a cor da raridade, categoria à parte para 
-#		Augmentation/Transmutation orbs.
-#		Adicionados filtros para Fragments, Soul Cores, Catalysts, Expedition, Ritual Omens, Distillations e Tablets.
-#		Addicionados Charms
-
-#Hide
-#BaseType "Gargantuan Life Flask" "Ultimate Mana Flask" "Ultimate Life Flask" "Gargantuan Mana Flask" "Advanced Brigand Mace" "Keth Raiment" "Advanced Gothic Quarterstaff" "Advanced Dualstring Bow" "Intricate Gloves" "Ornate Belt" "Expert Frayed Shoes" "Transcendent Mana Flask" "Advanced Hermit Garb" "Advanced Braced Sabatons" "Advanced Bombard Crossbow" "Advanced Warpick" "Advanced Keth Raiment" "Volatile Wand" "Advanced Feathered Tiara" "Advanced Votive Raiment" "Advanced Varnished Crossbow" "Advanced Forlorn Crossbow" "Advanced Silk Slippers" "Advanced Slicing Quarterstaff" "Siphoning Wand" "Expert Rogue Armour" "Advanced Scale Mail" "Advanced Rampart Tower Shield" "Chiming Staff" "Advanced Aged Cuffs" "Chiseled Targe" "Advanced Crystal Focus" "Advanced Barrier Quarterstaff" "Advanced Omen Crest Shield" "Advanced Sectioned Bracers" "Advanced Stone Tower Shield" "Shrine Sceptre" "Omen Sceptre" "Expert Wicker Tiara" "Advanced Shaman Mantle" "Advanced Feathered Targe" "Advanced Anchorite Garb" "Hunting Shoes" "Advanced Embossed Boots" "Advanced Marabout Garb" "Tribal Mask" "Expert Waxed Jacket" "Advanced Pelt Leggings" "Zealot Bow" "Advanced Goldcast Cuffs" "Advanced Lizardscale Boots" "Serrated Quiver" "Advanced Wayfarer Jacket" "Attuned Wand" "Expert Mail Sabatons" "Colossal Mana Flask" "Advanced Tonal Focus" "Advanced Plated Mace" "Advanced Swathed Cap" "Advanced Long Quarterstaff" "Advanced Studded Targe" "Expert Antler Focus" "Advanced Braced Tower Shield" "Expert Gauze Wraps" "Stoic Sceptre" "Expert Padded Leggings" "Expert Guarded Helm" "Advanced Jewelled Gloves" "Transcendent Life Flask" "Advanced Doubled Gauntlets" "Advanced Feathered Sandals" "Advanced Martyr Crown" "Advanced Mail Sabatons" "Advanced Mail Vestments" "Advanced Steeltoe Boots" "Expert Hexer's Robe" "Advanced Spined Bracers" "Bone Wand" "Expert Ringmail Gauntlets" "Ashen Staff" "Advanced Studded Vest" "Advanced Sombre Gloves" "Expert Face Mask" "Advanced Heavy Crown" "Advanced Chain Mail" "Advanced Stitched Glove" "Advanced Scout's Vest" "Advanced Plumed Focus" "Pyrophyte Staff" "Advanced Rhoahide Coat" "Expert Pathfinder Coat" "Advanced Shielded Helm" "Expert Felt Cap" "Advanced Sectarian Crest Shield" "Advanced Pilgrim Vestments" "Giant Life Flask" "Fire Quiver" "Advanced Crescent Quarterstaff" "Advanced Wicker Tiara" "Gelid Staff" "Advanced Linen Wraps" "Advanced Twig Circlet" "Expert Gothic Quarterstaff" "Expert Horned Crown" "Advanced Woven Focus" "Expert PElt Mantle" "Advanced Cloaked Mail" "Expert Firm Bracers" "Advanced Cultist Bow" "Advanced Serpentscale Coat" "Advanced Tense Crossbow" "Advanced Scalper's Jacket" "Volant Quiver" "Advanced Spiral Wraps" "Advanced Chain Tiara" "Advanced Ringmail Gauntlets" "Advanced Pelage Targe" "Advanced Cowled Helm" "Toxic Quiver" "Advanced Hexer's Robe" "Broadhead Quiver" "Expert Sturdy Crossbow" "Advanced Threaded Shoes" "Serpentscale Coat" "Advanced Rope Cuffs" "Expert Pelage Targe" "Advanced Iron Crown" "Advanced Secured Leggings" "Advanced Rogue Armour" "Advanced Cultist Crown" "Advanced Veiled Mask" "Gauze Wraps" "Advanced Ironclad Vestments" "Advanced Firm Bracers" "Advanced Dyad Crossbow" "Effigial tower Shield" "Withered Wand" "Steeltoe boots" "Sacral Quiver" "Expert Shortbow" "Advanced Warden Bow" "Voltaic Staff" "Sacrificial Mantle" "Expert Frayed Shoes" "Blunt Quiver" "Advanced Jingling Crest Shield" "Expert Braced Tower Shield" "Expert Wrapped Sandals" "Advanced Voodoo Focus" "Expert Wicker Tiara" "Advanced Shortbow" "Advanced Pathfinder Coat" "Expert Laced Boots" "Advanced Sturdy Crossbow" "Advanced Stacked Sabatons" "Advanced Brimmed Helm" "Veiled Mask"
-#Rarity <= Magic 
-#Sockets = 0
-#Quality = 0
+# ITENS COM SOCKET OU QUALIDADE
 
 Show # Socket
 	Sockets > 0
+	SetFontSize 36
 	SetBorderColor 255 100 100 255
 
 Show # Qualidade
 	Quality > 0
+	SetFontSize 36
 	SetBorderColor 255 255 255 255
 	
+
+# JEWELRY E CHARMS
+
 Show # Charms
-	#BaseType == "Staunching Charm" "Thawing Charm" "Antidote Charm" "Dousing Charm" "Grounding Charm" "Stone Charm" "Silver Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm" "Amethyst Charm" "Golden Charm"
 	Class "Charms"
 	SetFontSize 30
-	# SetTextColor 200 70 70  255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 200 70 70 255
+	SetBorderColor 0 60 80 255
+	SetBackgroundColor 0 60 80 255
 	
-Show # Aneis
-	BaseType == "Iron Ring" "Gold Ring" "Unset Ring" "Sapphire Ring" "Lazuli Ring" "Ruby Ring" "Topaz Ring" "Amethyst Ring" "Emerald Ring" "Prismatic Ring" "Pearl Ring" "Ring"
+Show # Aneis, Amuletos e Cintos
+	BaseType "Ring" "Amulet" "Belt"
 	SetFontSize 30
-	# SetTextColor 0 0 0  255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 70 90 255
+	SetBackgroundColor 0 60 80 255
 
 Show # Anéis de Fenda 
 	BaseType == "Breach Ring"
 	SetFontSize 35
-	# SetTextColor 0 0 0  255
 	SetBorderColor 255 255 0 255
 	SetBackgroundColor 65 65 0 255
 	MinimapIcon 2 Yellow Circle
 
-Show # Amuletos
-	BaseType == "Crimson Amulet" "Gold Amulet" "Azure Amulet" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Lunar Amulet" "Bloodstone Amulet" "Stellar Amulet" "Solar Amulet"
-	SetFontSize 30
-	# SetTextColor 0 0 0  255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 70 90 255
 
-Show # Cintos
-	BaseType == "Rawhide Belt" "Utility Belt" "Fine Belt" "Linen Belt" "Wide Belt" "Long Belt" "Plate Belt" "Ornate Belt" "Mail Belt" "Double Belt" "Heavy Belt"
-	SetFontSize 30
-	# SetTextColor 0 0 0  255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 70 90 255
+# FLASKS
 
-Show # Charms
-	BaseType == "Thawing Charm" "Topaz Charm" "Amethyst Charm" "Golden Charm" "Staunching Charm" "Antidote Charm" "Dousing Charm" "Grounding Charm" "Stone Charm" "Silver Charm" "Ruby Charm" "Sapphire Charm"
-	SetFontSize 30
-	# SetTextColor 0 0 0  255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 70 90 255	
+Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
+	AreaLevel > 70
+	Quality < 10
+	Class "Flasks"
 
-Show # High Level Flasks
-	BaseType == "Ultimate Mana Flask" "Ultimate Life Flask" 
-	# "Transcendent Life Flask" "Transcendent Mana Flask"
-	SetFontSize 25
-	# SetTextColor 0 255 145 255
-	# SetBorderColor 0 255 145 255
+Hide #Esconde todos os flasks normais nos mapas
+	AreaLevel > 65
+	Rarity Normal
+	Class "Flasks"	
+
+Show # Ultimate Flasks na campanha
+	AreaLevel > 60
+	Class "Flasks"
+	BaseType "Ultimate"
+	SetFontSize 40
+	SetBorderColor 0 255 255 255
+	MinimapIcon 0 Cyan Square
+
+Show #Flasks < Ultimate na campanha
+	AreaLevel <= 65
+	Class "Flasks"
+	SetFontSize 30
+	SetBorderColor 0 255 255 255
 	SetBackgroundColor 0 0 0 255
+
+	
+# CURRENCY
+
+Show # 
+	Class "Stackable Currency"
+	BaseType == "Exalted Orb" "Mirror of Kalandra" "Orb of Alchemy" "Divine Orb" "Orb of Annulment" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Gemcutter's Prism" "Chaos Orb"
+	SetFontSize 45
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+	PlayAlertSound 5 300
+
+Show # %D7 $type->currency->stackedthree $tier->t3 SHARDS
+	BaseType == "Regal Shard" "Artificer's Shard" "Chance Shard"
+	SetFontSize 26
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 240 150 35 255
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Square
 
 Show # $type->currency $tier->t1exalted
 	BaseType == "Scroll of Wisdom"
@@ -90,6 +99,8 @@ Show # Qualidade de itens
 	SetTextColor 100 100 0 255
 	SetBorderColor 100 100 0 255
 	SetBackgroundColor 255 255 0 255
+
+# GEMAS	
 
 Show # Gemas uncut de skill tier > 18
 	BaseType == "Uncut Skill Gem"
@@ -237,25 +248,7 @@ Show # Moeda de Sanctum e Ultimatum
 	MinimapIcon 1 Yellow Circle	
 
 
-Show # $type->currency $tier->t1exalted
-	BaseType == "Exalted Orb" "Mirror of Kalandra" "Orb of Alchemy" "Divine Orb" "Orb of Annulment" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Gemcutter's Prism" "Chaos Orb"
-	SetFontSize 45
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayEffect Red
-	MinimapIcon 0 Red Star
-	PlayAlertSound 5 300
 
-Show # %D7 $type->currency->stackedthree $tier->t3 SHARDS
-	BaseType == "Regal Shard" "Artificer's Shard" "Chance Shard"
-	SetFontSize 30
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 150 35 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Square
 
 Show # Fragments
 	BaseType == "Breach Splinter" "Breachstone" "Simulacrum Splinter" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
@@ -288,6 +281,13 @@ Show # Greater Essences
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle	
 
+
+#*********************************
+#
+# WAYSTONES
+#
+#*********************************
+
 Show # Tablets
 	BaseType = "Tablet"
 	SetFontSize 35
@@ -297,6 +297,16 @@ Show # Tablets
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 2 Red Square
+
+Show # Pinnacle Key
+	Class "Pinnacle Keys"	
+	SetFontSize 45
+	SetTextColor 150 0 255 255
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Purple
+	MinimapIcon 2 Purple Star
 
 Show # Waystones tier 15+
 	BaseType = "Waystone"
@@ -328,40 +338,53 @@ Show # Waystones tier 1+
 	PlayEffect Red
 	MinimapIcon 0 Red Square
 
-Show # Waystones and Tablets
-	BaseType = "Waystone" "Tablet"
-	SetFontSize 35
-	# SetTextColor 230 255 0 255
-	SetBorderColor 230 255 0 255
-	SetBackgroundColor 100 10 0 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 1 Red Square
+#*********************************
+#
+# EXPEDITION
+#
+#*********************************
 
-Show # %D7 $type->currency->stackedthree $tier->t3
-	BaseType == "Regal Orb" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance"
-		# "Chaos Orb" 
-	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 90 35 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
-
-Show # Expedition
-	BaseType == "Exotic Coinage" "Broken Circle Artifact" "Black Scythe Artifact" "Order Artifact" "Sun Artifact"
+Show # Expedition Artifacts
+	Class "Currency"
+	BaseType "Artifact"
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 0 255 145 255
-	PlayAlertSound 2 300
+	#PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 0 Yellow Circle
+
+Show # Expedition Coinage
+	Class "Currency"
+	BaseType "Coinage"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle
 
+Show # Expedition Logbook
+	BaseType "Expedition Logbook"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 2 Yellow Circle	
+
+#*********************************
+#
+# RITUAL
+#
+#*********************************
+
 Show # Ritual Omens
-	BaseType == "Omen of Refreshment" "Omen of Resurgence" "Omen of Amelioration" "Omen of Whittling"  "Omen of Sinistral Alchemy" "Omen of Dextral Alchemy" "Omen of Sinistral Coronation" "Omen of Dextral Coronation" "Omen of Corruption" "Omen of Greater Exaltation" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Greater Annulment" "Omen of Sinistral Annulment" "Omen of Dextral Annulment"
-	# "Omen  of Sinistral Erasure" "Omen of Dextral Erasure"
+	Class "Omen"
+	BaseType "Omen of"
 	SetFontSize 45
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -370,9 +393,26 @@ Show # Ritual Omens
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
+#*********************************
+#
+# CURRENCIES
+#
+#*********************************
+
+Show # %D7 $type->currency->stackedthree $tier->t3
+	Class "Stackable Currency"
+	BaseType == "Regal Orb" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance" "Chaos Orb" 
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 240 90 35 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle	
+
 Show # Augmentation/Transmutation
 	BaseType == "Orb of Augmentation" "Orb of Transmutation"
-	SetFontSize 30
+	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 240 90 35 255
@@ -389,7 +429,8 @@ Show # %D7 $type->currency->stackedthree $tier->t3
 	
 
 Show # Runes
-	BaseType == "Iron Rune" "Storm Rune" "Glacial Rune" "Body Rune" "Desert Rune" "Stone Rune" "Mind Rune"
+	Class == "Socketable"
+	BaseType "Rune"
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -399,7 +440,8 @@ Show # Runes
 	MinimapIcon 1 Yellow Circle
 
 Show # Soul Cores
-	BaseType == "Soul Core of Tacati" "Soul Core of Opiloti" "Soul Core of Jiquani" "Soul Core of Zalatl" "Soul Core of Citaqualotl" "Soul Core of Puhuarte" "Soul Core of Tzamoto" "Soul Core of Xopec" "Soul Core of Azcapa" "Soul Core of Topotante" "Soul Core of Quipolatl" "Soul Core of Ticaba" "Soul Core of Atmohua" "Soul Core of Cholotl" "Soul Core of Zantipi"
+	Class == "Socketable"
+	BaseType "Soul Core"
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
@@ -409,7 +451,8 @@ Show # Soul Cores
 	MinimapIcon 1 Yellow Circle	
 
 Show # Breach Catalysts
-	BaseType == "Flesh Catalyst" "Neural Catalyst" "Carapace Catalyst" "Uul-Netol's Catalyst" "Xoph's Catalyst" "Tul's Catalyst" "Esh's Catalyst" "Chayula's Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Skittering Catalyst" "Adaptive Catalyst"
+	Class == "Currency"
+	BaseType "Catalyst"
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
@@ -419,7 +462,8 @@ Show # Breach Catalysts
 	MinimapIcon 1 Yellow Circle
 
 Show # Delirium Distillations
-	BaseType == "Distilled Ire" "Distilled Guilt" "Distilled Greed" "Distilled Paranoia" "Distilled Envy" "Distilled Disgust" "Distilled Despair" "Distilled Fear" "Distilled Suffering" "Distilled Isolation"
+	Class == "Currency"
+	BaseType "Distilled"
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
@@ -428,6 +472,18 @@ Show # Delirium Distillations
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
-Show # SAFETY ALL NON-FILTERED ITEMS 
-	SetFontSize 30
+Show # All Normal and Magic Items
+	Rarity Normal Magic
+	SetFontSize 26
+
+Show # All Rare Items
+	Rarity Rare
+	SetFontSize 32
+
+Show # All Unique Items
+	Rarity Unique
+	SetFontSize 40
+	PlayEffect Orange
+	MinimapIcon 2 Orange Star
+
 
