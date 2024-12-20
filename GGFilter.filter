@@ -458,16 +458,16 @@ Show # Ritual Omens
 
 Show # Equipamentos Expert
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
-	Basetype "Expert "
-	SetFontSize 40
-	SetBorderColor 150 0 200 255
+	BaseType "Expert "
+	SetFontSize 34
+	#SetBorderColor 150 0 200 255
 	SetBackgroundColor 50 0 100 255
 
 Show # Equipamentos Advanced
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
-	Basetype "Advanced "
+	BaseType "Advanced "
 	SetFontSize 30
-	SetBorderColor 0 150 200 255
+	#SetBorderColor 0 150 200 255
 	SetBackgroundColor 0 50 100 255
 
 Show # %D7 $type->currency->stackedthree $tier->t3
