@@ -94,10 +94,11 @@ Show # Qualidade de itens
 Show # Gemas uncut de skill tier > 18
 	BaseType == "Uncut Skill Gem"
 	ItemLevel > 18
-	SetFontSize 40
+	SetFontSize 45
 	SetTextColor 200 0 0 255
 	SetBorderColor 200 0 0 255	
 	SetBackgroundColor 255 255 255 255	
+	PlayAlertSound 6 300
 	PlayEffect Red 
 	MinimapIcon 2 Red Star 
 
@@ -107,7 +108,7 @@ Show # Gemas uncut de skill tier > 12
 	SetFontSize 36
 	SetTextColor 150 0 0 255
 	SetBorderColor 150 0 0 255	
-	SetBackgroundColor 200 200 200 255
+	SetBackgroundColor 180 180 180 255
 	PlayEffect Red 
 	MinimapIcon 1 Red Star 
 
@@ -142,10 +143,11 @@ Show # Gemas uncut de skill tier > 1
 Show # Gemas uncut de Spirit tier > 18
 	BaseType == "Uncut Spirit Gem"
 	ItemLevel > 18
-	SetFontSize 40
+	SetFontSize 45
 	SetTextColor 0 200 0 255
 	SetBorderColor 0 200 0 255
 	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
 	MinimapIcon 2 Green Star
 
 Show # Gemas uncut de Spirit tier > 12
@@ -154,7 +156,7 @@ Show # Gemas uncut de Spirit tier > 12
 	SetFontSize 36
 	SetTextColor 0 150 0 255
 	SetBorderColor 0 150 0 255
-	SetBackgroundColor 200 200 200 255
+	SetBackgroundColor 180 180 180 255
 	MinimapIcon 1 Green Star
 
 Show # Gemas uncut de Spirit tier > 6
@@ -188,7 +190,7 @@ Show # Gemas uncut de Spirit tier > 1
 Show # GEMA Suporte uncut tier 3
 	BaseType == "Uncut Support Gem"
 	ItemLevel >= 3
-	SetFontSize 40
+	SetFontSize 45
 	SetTextColor 0 0 200 255
 	SetBorderColor 0 0 200 255
 	SetBackgroundColor 255 255 255 255
@@ -201,7 +203,7 @@ Show # GEMA Suporte uncut tier 2
 	SetFontSize 36
 	SetTextColor 0 0 150 255
 	SetBorderColor 0 0 150 255
-	SetBackgroundColor 200 200 200 255
+	SetBackgroundColor 180 180 180 255
 	PlayEffect Blue
 	MinimapIcon 1 Blue Star
 
