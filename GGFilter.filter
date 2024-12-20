@@ -2,8 +2,11 @@
 #Criado por Gerbasi
 #Expandido por Guinnyn
 
-# ITENS COM SOCKET OU QUALIDADE
-
+#*********************************
+#
+# ITENS COM QUALITY OU SOCKETS
+#
+#*********************************
 Show # Socket
 	Sockets > 0
 	SetFontSize 36
@@ -14,14 +17,26 @@ Show # Qualidade
 	SetFontSize 36
 	SetBorderColor 255 255 255 255
 	
-
+#*********************************
+#
 # JEWELRY E CHARMS
+#
+#*********************************
 
 Show # Charms
 	Class "Charms"
 	SetFontSize 30
 	SetBorderColor 0 60 80 255
 	SetBackgroundColor 0 60 80 255
+
+Show # GEMA
+	BaseType "Ruby" "Sapphire" "Emerald"
+	SetFontSize 30
+	# SetTextColor 0 0 0 255
+	SetBackgroundColor 25 70 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Circle
+
 	
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
@@ -35,18 +50,21 @@ Show # Anéis de Fenda
 	SetBackgroundColor 65 65 0 255
 	MinimapIcon 2 Yellow Circle
 
-
+#*********************************
+#
 # FLASKS
+#
+#*********************************
 
-Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
-	AreaLevel > 70
-	Quality < 10
-	Class "Flasks"
+#Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
+#	AreaLevel > 70
+#	Quality < 10
+#	Class "Flasks"
 
-Hide #Esconde todos os flasks normais nos mapas
-	AreaLevel > 65
-	Rarity Normal
-	Class "Flasks"	
+#Hide #Esconde todos os flasks normais nos mapas
+#	AreaLevel > 65
+#	Rarity Normal
+#	Class "Flasks"	
 
 Show # Ultimate Flasks na campanha
 	AreaLevel > 60
@@ -105,8 +123,8 @@ Show # TIER 2
 	Class == "Stackable Currency"
 	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
 	SetFontSize 30
-	SetTextColor 255 0 200 255
-	SetBorderColor 255 0 200 255
+	SetTextColor 255 0 160 255
+	SetBorderColor 255 0 160 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 3 300
 	PlayEffect White
@@ -118,7 +136,7 @@ Show # TIER 4
 	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
-	SetBackgroundColor 80 0 60 255
+	SetBackgroundColor 180 0 150 255
 	MinimapIcon 2 White Circle
 
 Show # TIER 5 - Shards I
@@ -133,14 +151,18 @@ Show # TIER 5 - Shards II
 	SetFontSize 26
 	SetBackgroundColor 80 0 60 255
 
-Show # $type->currency $tier->t1exalted
+Show # Scroll of Wisdom
 	BaseType == "Scroll of Wisdom"
 	SetFontSize 26
 	SetTextColor 255 0 0 255
 	#SetBorderColor 255 0 0 255
 	SetBackgroundColor 0 0 0 255
 	
-# GEMAS	
+#*********************************
+#
+# GEMAS
+#
+#*********************************
 
 Show # Gemas uncut de skill tier > 18
 	BaseType == "Uncut Skill Gem"
@@ -241,7 +263,7 @@ Show # Gemas uncut de Spirit tier > 1
 Show # GEMA Suporte uncut tier 3
 	BaseType == "Uncut Support Gem"
 	ItemLevel >= 3
-	SetFontSize 45
+	SetFontSize 40
 	SetTextColor 0 0 200 255
 	SetBorderColor 0 0 200 255
 	SetBackgroundColor 255 255 255 255
@@ -268,14 +290,11 @@ Show # GEMA Suporte uncut tier 1
 	PlayEffect Blue
 	MinimapIcon 1 Blue Star	
 
-Show # GEMA
-	BaseType == "Ruby" "Sapphire" "Emerald"
-	SetFontSize 30
-	# SetTextColor 0 0 0 255
-	SetBackgroundColor 25 70 0 255
-	PlayEffect Green
-	MinimapIcon 1 Green Circle
-
+#*********************************
+#
+# SANCTUM E ULTIMATUM
+#
+#*********************************
 
 Show # Moeda de Sanctum e Ultimatum
 	Class == "Trial Coins" "Inscribed Ultimatum"
@@ -287,12 +306,14 @@ Show # Moeda de Sanctum e Ultimatum
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
-
-
+#*********************************
+#
+# FRAGMENTS
+#
+#*********************************
 
 Show # Fragments
-	BaseType == "Breach Splinter" "Breachstone" "Simulacrum Splinter" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
-	# "Ancient Crisis Fragment" "Faded Crisis Fragment" "Weathered Crisis Fragment"
+	BaseType "Breach Splinter" "Breachstone" "Simulacrum Splinter" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
 	SetFontSize 40
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
@@ -301,8 +322,14 @@ Show # Fragments
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
+#*********************************
+#
+# ESSÊNCIAS
+#
+#*********************************
+
 Show # Essences
-	BaseType == "Essence of Battle" "Essence of the Infinite" "Essence of Sorcery" "Essence of Ruin" "Essence of Ice" "Essence of Enhancement" "Essence of Flames" "Essence of the Body" "Essence of Electricity" "Essence of the Mind" "Essence of Torment" "Essence of Haste"
+	BaseType "Essence of"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
@@ -312,12 +339,12 @@ Show # Essences
 	# MinimapIcon 1 Yellow Circle
 
 Show # Greater Essences
-	BaseType == "Greater Essence of Battle" "Greater Essence of the Infinite" "Greater Essence of Sorcery" "Greater Essence of Ruin" "Greater Essence of Ice" "Greater Essence of Enhancement" "Greater Essence of Flames" "Greater Essence of the Body" "Greater Essence of Electricity" "Greater Essence of the Mind" "Greater Essence of Torment" "Greater Essence of Haste"
-	SetFontSize 45
+	BaseType "Greater Essence of"
+	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
 	SetBackgroundColor 145 0 100 255
-	PlayAlertSound 2 300
+	PlayAlertSound 4 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle	
 
@@ -433,13 +460,16 @@ Show # Ritual Omens
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
-
+#*********************************
+#
 # EQUIPAMENTO
+#
+#*********************************
 
 Show # Equipamentos Expert
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
 	BaseType "Expert "
-	SetFontSize 34
+	SetFontSize 30
 	#SetBorderColor 150 0 200 255
 	SetBackgroundColor 50 0 100 255
 
@@ -450,6 +480,12 @@ Show # Equipamentos Advanced
 	#SetBorderColor 0 150 200 255
 	SetBackgroundColor 0 50 100 255
 
+#*********************************
+#
+# SOCKETABLES
+#
+#*********************************
+
 Show # %D7 $type->currency->stackedthree $tier->t3
 	Class == "Socketable"
 	SetFontSize 36
@@ -457,7 +493,6 @@ Show # %D7 $type->currency->stackedthree $tier->t3
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 70 180 35 255
 	
-
 Show # Runes
 	Class == "Socketable"
 	BaseType "Rune"
@@ -480,6 +515,12 @@ Show # Soul Cores
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
+#*********************************
+#
+# CATALYSTS
+#
+#*********************************	
+
 Show # Breach Catalysts
 	Class == "Currency"
 	BaseType "Catalyst"
@@ -491,6 +532,12 @@ Show # Breach Catalysts
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle
 
+#*********************************
+#
+# DELIRIUM
+#
+#*********************************
+
 Show # Delirium Distillations
 	Class == "Currency"
 	BaseType "Distilled"
@@ -501,6 +548,12 @@ Show # Delirium Distillations
 	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
+
+#*********************************
+#
+# DEFAULTS
+#
+#*********************************	
 
 Show # All Normal and Magic Items
 	Rarity Normal Magic
@@ -516,4 +569,5 @@ Show # All Unique Items
 	PlayEffect Orange
 	MinimapIcon 2 Orange Star
 
-
+Show #ALL OTHER ITEMS SAFEGUARD
+	SetFontSize 30
