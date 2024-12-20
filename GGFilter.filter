@@ -67,10 +67,10 @@ Show # Anéis de Fenda
 #	Class "Flasks"	
 
 Show # Ultimate Flasks na campanha
-	AreaLevel > 60
+	AreaLevel < 60
 	Class "Flasks"
 	BaseType "Ultimate"
-	SetFontSize 40
+	SetFontSize 30
 	SetBorderColor 0 255 255 255
 	MinimapIcon 0 Cyan Square
 
