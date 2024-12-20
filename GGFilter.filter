@@ -63,28 +63,95 @@ Show #Flasks < Ultimate na campanha
 	SetBorderColor 0 255 255 255
 	SetBackgroundColor 0 0 0 255
 
-	
-# CURRENCY
+#*********************************
+#
+# CURRENCIES
+#
+#*********************************
 
-Show # 
-	Class "Stackable Currency"
-	BaseType == "Exalted Orb" "Mirror of Kalandra" "Orb of Alchemy" "Divine Orb" "Orb of Annulment" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Gemcutter's Prism" "Chaos Orb"
-	SetFontSize 45
+Show # RARIDADE TIER 0
+	Class == "Stackable Currency"
+	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
+	SetFontSize 50
 	SetTextColor 255 0 0 255
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
 	PlayEffect Red
 	MinimapIcon 0 Red Star
-	PlayAlertSound 5 300
+	
+Show # TIER 1
+	Class == "Stackable Currency"
+	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 240 90 35 255
+	PlayAlertSound 4 300
+	PlayEffect Yellow
+	MinimapIcon 0 Orange Circle
 
-Show # %D7 $type->currency->stackedthree $tier->t3 SHARDS
-	BaseType == "Regal Shard" "Artificer's Shard" "Chance Shard"
+#Show # TIER 1 - EXALTED ORB
+#	Class == "Stackable Currency"
+#	BaseType "Exalted Orb"
+#	SetFontSize 36
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 240 90 35 255
+#	PlayEffect White
+#	MinimapIcon 0 Orange Circle
+	
+Show # TIER 2
+	Class == "Stackable Currency"
+	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 249 150 25 255
+	PlayEffect White
+	MinimapIcon 2 Orange Circle
+	
+Show # TIER 3
+	Class == "Stackable Currency"
+	BaseType "Artificer's Orb" "Glassblower's Bauble"
+	SetFontSize 30
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 213 159 0 255
+	PlayEffect White
+	MinimapIcon 2 Yellow Circle
+	
+Show # TIER 3 - VAAL ORB
+	Class == "Stackable Currency"
+	BaseType "Vaal Orb"
+	SetFontSize 30
+	SetTextColor 0 0 0 255
+	SetBorderColor 240 10 35 255
+	SetBackgroundColor 213 159 0 255
+	PlayEffect White
+	MinimapIcon 2 Yellow Circle
+	
+Show # TIER 4
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
 	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 150 35 255
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Square
+	SetBackgroundColor 210 178 135 255
+	MinimapIcon 2 White Circle
+
+Show # TIER 5 - Shards I
+	Class == "Stackable Currency"
+	BaseType "Regal Shard" "Chance Shard"
+	SetFontSize 30
+	SetBorderColor 180 158 135 255
+#	SetBorderColor 222 184 135 205
+	
+Show # TIER 5 - Shards II
+	Class == "Stackable Currency"
+	BaseType "Transmutation Shard" "Artificer's Shard"
+	SetFontSize 26
+	SetBackgroundColor 20 20 0 200
 
 Show # $type->currency $tier->t1exalted
 	BaseType == "Scroll of Wisdom"
@@ -93,13 +160,6 @@ Show # $type->currency $tier->t1exalted
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 0 0 0 255
 	
-Show # Qualidade de itens
-	BaseType == "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 26
-	SetTextColor 100 100 0 255
-	SetBorderColor 100 100 0 255
-	SetBackgroundColor 255 255 0 255
-
 # GEMAS	
 
 Show # Gemas uncut de skill tier > 18
@@ -393,36 +453,26 @@ Show # Ritual Omens
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
-#*********************************
-#
-# CURRENCIES
-#
-#*********************************
 
-Show # %D7 $type->currency->stackedthree $tier->t3
-	Class "Stackable Currency"
-	BaseType == "Regal Orb" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance" "Chaos Orb" 
+# EQUIPAMENTO
+
+Show # Equipamentos Expert
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
+	Basetype "Expert "
 	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 90 35 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
+	SetBorderColor 150 0 200 255
+	SetBackgroundColor 50 0 100 255
 
-Show # Augmentation/Transmutation
-	BaseType == "Orb of Augmentation" "Orb of Transmutation"
-	SetFontSize 26
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 90 35 255
-	# PlayAlertSound 2 300
-	# PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
+Show # Equipamentos Advanced
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
+	Basetype "Advanced "
+	SetFontSize 30
+	SetBorderColor 0 150 200 255
+	SetBackgroundColor 0 50 100 255
 
 Show # %D7 $type->currency->stackedthree $tier->t3
 	Class == "Socketable"
-	SetFontSize 45
+	SetFontSize 36
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 70 180 35 255
