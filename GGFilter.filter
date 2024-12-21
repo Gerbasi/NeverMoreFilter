@@ -41,13 +41,13 @@ Show # GEMA
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
 	SetFontSize 30
-	SetBackgroundColor 0 60 80 255
+	SetBackgroundColor 0 120 130 255
 
 Show # Anéis de Fenda 
 	BaseType == "Breach Ring"
 	SetFontSize 35
 	SetBorderColor 255 255 0 255
-	SetBackgroundColor 65 65 0 255
+	SetBackgroundColor 100 100 0 255
 	MinimapIcon 2 Yellow Circle
 
 #*********************************
@@ -467,18 +467,16 @@ Show # Ritual Omens
 #*********************************
 
 Show # Equipamentos Expert
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
-	SetFontSize 30
-	#SetBorderColor 150 0 200 255
-	SetBackgroundColor 50 0 100 255
+	SetFontSize 26
+	SetBackgroundColor 90 0 140 255
 
 Show # Equipamentos Advanced
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre"
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Advanced "
-	SetFontSize 30
-	#SetBorderColor 0 150 200 255
-	SetBackgroundColor 0 50 100 255
+	SetFontSize 26
+	SetBackgroundColor 0 100 140 255
 
 #*********************************
 #
@@ -566,6 +564,9 @@ Show # All Rare Items
 Show # All Unique Items
 	Rarity Unique
 	SetFontSize 40
+	SetBorderColor 255 255 255 255
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 255 102 0
 	PlayEffect Orange
 	MinimapIcon 2 Orange Star
 
