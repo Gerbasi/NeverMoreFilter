@@ -36,7 +36,6 @@ Show # GEMA
 	SetBackgroundColor 25 70 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Circle
-
 	
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
@@ -304,7 +303,25 @@ Show # Moeda de Sanctum e Ultimatum
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 2 300
 	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
+	MinimapIcon 1 Yellow Circle
+	
+Show # Reliquias Sekhemas
+	Class "Relics"
+	SetFontSize 30
+	SetTextColor 0 255 0  255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 0 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Raindrop
+	
+Show # Chaves Sekmas
+	BaseType == "Bronze Key" "Silve Key" "Golden Key"
+	SetFontSize 25
+	SetTextColor 0 255 0  255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 0 0 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Cross
 
 #*********************************
 #
