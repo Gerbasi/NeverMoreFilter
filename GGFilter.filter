@@ -315,7 +315,7 @@ Show # Reliquias Sekhemas
 	MinimapIcon 1 Green Raindrop
 	
 Show # Chaves Sekmas
-	BaseType == "Bronze Key" "Silve Key" "Golden Key"
+	BaseType == "Bronze Key" "Silver Key" "Gold Key"
 	SetFontSize 25
 	SetTextColor 0 255 0  255
 	SetBorderColor 0 255 0 255
