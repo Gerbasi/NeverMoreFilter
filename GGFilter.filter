@@ -318,7 +318,7 @@ Show # Fragments
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 6 300
+	PlayAlertSound 4 300
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
