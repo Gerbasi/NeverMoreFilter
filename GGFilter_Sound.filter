@@ -596,6 +596,7 @@ Show # All Unique Items
 	SetBackgroundColor 255 102 0
 	PlayEffect Orange
 	MinimapIcon 2 Orange Star
+	CustomAlertSound "oloco.mp3" 300
 
 Show #ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 30
