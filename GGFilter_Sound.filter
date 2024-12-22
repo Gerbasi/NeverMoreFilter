@@ -413,14 +413,10 @@ Show # Greater Essences
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
 	SetBackgroundColor 145 0 100 255
-<<<<<<< Updated upstream
-=======
 	#PlayAlertSound 4 300
 	CustomAlertSound "essence.mp3" 300	
->>>>>>> Stashed changes
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle
-	CustomAlertSound "tamoricoscurto.mp3" 300	
 
 
 #*********************************
