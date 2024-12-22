@@ -2,15 +2,18 @@
 #Criado por Gerbasi
 #Expandido por Guinnyn
 
-#*********************************
-#
-# MOEDAS
-#
-#*********************************
-
-Show # Ouro
-	BaseType == "Gold"
-	CustomAlertSound "gold.mp3" 300
+#####################################################################################
+# ARQUIVOS PARA SOUNDPACK:
+#	- currencyt0.mp3 (Divine, Mirror, etc)
+#	- currencyt1.mp3 (Exalted, Annul, Bauble, etc.)
+#	- essence.mp3 (apenas Greater Essences)
+#	- keys.mp3 (Pinnacle Keys, não as chaves do sanctum)
+#	- mechanics.mp3 (diversas mecânicas, sanctum, delirium, expedition, etc)
+#	- tablet.mp3 (Precursor Tablets)
+#	- uncut.mp3 (uncut skill e spirit gems de nivel 19/20 apenas)
+#	- unique.mp3 (itens únicos)
+#	- waystone.mp3 (Waystones tier 14+ apenas)
+#####################################################################################
 
 #*********************************
 #
@@ -19,12 +22,12 @@ Show # Ouro
 #*********************************
 Show # Socket
 	Sockets > 0
-	SetFontSize 36
+	SetFontSize 30
 	SetBorderColor 255 100 100 255
 
 Show # Qualidade
 	Quality > 0
-	SetFontSize 36
+	SetFontSize 30
 	SetBorderColor 255 255 255 255
 	
 #*********************************
@@ -54,6 +57,14 @@ Show # Anéis de Fenda
 	SetBackgroundColor 100 100 0 255
 	MinimapIcon 2 Yellow Circle	
 	
+Show # Anéis de Fenda 
+	BaseType == "Breach Ring"
+	SetFontSize 38
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 100 100 0 255
+	PlayEffect Yellow
+	MinimapIcon 2 Yellow Circle
+
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
 	SetFontSize 30
@@ -104,7 +115,8 @@ Show # RARIDADE TIER 0
 	SetTextColor 255 0 200 255
 	SetBorderColor 255 0 200 255
 	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
+	# PlayAlertSound 6 300
+	CustomAlertSound "currencyt0.mp3" 300
 	PlayEffect Red
 	MinimapIcon 0 Red Star
 	
@@ -115,7 +127,8 @@ Show # TIER 1
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 255 0 200 255
-	PlayAlertSound 4 300
+	#PlayAlertSound 4 300
+	CustomAlertSound "currencyt1.mp3" 300
 	PlayEffect Yellow
 	MinimapIcon 0 Orange Circle
 
@@ -181,7 +194,8 @@ Show # Gemas uncut de skill tier > 18
 	SetTextColor 200 0 0 255
 	SetBorderColor 200 0 0 255	
 	SetBackgroundColor 255 255 255 255	
-	PlayAlertSound 6 300
+	#PlayAlertSound 6 300
+	CustomAlertSound "uncut.mp3" 300
 	PlayEffect Red 
 	MinimapIcon 2 Red Star 
 
@@ -230,7 +244,8 @@ Show # Gemas uncut de Spirit tier > 18
 	SetTextColor 0 200 0 255
 	SetBorderColor 0 200 0 255
 	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
+	#PlayAlertSound 6 300
+	CustomAlertSound "uncut.mp3" 300
 	MinimapIcon 2 Green Star
 
 Show # Gemas uncut de Spirit tier > 12
@@ -346,6 +361,7 @@ Show # Fragments
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
+<<<<<<< Updated upstream
 	PlayAlertSound 6 300
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
@@ -357,8 +373,23 @@ Show # Fragments
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
 	PlayAlertSound 2 300
+=======
+	# PlayAlertSound 4 300
+	CustomAlertSound "mechanics.mp3" 300
+>>>>>>> Stashed changes
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
+
+Show # Splinters
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
+	# CustomAlertSound "mechanics.mp3" 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star	
 
 #*********************************
 #
@@ -382,6 +413,11 @@ Show # Greater Essences
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
 	SetBackgroundColor 145 0 100 255
+<<<<<<< Updated upstream
+=======
+	#PlayAlertSound 4 300
+	CustomAlertSound "essence.mp3" 300	
+>>>>>>> Stashed changes
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle
 	CustomAlertSound "tamoricoscurto.mp3" 300	
@@ -399,7 +435,8 @@ Show # Tablets
 	# SetTextColor 230 255 0 255
 	SetBorderColor 230 255 0 255
 	SetBackgroundColor 100 10 0 255
-	PlayAlertSound 4 300
+	#PlayAlertSound 4 300
+	CustomAlertSound "tablet.mp3" 300	
 	PlayEffect Red
 	MinimapIcon 2 Red Square
 
@@ -409,7 +446,8 @@ Show # Pinnacle Key
 	SetTextColor 150 0 255 255
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
+	#PlayAlertSound 6 300
+	CustomAlertSound "keys.mp3" 300
 	PlayEffect Purple
 	MinimapIcon 2 Purple Star
 
@@ -419,7 +457,8 @@ Show # Waystones tier 15+
 	SetFontSize 40
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 100 0 0 255
-	PlayAlertSound 4 300
+	#PlayAlertSound 4 300
+	CustomAlertSound "waystone.mp3" 300
 	PlayEffect Red
 	MinimapIcon 2 Red Square
 
@@ -494,7 +533,8 @@ Show # Ritual Omens
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 255 110 0 255
-	PlayAlertSound 2 300
+	#PlayAlertSound 2 300
+	CustomAlertSound "mechanics.mp3" 300	
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
@@ -581,7 +621,8 @@ Show # Delirium Distillations
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
 	SetBackgroundColor 190 0 115 255
-	PlayAlertSound 2 300
+	#PlayAlertSound 2 300
+	CustomAlertSound "mechanics.mp3" 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
 
@@ -605,9 +646,9 @@ Show # All Unique Items
 	SetBorderColor 255 255 255 255
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 102 0
+	CustomAlertSound "unique.mp3" 300
 	PlayEffect Orange
 	MinimapIcon 2 Orange Star
-	CustomAlertSound "oloco.mp3" 300
 
 Show #ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 30
