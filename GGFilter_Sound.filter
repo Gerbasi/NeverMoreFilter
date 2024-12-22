@@ -46,18 +46,19 @@ Show # GEMA
 	SetBackgroundColor 25 70 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Circle
+
+Show # Anéis de Fenda 
+	BaseType == "Breach Ring"
+	SetFontSize 38
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 100 100 0 255
+	MinimapIcon 2 Yellow Circle	
 	
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
 	SetFontSize 30
 	SetBackgroundColor 0 120 130 255
 
-Show # Anéis de Fenda 
-	BaseType == "Breach Ring"
-	SetFontSize 35
-	SetBorderColor 255 255 0 255
-	SetBackgroundColor 100 100 0 255
-	MinimapIcon 2 Yellow Circle
 
 #*********************************
 #
@@ -340,12 +341,22 @@ Show # Chaves Sekmas
 #*********************************
 
 Show # Fragments
-	BaseType "Breach Splinter" "Breachstone" "Simulacrum Splinter" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
 	SetFontSize 40
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 4 300
+	PlayAlertSound 6 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
+
+Show # Fragments
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
@@ -371,9 +382,9 @@ Show # Greater Essences
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
 	SetBackgroundColor 145 0 100 255
-	PlayAlertSound 4 300
 	PlayEffect Pink
-	MinimapIcon 1 Pink Circle	
+	MinimapIcon 1 Pink Circle
+	CustomAlertSound "tamoricoscurto.mp3" 300	
 
 
 #*********************************
@@ -549,13 +560,13 @@ Show # Soul Cores
 Show # Breach Catalysts
 	Class == "Currency"
 	BaseType "Catalyst"
-	SetFontSize 35
-	SetTextColor 0 0 0 255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 150 0 215 255
+	SetFontSize 38
+	SetTextColor 0 200 255 255
+	SetBorderColor 0 200 255 255
+	SetBackgroundColor 0 100 150 255
 	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
+	PlayEffect Cyan
+	MinimapIcon 1 Cyan Star
 
 #*********************************
 #
