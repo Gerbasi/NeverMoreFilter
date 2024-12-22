@@ -122,7 +122,7 @@ Show # TIER 1
 Show # TIER 2
 	Class == "Stackable Currency"
 	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
-	SetFontSize 30
+	SetFontSize 36
 	SetTextColor 255 0 160 255
 	SetBorderColor 255 0 160 255
 	SetBackgroundColor 0 0 0 255
@@ -133,7 +133,7 @@ Show # TIER 2
 Show # TIER 4
 	Class == "Stackable Currency"
 	BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 26
+	SetFontSize 30
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 0 150 255
