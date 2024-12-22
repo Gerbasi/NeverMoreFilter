@@ -331,12 +331,22 @@ Show # Chaves Sekmas
 #*********************************
 
 Show # Fragments
-	BaseType "Breach Splinter" "Breachstone" "Simulacrum Splinter" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
 	SetFontSize 40
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 4 300
+	PlayAlertSound 6 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
+
+Show # Fragments
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
