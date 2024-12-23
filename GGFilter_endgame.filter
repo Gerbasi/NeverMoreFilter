@@ -18,6 +18,21 @@ Show
 	SetBackgroundColor 0 120 130 255
 	SetBorderColor 255 255 0 255
 
+####################################
+# 
+# GOLD
+# 
+####################################
+
+Show #Stack grande de gold
+	BaseType == "Gold"
+	StackSize >= 1000
+	SetFontSize 26
+
+Show #Stack pequeno de gold
+	BaseType == "Gold"
+	SetFontSize 18
+
 
 #*********************************
 #

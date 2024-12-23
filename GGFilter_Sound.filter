@@ -15,6 +15,22 @@
 #	- waystone.mp3 (Waystones tier 14+ apenas)
 #####################################################################################
 
+####################################
+# 
+# GOLD
+# 
+####################################
+
+Show #Stack grande de gold
+	BaseType == "Gold"
+	StackSize >= 1000
+	SetFontSize 26
+
+Show #Stack pequeno de gold
+	BaseType == "Gold"
+	SetFontSize 18
+
+
 #*********************************
 #
 # ITENS COM QUALITY OU SOCKETS
@@ -45,7 +61,6 @@ Show # Charms
 Show # GEMA
 	BaseType "Ruby" "Sapphire" "Emerald"
 	SetFontSize 30
-	# SetTextColor 0 0 0 255
 	SetBackgroundColor 25 70 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Circle
@@ -144,8 +159,8 @@ Show # TIER 1
 	
 Show # TIER 2
 	Class == "Stackable Currency"
-	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
-	SetFontSize 36
+	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration"
+	SetFontSize 40
 	SetTextColor 255 0 160 255
 	SetBorderColor 255 0 160 255
 	SetBackgroundColor 0 0 0 255
@@ -336,7 +351,7 @@ Show # Reliquias Sekhemas
 	SetFontSize 30
 	SetTextColor 0 255 0  255
 	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 0 0 255
+	SetBackgroundColor 0 150 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Raindrop
 	
@@ -345,7 +360,7 @@ Show # Chaves Sekmas
 	SetFontSize 25
 	SetTextColor 0 255 0  255
 	SetBorderColor 0 255 0 255
-	SetBackgroundColor 0 0 0 255
+	SetBackgroundColor 0 150 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Cross
 
@@ -361,7 +376,6 @@ Show # Fragments
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
-<<<<<<< Updated upstream
 	PlayAlertSound 6 300
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
@@ -373,10 +387,7 @@ Show # Fragments
 	SetBorderColor 170 0 25 255
 	SetBackgroundColor 0 255 180 255
 	PlayAlertSound 2 300
-=======
-	# PlayAlertSound 4 300
 	CustomAlertSound "mechanics.mp3" 300
->>>>>>> Stashed changes
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
@@ -426,12 +437,11 @@ Show # Greater Essences
 #*********************************
 
 Show # Tablets
-	BaseType = "Tablet"
+	BaseType "Tablet"
 	SetFontSize 35
 	# SetTextColor 230 255 0 255
 	SetBorderColor 230 255 0 255
 	SetBackgroundColor 100 10 0 255
-	#PlayAlertSound 4 300
 	CustomAlertSound "tablet.mp3" 300	
 	PlayEffect Red
 	MinimapIcon 2 Red Square
@@ -442,7 +452,6 @@ Show # Pinnacle Key
 	SetTextColor 150 0 255 255
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 255 255 255 255
-	#PlayAlertSound 6 300
 	CustomAlertSound "keys.mp3" 300
 	PlayEffect Purple
 	MinimapIcon 2 Purple Star
@@ -451,8 +460,8 @@ Show # Waystones tier 15+
 	BaseType = "Waystone"
 	WaystoneTier > 14
 	SetFontSize 40
-	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
 	#PlayAlertSound 4 300
 	CustomAlertSound "waystone.mp3" 300
 	PlayEffect Red
@@ -463,7 +472,7 @@ Show # Waystones tier 10+
 	WaystoneTier > 9
 	SetFontSize 35
 	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 100 0 255
+	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 1 Red Square
@@ -473,7 +482,7 @@ Show # Waystones tier 1+
 	WaystoneTier >= 1
 	SetFontSize 30
 	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 100 100 255
+	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 0 Red Square
@@ -549,7 +558,7 @@ Show # Equipamentos Expert
 Show # Equipamentos Advanced
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Advanced "
-	SetFontSize 26
+	SetFontSize 22
 	SetBackgroundColor 0 100 140 255
 
 #*********************************
@@ -558,34 +567,16 @@ Show # Equipamentos Advanced
 #
 #*********************************
 
-Show # %D7 $type->currency->stackedthree $tier->t3
+Show # Runes and Soul Cores
 	Class == "Socketable"
-	SetFontSize 36
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 70 180 35 255
-	
-Show # Runes
-	Class == "Socketable"
-	BaseType "Rune"
+	BaseType "Rune" "Soul Core"
 	SetFontSize 35
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 70 180 35 255
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
 	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
-
-Show # Soul Cores
-	Class == "Socketable"
-	BaseType "Soul Core"
-	SetFontSize 35
-	SetTextColor 0 0 0 255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 80 225 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
+	PlayEffect Cyan
+	MinimapIcon 1 Cyan Cross
 
 #*********************************
 #
@@ -597,10 +588,10 @@ Show # Breach Catalysts
 	Class == "Currency"
 	BaseType "Catalyst"
 	SetFontSize 38
-	SetTextColor 0 200 255 255
-	SetBorderColor 0 200 255 255
-	SetBackgroundColor 0 100 150 255
-	PlayAlertSound 2 300
+	SetTextColor 0 0 0 255
+	# SetBorderColor 0 0 0 255
+	SetBackgroundColor 190 0 115 255
+	CustomAlertSound "mechanics.mp3" 300
 	PlayEffect Cyan
 	MinimapIcon 1 Cyan Star
 
@@ -613,7 +604,7 @@ Show # Breach Catalysts
 Show # Delirium Distillations
 	Class == "Currency"
 	BaseType "Distilled"
-	SetFontSize 35
+	SetFontSize 38
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
 	SetBackgroundColor 190 0 115 255
@@ -630,11 +621,11 @@ Show # Delirium Distillations
 
 Show # All Normal and Magic Items
 	Rarity Normal Magic
-	SetFontSize 26
+	SetFontSize 22
 
 Show # All Rare Items
 	Rarity Rare
-	SetFontSize 32
+	SetFontSize 26
 
 Show # All Unique Items
 	Rarity Unique

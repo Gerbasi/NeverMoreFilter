@@ -2,6 +2,22 @@
 #Criado por Gerbasi
 #Expandido por Guinnyn
 
+####################################
+# 
+# GOLD
+# 
+####################################
+
+Show #Stack grande de gold
+	BaseType == "Gold"
+	StackSize >= 1000
+	SetFontSize 26
+
+Show #Stack pequeno de gold
+	BaseType == "Gold"
+	SetFontSize 18
+
+
 #*********************************
 #
 # ITENS COM QUALITY OU SOCKETS
@@ -9,12 +25,12 @@
 #*********************************
 Show # Socket
 	Sockets > 0
-	SetFontSize 36
+	SetFontSize 30
 	SetBorderColor 255 100 100 255
 
 Show # Qualidade
 	Quality > 0
-	SetFontSize 36
+	SetFontSize 30
 	SetBorderColor 255 255 255 255
 	
 #*********************************
@@ -32,7 +48,6 @@ Show # Charms
 Show # GEMA
 	BaseType "Ruby" "Sapphire" "Emerald"
 	SetFontSize 30
-	# SetTextColor 0 0 0 255
 	SetBackgroundColor 25 70 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Circle
@@ -55,16 +70,6 @@ Show # Aneis, Amuletos e Cintos
 # FLASKS
 #
 #*********************************
-
-#Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
-#	AreaLevel > 70
-#	Quality < 10
-#	Class "Flasks"
-
-#Hide #Esconde todos os flasks normais nos mapas
-#	AreaLevel > 65
-#	Rarity Normal
-#	Class "Flasks"	
 
 Show # Ultimate Flasks na campanha
 	AreaLevel < 60
@@ -121,8 +126,8 @@ Show # TIER 1
 	
 Show # TIER 2
 	Class == "Stackable Currency"
-	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
-	SetFontSize 36
+	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration"
+	SetFontSize 40
 	SetTextColor 255 0 160 255
 	SetBorderColor 255 0 160 255
 	SetBackgroundColor 0 0 0 255
@@ -132,7 +137,7 @@ Show # TIER 2
 	
 Show # TIER 4
 	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
 	SetFontSize 30
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -407,8 +412,8 @@ Show # Waystones tier 15+
 	BaseType = "Waystone"
 	WaystoneTier > 14
 	SetFontSize 40
-	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 2 Red Square
@@ -416,9 +421,9 @@ Show # Waystones tier 15+
 Show # Waystones tier 10+
 	BaseType = "Waystone"
 	WaystoneTier > 9
-	SetFontSize 35
+	SetFontSize 34
 	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 100 0 255
+	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 1 Red Square
@@ -428,7 +433,7 @@ Show # Waystones tier 1+
 	WaystoneTier >= 1
 	SetFontSize 30
 	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 100 100 255
+	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 0 Red Square
@@ -503,7 +508,7 @@ Show # Equipamentos Expert
 Show # Equipamentos Advanced
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Advanced "
-	SetFontSize 26
+	SetFontSize 22
 	SetBackgroundColor 0 100 140 255
 
 #*********************************
@@ -512,34 +517,18 @@ Show # Equipamentos Advanced
 #
 #*********************************
 
-Show # %D7 $type->currency->stackedthree $tier->t3
-	Class == "Socketable"
-	SetFontSize 36
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 70 180 35 255
 	
-Show # Runes
+Show # Runes and Soul Cores
 	Class == "Socketable"
-	BaseType "Rune"
+	BaseType "Rune" "Soul Core"
 	SetFontSize 35
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 70 180 35 255
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
 	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
+	PlayEffect Cyan
+	MinimapIcon 1 Cyan Cross
 
-Show # Soul Cores
-	Class == "Socketable"
-	BaseType "Soul Core"
-	SetFontSize 35
-	SetTextColor 0 0 0 255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 80 225 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
 
 #*********************************
 #
@@ -567,7 +556,7 @@ Show # Breach Catalysts
 Show # Delirium Distillations
 	Class == "Currency"
 	BaseType "Distilled"
-	SetFontSize 35
+	SetFontSize 38
 	SetTextColor 0 0 0 255
 	# SetBorderColor 0 0 0 255
 	SetBackgroundColor 190 0 115 255
@@ -583,11 +572,11 @@ Show # Delirium Distillations
 
 Show # All Normal and Magic Items
 	Rarity Normal Magic
-	SetFontSize 26
+	SetFontSize 22
 
 Show # All Rare Items
 	Rarity Rare
-	SetFontSize 32
+	SetFontSize 26
 
 Show # All Unique Items
 	Rarity Unique
