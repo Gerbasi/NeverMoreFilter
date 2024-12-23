@@ -1,0 +1,650 @@
+#Filtro PoE2 Genérico 
+#Criado por Gerbasi
+#Expandido por Guinnyn
+
+#####################################################################################
+# ARQUIVOS PARA SOUNDPACK:
+#	- currencyt0.mp3 (Divine, Mirror, etc)
+#	- currencyt1.mp3 (Exalted, Annul, Bauble, etc.)
+#	- essence.mp3 (apenas Greater Essences)
+#	- keys.mp3 (Pinnacle Keys, não as chaves do sanctum)
+#	- mechanics.mp3 (diversas mecânicas, sanctum, delirium, expedition, etc)
+#	- tablet.mp3 (Precursor Tablets)
+#	- uncut.mp3 (uncut skill e spirit gems de nivel 19/20 apenas)
+#	- unique.mp3 (itens únicos)
+#	- waystone.mp3 (Waystones tier 14+ apenas)
+#####################################################################################
+
+#*********************************
+#
+# ITENS COM QUALITY OU SOCKETS
+#
+#*********************************
+Show # Socket
+	Sockets > 0
+	SetFontSize 30
+	SetBorderColor 255 100 100 255
+
+Show # Qualidade
+	Quality > 0
+	SetFontSize 30
+	SetBorderColor 255 255 255 255
+	
+#*********************************
+#
+# JEWELRY E CHARMS
+#
+#*********************************
+
+Show # Charms
+	Class "Charms"
+	SetFontSize 30
+	SetBorderColor 0 60 80 255
+	SetBackgroundColor 0 60 80 255
+
+Show # GEMA
+	BaseType "Ruby" "Sapphire" "Emerald"
+	SetFontSize 30
+	# SetTextColor 0 0 0 255
+	SetBackgroundColor 25 70 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Circle
+
+Show # Anéis de Fenda 
+	BaseType == "Breach Ring"
+	SetFontSize 38
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 100 100 0 255
+	MinimapIcon 2 Yellow Circle	
+	
+Show # Anéis de Fenda 
+	BaseType == "Breach Ring"
+	SetFontSize 38
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 100 100 0 255
+	PlayEffect Yellow
+	MinimapIcon 2 Yellow Circle
+
+Show # Aneis, Amuletos e Cintos
+	BaseType "Ring" "Amulet" "Belt"
+	SetFontSize 30
+	SetBackgroundColor 0 120 130 255
+
+
+#*********************************
+#
+# FLASKS
+#
+#*********************************
+
+#Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
+#	AreaLevel > 70
+#	Quality < 10
+#	Class "Flasks"
+
+#Hide #Esconde todos os flasks normais nos mapas
+#	AreaLevel > 65
+#	Rarity Normal
+#	Class "Flasks"	
+
+Show # Ultimate Flasks na campanha
+	AreaLevel < 60
+	Class "Flasks"
+	BaseType "Ultimate"
+	SetFontSize 30
+	SetBorderColor 0 255 255 255
+	MinimapIcon 0 Cyan Square
+
+Show #Flasks < Ultimate na campanha
+	AreaLevel <= 65
+	Class "Flasks"
+	SetFontSize 30
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 0 0 255
+
+#*********************************
+#
+# CURRENCIES
+#
+#*********************************
+
+Show # RARIDADE TIER 0
+	Class == "Stackable Currency"
+	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
+	SetFontSize 50
+	SetTextColor 255 0 200 255
+	SetBorderColor 255 0 200 255
+	SetBackgroundColor 255 255 255 255
+	# PlayAlertSound 6 300
+	CustomAlertSound "currencyt0.mp3" 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+	
+Show # TIER 1
+	Class == "Stackable Currency"
+	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 255 0 200 255
+	#PlayAlertSound 4 300
+	CustomAlertSound "currencyt1.mp3" 300
+	PlayEffect Yellow
+	MinimapIcon 0 Orange Circle
+
+#Show # TIER 1 - EXALTED ORB
+#	Class == "Stackable Currency"
+#	BaseType "Exalted Orb"
+#	SetFontSize 36
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 255 255 255 255
+#	SetBackgroundColor 240 90 35 255
+#	PlayEffect White
+#	MinimapIcon 0 Orange Circle
+	
+Show # TIER 2
+	Class == "Stackable Currency"
+	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb"
+	SetFontSize 36
+	SetTextColor 255 0 160 255
+	SetBorderColor 255 0 160 255
+	SetBackgroundColor 0 0 0 255
+	PlayAlertSound 3 300
+	PlayEffect White
+	MinimapIcon 2 Orange Circle
+	
+Show # TIER 4
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	SetFontSize 30
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 180 0 150 255
+	MinimapIcon 2 White Circle
+
+Show # TIER 5 - Shards I
+	Class == "Stackable Currency"
+	BaseType "Regal Shard" "Chance Shard"
+	SetFontSize 32
+	SetBackgroundColor 80 0 60 255
+	
+Show # TIER 5 - Shards II
+	Class == "Stackable Currency"
+	BaseType "Transmutation Shard" "Artificer's Shard"
+	SetFontSize 26
+	SetBackgroundColor 80 0 60 255
+
+Show # Scroll of Wisdom
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 26
+	SetTextColor 255 0 0 255
+	#SetBorderColor 255 0 0 255
+	SetBackgroundColor 0 0 0 255
+	
+#*********************************
+#
+# GEMAS
+#
+#*********************************
+
+Show # Gemas uncut de skill tier > 18
+	BaseType == "Uncut Skill Gem"
+	ItemLevel > 18
+	SetFontSize 45
+	SetTextColor 200 0 0 255
+	SetBorderColor 200 0 0 255	
+	SetBackgroundColor 255 255 255 255	
+	#PlayAlertSound 6 300
+	CustomAlertSound "uncut.mp3" 300
+	PlayEffect Red 
+	MinimapIcon 2 Red Star 
+
+Show # Gemas uncut de skill tier > 12
+	BaseType == "Uncut Skill Gem"
+	ItemLevel > 12
+	SetFontSize 36
+	SetTextColor 150 0 0 255
+	SetBorderColor 150 0 0 255	
+	SetBackgroundColor 180 180 180 255
+	PlayEffect Red 
+	MinimapIcon 1 Red Star 
+
+Show # Gemas uncut de skill tier > 6
+	BaseType == "Uncut Skill Gem"
+	ItemLevel > 6
+	SetFontSize 32
+	SetTextColor 255 0 0 255	
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 100 100 100 255
+	MinimapIcon 0 Red Star
+
+Show # Gemas uncut de skill tier > 1
+	BaseType == "Uncut Skill Gem"
+	ItemLevel >= 1
+	SetFontSize 26
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 50 50 50 255
+	MinimapIcon 0 Red Star
+
+# Todas as gemas uncut de skill
+#Show # GEMA Skill 
+#	BaseType == "Uncut Skill Gem"
+#	SetFontSize 40
+#	SetTextColor 200 0 0 255
+#	SetBackgroundColor 255 255 255 255
+#	PlayEffect Red
+#	MinimapIcon 2 Red Star
+
+
+Show # Gemas uncut de Spirit tier > 18
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 18
+	SetFontSize 45
+	SetTextColor 0 200 0 255
+	SetBorderColor 0 200 0 255
+	SetBackgroundColor 255 255 255 255
+	#PlayAlertSound 6 300
+	CustomAlertSound "uncut.mp3" 300
+	MinimapIcon 2 Green Star
+
+Show # Gemas uncut de Spirit tier > 12
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 12
+	SetFontSize 36
+	SetTextColor 0 150 0 255
+	SetBorderColor 0 150 0 255
+	SetBackgroundColor 180 180 180 255
+	MinimapIcon 1 Green Star
+
+Show # Gemas uncut de Spirit tier > 6
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel > 6
+	SetFontSize 30
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 100 100 100 255
+
+
+Show # Gemas uncut de Spirit tier > 1
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel >= 1
+	SetFontSize 26
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 50 50 50 255
+
+
+# Mostrar todas as gemas uncut de spirit
+#Show # GEMA Spirit
+#	BaseType == "Uncut Spirit Gem"
+#	SetFontSize 40
+#	SetTextColor 0 200 0 255
+#	SetBackgroundColor 255 255 255 255
+#	PlayEffect Green
+#	MinimapIcon 2 Green Star
+
+
+Show # GEMA Suporte uncut tier 3
+	BaseType == "Uncut Support Gem"
+	ItemLevel >= 3
+	SetFontSize 40
+	SetTextColor 0 0 200 255
+	SetBorderColor 0 0 200 255
+	SetBackgroundColor 255 255 255 255
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+
+Show # GEMA Suporte uncut tier 2
+	BaseType == "Uncut Support Gem"
+	ItemLevel >= 2
+	SetFontSize 36
+	SetTextColor 0 0 150 255
+	SetBorderColor 0 0 150 255
+	SetBackgroundColor 180 180 180 255
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star
+
+Show # GEMA Suporte uncut tier 1
+	BaseType == "Uncut Support Gem"
+	ItemLevel >= 1
+	SetFontSize 30
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
+	SetBackgroundColor 80 80 80 255
+	PlayEffect Blue
+	MinimapIcon 1 Blue Star	
+
+#*********************************
+#
+# SANCTUM E ULTIMATUM
+#
+#*********************************
+
+Show # Moeda de Sanctum e Ultimatum
+	Class == "Trial Coins" "Inscribed Ultimatum"
+	SetFontSize 35
+	SetTextColor 0 80 100 255
+	SetBorderColor 0 80 100 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+	
+Show # Reliquias Sekhemas
+	Class "Relics"
+	SetFontSize 30
+	SetTextColor 0 255 0  255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 0 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Raindrop
+	
+Show # Chaves Sekmas
+	BaseType == "Bronze Key" "Silver Key" "Gold Key"
+	SetFontSize 25
+	SetTextColor 0 255 0  255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 0 0 0 255
+	PlayEffect Green
+	MinimapIcon 1 Green Cross
+
+#*********************************
+#
+# FRAGMENTS
+#
+#*********************************
+
+Show # Fragments
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+<<<<<<< Updated upstream
+	PlayAlertSound 6 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
+
+Show # Fragments
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
+=======
+	# PlayAlertSound 4 300
+	CustomAlertSound "mechanics.mp3" 300
+>>>>>>> Stashed changes
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
+
+Show # Splinters
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
+	# CustomAlertSound "mechanics.mp3" 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star	
+
+#*********************************
+#
+# ESSÊNCIAS
+#
+#*********************************
+
+Show # Essences
+	BaseType "Essence of"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 145 0 100 255
+	SetBackgroundColor 145 0 100 255
+	# PlayAlertSound 2 300
+	# PlayEffect Yellow
+	# MinimapIcon 1 Yellow Circle
+
+Show # Greater Essences
+	BaseType "Greater Essence of"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 145 0 100 255
+	SetBackgroundColor 145 0 100 255
+	#PlayAlertSound 4 300
+	CustomAlertSound "essence.mp3" 300	
+	PlayEffect Pink
+	MinimapIcon 1 Pink Circle
+
+
+#*********************************
+#
+# WAYSTONES
+#
+#*********************************
+
+Show # Tablets
+	BaseType = "Tablet"
+	SetFontSize 35
+	# SetTextColor 230 255 0 255
+	SetBorderColor 230 255 0 255
+	SetBackgroundColor 100 10 0 255
+	#PlayAlertSound 4 300
+	CustomAlertSound "tablet.mp3" 300	
+	PlayEffect Red
+	MinimapIcon 2 Red Square
+
+Show # Pinnacle Key
+	Class "Pinnacle Keys"	
+	SetFontSize 45
+	SetTextColor 150 0 255 255
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 255 255 255 255
+	#PlayAlertSound 6 300
+	CustomAlertSound "keys.mp3" 300
+	PlayEffect Purple
+	MinimapIcon 2 Purple Star
+
+Show # Waystones tier 15+
+	BaseType = "Waystone"
+	WaystoneTier > 14
+	SetFontSize 40
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 0 0 255
+	#PlayAlertSound 4 300
+	CustomAlertSound "waystone.mp3" 300
+	PlayEffect Red
+	MinimapIcon 2 Red Square
+
+Show # Waystones tier 10+
+	BaseType = "Waystone"
+	WaystoneTier > 9
+	SetFontSize 35
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 100 0 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 1 Red Square
+
+Show # Waystones tier 1+
+	BaseType = "Waystone"
+	WaystoneTier >= 1
+	SetFontSize 30
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 100 100 100 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
+
+#*********************************
+#
+# EXPEDITION
+#
+#*********************************
+
+Show # Expedition Artifacts
+	Class "Currency"
+	BaseType "Artifact"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 0 Yellow Circle
+
+Show # Expedition Coinage
+	Class "Currency"
+	BaseType "Coinage"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # Expedition Logbook
+	BaseType "Expedition Logbook"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 2 Yellow Circle	
+
+#*********************************
+#
+# RITUAL
+#
+#*********************************
+
+Show # Ritual Omens
+	Class "Omen"
+	BaseType "Omen of"
+	SetFontSize 45
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 255 110 0 255
+	#PlayAlertSound 2 300
+	CustomAlertSound "mechanics.mp3" 300	
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle	
+
+#*********************************
+#
+# EQUIPAMENTO
+#
+#*********************************
+
+Show # Equipamentos Expert
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	BaseType "Expert "
+	SetFontSize 26
+	SetBackgroundColor 90 0 140 255
+
+Show # Equipamentos Advanced
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	BaseType "Advanced "
+	SetFontSize 26
+	SetBackgroundColor 0 100 140 255
+
+#*********************************
+#
+# SOCKETABLES
+#
+#*********************************
+
+Show # %D7 $type->currency->stackedthree $tier->t3
+	Class == "Socketable"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 70 180 35 255
+	
+Show # Runes
+	Class == "Socketable"
+	BaseType "Rune"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 70 180 35 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle
+
+Show # Soul Cores
+	Class == "Socketable"
+	BaseType "Soul Core"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	# SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 80 225 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle	
+
+#*********************************
+#
+# CATALYSTS
+#
+#*********************************	
+
+Show # Breach Catalysts
+	Class == "Currency"
+	BaseType "Catalyst"
+	SetFontSize 38
+	SetTextColor 0 200 255 255
+	SetBorderColor 0 200 255 255
+	SetBackgroundColor 0 100 150 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan
+	MinimapIcon 1 Cyan Star
+
+#*********************************
+#
+# DELIRIUM
+#
+#*********************************
+
+Show # Delirium Distillations
+	Class == "Currency"
+	BaseType "Distilled"
+	SetFontSize 35
+	SetTextColor 0 0 0 255
+	# SetBorderColor 0 0 0 255
+	SetBackgroundColor 190 0 115 255
+	#PlayAlertSound 2 300
+	CustomAlertSound "mechanics.mp3" 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Circle	
+
+#*********************************
+#
+# DEFAULTS
+#
+#*********************************	
+
+Show # All Normal and Magic Items
+	Rarity Normal Magic
+	SetFontSize 26
+
+Show # All Rare Items
+	Rarity Rare
+	SetFontSize 32
+
+Show # All Unique Items
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 255 255 255 255
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 255 102 0
+	CustomAlertSound "unique.mp3" 300
+	PlayEffect Orange
+	MinimapIcon 2 Orange Star
+
+Show #ALL OTHER ITEMS SAFEGUARD
+	SetFontSize 30
