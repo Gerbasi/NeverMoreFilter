@@ -92,16 +92,6 @@ Show # Aneis, Amuletos e Cintos
 #
 #*********************************
 
-#Hide #Esconde Flasks em mapas Tier 6+ se tiver < 10% quality
-#	AreaLevel > 70
-#	Quality < 10
-#	Class "Flasks"
-
-#Hide #Esconde todos os flasks normais nos mapas
-#	AreaLevel > 65
-#	Rarity Normal
-#	Class "Flasks"	
-
 Show # Ultimate Flasks na campanha
 	AreaLevel < 60
 	Class "Flasks"
@@ -470,7 +460,7 @@ Show # Waystones tier 15+
 Show # Waystones tier 10+
 	BaseType = "Waystone"
 	WaystoneTier > 9
-	SetFontSize 35
+	SetFontSize 34
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
