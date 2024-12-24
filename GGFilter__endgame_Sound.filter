@@ -469,29 +469,30 @@ Show # Waystones
 	PlayEffect White
 	MinimapIcon 0 White Square
 	Continue
-		Show # Waystones tier +10
-			WaystoneTier > 10
-			SetFontSize 36
-			SetBackgroundColor 100 100 100
-			PlayEffect Yellow
-			MinimapIcon 0 Yellow Square
-			Continue
-				Show #Waystones 14+
-					WaystoneTier >= 14
-					SetFontSize 40
-					SetBackgroundColor 255 255 255
-					CustomAlertSound "waystone.mp3" 300
-					PlayEffect Red
-					MinimapIcon 2 Red Square
-					Continue
-						Hide # Esconde mapas 9- em mapas 10+
-							AreaLevel >= 75
-							WaystoneTier < 10
-							Continue
-								Hide # Esconde mapas 12- em mapas 14+
-									AreaLevel >= 80
-									WaystoneTier < 13
+		Hide # Esconde em mapas 10+
+			AreaLevel > 74
+			WaystoneTier < 10
 
+Show # Waystones tier +10
+	BaseType "Waystone"
+	WaystoneTier > 10
+	SetFontSize 36
+	SetBackgroundColor 100 100 100
+	PlayEffect Yellow
+	MinimapIcon 0 Yellow Square
+	Continue
+		Hide # Esconde em mapas 14+
+			AreaLevel > 78
+			WaystoneTier < 14
+
+Show #Waystones 14+
+	BaseType "Waystone"
+	WaystoneTier >= 14
+	SetFontSize 40
+	SetBackgroundColor 255 255 255
+	CustomAlertSound "waystone.mp3" 300
+	PlayEffect Red
+	MinimapIcon 2 Red Square
 
 #*********************************
 #
