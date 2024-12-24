@@ -26,7 +26,35 @@ Show #Stack pequeno de gold
 	SetFontSize 22
 	MinimapIcon 0 Yellow Star
 
+##################################
+#
+# UNIQUES
+#
+##################################
 
+Show # All Unique Items
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 255 255 255 255
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 255 102 0
+	PlayEffect Orange
+	MinimapIcon 2 Orange Star
+
+
+##################################
+# Bases para usar Orb of Chance
+##################################
+
+Show # Heavy Belt = Headhunter
+	Class "Belt"
+	BaseType == "Heavy Belt"
+	Rarity Normal
+	ItemLevel > 75
+	SetFontSize 36
+	SetBackgroundColor 0 180 0
+	SetBorderColor 255 255 255
+	PlayEffect Green
 
 #*********************************
 #
@@ -67,8 +95,8 @@ Show # Anéis de Fenda
 	SetFontSize 38
 	SetBorderColor 255 255 0 255
 	SetBackgroundColor 100 100 0 255
-	MinimapIcon 2 Yellow Circle	
-	
+	MinimapIcon 2 Yellow Circle
+
 Show # Aneis, Amuletos e Cintos
 	BaseType "Ring" "Amulet" "Belt"
 	SetFontSize 30
@@ -420,7 +448,7 @@ Show # Pinnacle Key
 
 Show # Waystones tier 15+
 	BaseType = "Waystone"
-	WaystoneTier > 14
+	WaystoneTier > 13
 	SetFontSize 40
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
@@ -432,21 +460,21 @@ Show # Waystones tier 10+
 	BaseType = "Waystone"
 	WaystoneTier > 9
 	SetFontSize 34
-	SetBorderColor 150 0 255 255
+	SetBorderColor 255 255 0 255
 	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 1 Red Square
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Square
 
 Show # Waystones tier 1+
 	BaseType = "Waystone"
-	WaystoneTier >= 1
+	WaystoneTier > 0
 	SetFontSize 30
-	SetBorderColor 150 0 255 255
+	SetBorderColor 255 255 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 0 Red Square
+	PlayEffect White
+	MinimapIcon 0 White Square
 
 #*********************************
 #
@@ -508,6 +536,24 @@ Show # Ritual Omens
 # EQUIPAMENTO
 #
 #*********************************
+
+Show # Equipamentos Expert Nivel Muito Alto
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	BaseType "Expert "
+	ItemLevel > 82
+	SetFontSize 36
+	SetBackgroundColor 90 0 140 255
+	SetBorderColor 255 255 0
+	PlayEffect Purple
+
+Show # Equipamentos Expert Nivel Alto
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	BaseType "Expert "
+	ItemLevel > 76
+	SetFontSize 30
+	SetBackgroundColor 90 0 140 255
+	SetBorderColor 180 180 0
+	PlayEffect Yellow
 
 Show # Equipamentos Expert
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
@@ -588,14 +634,7 @@ Show # All Rare Items
 	Rarity Rare
 	SetFontSize 26
 
-Show # All Unique Items
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 255 255 255 255
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 102 0
-	PlayEffect Orange
-	MinimapIcon 2 Orange Star
+
 
 Show #ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 30
