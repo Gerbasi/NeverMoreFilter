@@ -459,40 +459,45 @@ Show # Pinnacle Key
 	PlayEffect Purple
 	MinimapIcon 2 Purple Star
 
-Show # Waystones
+Hide # Waystones até tier 12 em mapas T14+
 	BaseType "Waystone"
-	WaystoneTier > 0
-	SetFontSize 32
-	SetBorderColor 0 200 200
-	SetBackgroundColor 0 0 0
-	PlayAlertSound 3 300
-	PlayEffect White
-	MinimapIcon 0 White Square
-	Continue
-		Hide # Esconde em mapas 10+
-			AreaLevel > 74
-			WaystoneTier < 10
+	WaystoneTier < 13
+	AreaLevel > 79
+
+Hide # Waystones até tier 8 em mapas T10+
+	BaseType "Waystone"
+	WaystoneTier < 9
+	AreaLevel > 74
+
+Show #Waystones 14+
+	BaseType "Waystone"
+	WaystoneTier > 13
+	SetFontSize 40
+	SetBackgroundColor 255 255 255
+	SetBorderColor 255 0 0 
+	CustomAlertSound "waystone.mp3" 300
+	PlayEffect Red
+	MinimapIcon 2 Red Square
 
 Show # Waystones tier +10
 	BaseType "Waystone"
 	WaystoneTier > 10
 	SetFontSize 36
 	SetBackgroundColor 100 100 100
+	SetBorderColor 255 255 0
+	PlayAlertSound 3 300
 	PlayEffect Yellow
 	MinimapIcon 0 Yellow Square
-	Continue
-		Hide # Esconde em mapas 14+
-			AreaLevel > 78
-			WaystoneTier < 14
 
-Show #Waystones 14+
+Show # Waystones
 	BaseType "Waystone"
-	WaystoneTier >= 14
-	SetFontSize 40
-	SetBackgroundColor 255 255 255
-	CustomAlertSound "waystone.mp3" 300
-	PlayEffect Red
-	MinimapIcon 2 Red Square
+	WaystoneTier > 0
+	SetFontSize 32
+	SetBorderColor 200 200 200
+	SetBackgroundColor 0 0 0
+	PlayAlertSound 3 300
+	PlayEffect White
+	MinimapIcon 0 White Square
 
 #*********************************
 #
