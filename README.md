@@ -1,4 +1,6 @@
-ESSA É A VERSAO CANDIDATA A RELEAS5. É UMA VERSAO DE TESTE. PARA A ESTAVE PROCURE NOS RELEASES
+ESTA É UMA VERSÃO PARA TESTES, CANDIDATA A RELEASE. Provavelmente contém erros, use por sua conta e risco (e providencie feedback se achar algo!)
+A última versão estável lançada https://github.com/Gerbasi/NeverMoreFilter/releases/tag/1.0
+
 </br>
 É um projeto da comunidade de Path of Exile brasileira de contruir um filtro para ajudar no jogo e divertir tambem.
 
