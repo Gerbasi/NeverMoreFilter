@@ -12,19 +12,19 @@ Show #Stack grande de gold
 	StackSize > 1000
 	SetFontSize 32
 	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Star
+	MinimapIcon 0 Yellow Circle
 
 Show #Stack médio de gold
 	BaseType == "Gold"
 	StackSize > 500
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Star
+	MinimapIcon 0 Yellow Circle
 
 Show #Stack pequeno de gold
 	BaseType == "Gold"
 	SetFontSize 22
-	MinimapIcon 0 Yellow Star
+	MinimapIcon 0 Yellow Circle
 
 
 
@@ -81,20 +81,37 @@ Show # Aneis, Amuletos e Cintos
 #
 #*********************************
 
-Show # Ultimate Flasks na campanha
-	AreaLevel < 60
+Show # Ultimate Flasks até os primeiros mapas do atlas
 	Class "Flasks"
 	BaseType "Ultimate"
-	SetFontSize 30
-	SetBorderColor 0 255 255 255
-	MinimapIcon 0 Cyan Square
+	SetFontSize 26
+	MinimapIcon 0 Cyan Raindrop
+	Continue 
+		Show # Se tiver qualidade, usar bordas
+		Quality > 0
+		SetBorderColor 0 255 255
+		Continue
+			Show #Se qualidade alta, aumenta a fonte e mostra em qualquer mapa
+				Quality > 10
+				SetFontSize 36
+				PlayEffect Cyan
+			
 
-Show #Flasks < Ultimate na campanha
-	AreaLevel <= 65
+Show # Demais Flasks
 	Class "Flasks"
-	SetFontSize 30
+	SetFontSize 26
 	SetBorderColor 0 255 255 255
 	SetBackgroundColor 0 0 0 255
+	Continue 
+		Show # Se tiver qualidade, usar bordas
+		Quality > 0
+		SetBorderColor 0 255 255
+		Continue
+			Show #Se qualidade alta, aumenta a fonte e mostra em qualquer mapa
+				Quality > 10
+				SetFontSize 36
+				PlayEffect Cyan	
+
 
 #*********************************
 #
@@ -102,29 +119,29 @@ Show #Flasks < Ultimate na campanha
 #
 #*********************************
 
-Show # RARIDADE TIER 0
+Show # T0 - Raros, caros e muito procurados
 	Class == "Stackable Currency"
-	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
+	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb" "Greater Jeweller's Orb"
 	SetFontSize 50
 	SetTextColor 255 0 200 255
 	SetBorderColor 255 0 200 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
 	PlayEffect Red
-	MinimapIcon 0 Red Star
+	MinimapIcon 2 Red Diamond
 	
-Show # TIER 1
+Show # T1 - Não tão raros, mas valiosos
 	Class == "Stackable Currency"
-	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
+	BaseType "Orb of Annulment" "Orb of Chance" "Chaos Orb" "Exalted Orb" "Silver Key" "Vaal Orb" "Glassblower's Bauble"
 	SetFontSize 40
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 255 0 200 255
 	PlayAlertSound 4 300
 	PlayEffect Yellow
-	MinimapIcon 0 Orange Circle
+	MinimapIcon 2 Orange Diamond
 
-#Show # TIER 1 - EXALTED ORB
+#Show # TIER 1 - EXALTED ORB (se quiser filtro específico para exalts)
 #	Class == "Stackable Currency"
 #	BaseType "Exalted Orb"
 #	SetFontSize 36
@@ -132,27 +149,27 @@ Show # TIER 1
 #	SetBorderColor 255 255 255 255
 #	SetBackgroundColor 240 90 35 255
 #	PlayEffect White
-#	MinimapIcon 0 Orange Circle
+#	MinimapIcon 2 Orange Circle
 	
-Show # TIER 2
+Show # T2 - Não são raros mas úteis até chegar no endgame
 	Class == "Stackable Currency"
-	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration"
+	BaseType "Regal Orb" "Artificer's Orb" "Orb of Alchemy" "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Bronze Key" "Gemcutter's Prism" "Lesser Jeweller's Orb"
 	SetFontSize 40
 	SetTextColor 255 0 160 255
 	SetBorderColor 255 0 160 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 3 300
 	PlayEffect White
-	MinimapIcon 2 Orange Circle
+	MinimapIcon 1 Yellow Diamond
 	
-Show # TIER 4
+Show # T4 - Úteis no começo, pode esconder no atlas
 	Class == "Stackable Currency"
 	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 30
+	SetFontSize 26
 	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 180 0 150 255
-	MinimapIcon 2 White Circle
+	SetBackgroundColor 80 0 60 255
+	SetBorderColor 180 0 150 255
+	MinimapIcon 0 White Diamond
 
 Show # TIER 5 - Shards I
 	Class == "Stackable Currency"
@@ -179,131 +196,78 @@ Show # Scroll of Wisdom
 #
 #*********************************
 
-Show # Gemas uncut de skill tier > 18
-	BaseType == "Uncut Skill Gem"
-	ItemLevel > 18
-	SetFontSize 45
-	SetTextColor 200 0 0 255
-	SetBorderColor 200 0 0 255	
-	SetBackgroundColor 255 255 255 255	
-	PlayAlertSound 6 300
-	PlayEffect Red 
-	MinimapIcon 2 Red Star 
-
-Show # Gemas uncut de skill tier > 12
-	BaseType == "Uncut Skill Gem"
-	ItemLevel > 12
-	SetFontSize 36
-	SetTextColor 150 0 0 255
-	SetBorderColor 150 0 0 255	
-	SetBackgroundColor 180 180 180 255
-	PlayEffect Red 
-	MinimapIcon 1 Red Star 
-
-Show # Gemas uncut de skill tier > 6
-	BaseType == "Uncut Skill Gem"
-	ItemLevel > 6
-	SetFontSize 32
-	SetTextColor 255 0 0 255	
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 100 100 100 255
-	MinimapIcon 0 Red Star
-
-Show # Gemas uncut de skill tier > 1
-	BaseType == "Uncut Skill Gem"
-	ItemLevel >= 1
+Show # Uncut Skill
+	BaseType "Uncut Skill "
+	ItemLevel > 0
 	SetFontSize 26
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 50 50 50 255
-	MinimapIcon 0 Red Star
-
-# Todas as gemas uncut de skill
-#Show # GEMA Skill 
-#	BaseType == "Uncut Skill Gem"
-#	SetFontSize 40
-#	SetTextColor 200 0 0 255
-#	SetBackgroundColor 255 255 255 255
-#	PlayEffect Red
-#	MinimapIcon 2 Red Star
-
-
-Show # Gemas uncut de Spirit tier > 18
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel > 18
-	SetFontSize 45
-	SetTextColor 0 200 0 255
-	SetBorderColor 0 200 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
-	MinimapIcon 2 Green Star
-
-Show # Gemas uncut de Spirit tier > 12
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel > 12
-	SetFontSize 36
-	SetTextColor 0 150 0 255
-	SetBorderColor 0 150 0 255
-	SetBackgroundColor 180 180 180 255
-	MinimapIcon 1 Green Star
-
-Show # Gemas uncut de Spirit tier > 6
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel > 6
-	SetFontSize 30
-	SetTextColor 0 255 0 255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 100 100 100 255
+	SetBackgroundColor 0 0 0
+	SetBorderColor 200 0 0
+	SetTextColor 200 0 0
+	Continue
+		Show # Gemas tier 6+
+			ItemLevel > 5
+			SetFontSize 32
+			SetBackgroundColor 100 100 100
+			Continue
+				Show # Gemas Tier > 12
+					ItemLevel > 11
+					SetFontSize 36
+					PlayEffect Red
+					Continue
+						Show #Gemas Tier > 18
+							ItemLevel > 18
+							SetFontSize 40
+							SetBackgroundColor 255 255 255
+							PlayAlertSound 4 300
+							MinimapIcon 1 Red UpsideDownHouse
 
 
-Show # Gemas uncut de Spirit tier > 1
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel >= 1
+Show # Uncut Spirit
+	BaseType "Uncut Spirit "
+	ItemLevel > 0
 	SetFontSize 26
-	SetTextColor 0 255 0 255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 50 50 50 255
+	SetBackgroundColor 0 0 0
+	SetBorderColor 0 200 0
+	SetTextColor 0 200 0
+	Continue
+		Show # Gemas tier 6+
+			ItemLevel > 5
+			SetFontSize 32
+			SetBackgroundColor 100 100 100
+			Continue
+				Show # Gemas Tier > 12
+					ItemLevel > 11
+					SetFontSize 36
+					PlayEffect Green
+					Continue
+						Show #Gemas Tier > 18
+							ItemLevel > 18
+							SetFontSize 40
+							SetBackgroundColor 255 255 255
+							PlayAlertSound 4 300
+							MinimapIcon 1 Green UpsideDownHouse
 
 
-# Mostrar todas as gemas uncut de spirit
-#Show # GEMA Spirit
-#	BaseType == "Uncut Spirit Gem"
-#	SetFontSize 40
-#	SetTextColor 0 200 0 255
-#	SetBackgroundColor 255 255 255 255
-#	PlayEffect Green
-#	MinimapIcon 2 Green Star
+Show #Gema uncut de suporte
+	BaseType "Uncut Support "
+	ItemLevel > 0
+	SetFontSize 26
+	SetTextColor 0 0 200
+	SetBorderColor 0 0 200
+	Continue
+		Show # Uncut level 2
+			ItemLevel > 1
+			SetFontSize 32
+			SetBackgroundColor 100 100 100
+			PlayEffect Blue
+			Continue
+				Show # Uncut 3+
+					ItemLevel > 2
+					SetFontSize 40
+					SetBackgroundColor 255 255 255
+					PlayAlertSound 4 300
+					MinimapIcon 1 Blue UpsideDownHouse
 
-
-Show # GEMA Suporte uncut tier 3
-	BaseType == "Uncut Support Gem"
-	ItemLevel >= 3
-	SetFontSize 40
-	SetTextColor 0 0 200 255
-	SetBorderColor 0 0 200 255
-	SetBackgroundColor 255 255 255 255
-	PlayEffect Blue
-	MinimapIcon 2 Blue Star
-
-Show # GEMA Suporte uncut tier 2
-	BaseType == "Uncut Support Gem"
-	ItemLevel >= 2
-	SetFontSize 36
-	SetTextColor 0 0 150 255
-	SetBorderColor 0 0 150 255
-	SetBackgroundColor 180 180 180 255
-	PlayEffect Blue
-	MinimapIcon 1 Blue Star
-
-Show # GEMA Suporte uncut tier 1
-	BaseType == "Uncut Support Gem"
-	ItemLevel >= 1
-	SetFontSize 30
-	SetTextColor 0 0 255 255
-	SetBorderColor 0 0 255 255
-	SetBackgroundColor 80 80 80 255
-	PlayEffect Blue
-	MinimapIcon 1 Blue Star	
 
 #*********************************
 #
@@ -328,22 +292,24 @@ Show # Reliquias Sekhemas
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayEffect Green
-	MinimapIcon 1 Green Raindrop
+	MinimapIcon 1 Green UpsideDownHouse
 	
-Show # Chaves Sekmas
-	BaseType == "Bronze Key" "Silver Key" "Gold Key"
-	SetFontSize 25
-	SetTextColor 0 255 0  255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 0 0 0 255
-	PlayEffect Green
-	MinimapIcon 1 Green Cross
 
 #*********************************
 #
 # FRAGMENTS
 #
 #*********************************
+
+Show # Splinters de Breach/Simulacrum
+	BaseType "Splinter"
+	SetFontSize 32
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
 
 Show # Fragments
 	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
@@ -355,15 +321,7 @@ Show # Fragments
 	PlayEffect Yellow
 	MinimapIcon 1 Red Star
 
-Show # Fragments
-	BaseType "Breach Splinter" "Simulacrum Splinter" 
-	SetFontSize 40
-	SetTextColor 170 0 25 255
-	SetBorderColor 170 0 25 255
-	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Red Star
+
 
 #*********************************
 #
@@ -377,9 +335,7 @@ Show # Essences
 	SetTextColor 0 0 0 255
 	SetBorderColor 145 0 100 255
 	SetBackgroundColor 145 0 100 255
-	# PlayAlertSound 2 300
-	# PlayEffect Yellow
-	# MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Pink Hexagon
 
 Show # Greater Essences
 	BaseType "Greater Essence of"
@@ -389,7 +345,7 @@ Show # Greater Essences
 	SetBackgroundColor 145 0 100 255
 	PlayAlertSound 4 300
 	PlayEffect Pink
-	MinimapIcon 1 Pink Circle	
+	MinimapIcon 2 Pink Hexagon
 
 
 #*********************************
@@ -406,7 +362,7 @@ Show # Tablets
 	SetBackgroundColor 100 10 0 255
 	PlayAlertSound 4 300
 	PlayEffect Red
-	MinimapIcon 2 Red Square
+	MinimapIcon 2 Purple Square
 
 Show # Pinnacle Key
 	Class "Pinnacle Keys"	
@@ -435,8 +391,8 @@ Show # Waystones tier 10+
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 1 Red Square
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Square
 
 Show # Waystones tier 1+
 	BaseType = "Waystone"
@@ -445,8 +401,8 @@ Show # Waystones tier 1+
 	SetBorderColor 150 0 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 0 Red Square
+	PlayEffect White
+	MinimapIcon 0 White Square
 
 #*********************************
 #
