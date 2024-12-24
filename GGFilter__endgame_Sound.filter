@@ -555,6 +555,14 @@ Show # Ritual Omens
 #
 #*********************************
 
+Show # Chance bases (Heavy Belt = Headhunter)
+	Class "Belt"
+	BaseType == "Heavy Belt"
+	Rarity Normal
+	SetFontSize 40
+	SetBackgroundColor 0 120 130 255
+	SetBorderColor 0 255 255
+
 Show # Itens expert de nivel mais alto
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
