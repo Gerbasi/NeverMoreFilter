@@ -8,24 +8,36 @@
 # 
 ####################################
 
-Show #Stack grande de gold
-	StackSize > 1000
-	SetFontSize 32
-	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Circle
-
-Show #Stack médio de gold
+Show #Stacks de gold
 	BaseType == "Gold"
-	StackSize > 500
-	SetFontSize 28
-	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Circle
-
-Show #Stack pequeno de gold
-	BaseType == "Gold"
+	StackSize > 0
 	SetFontSize 22
 	MinimapIcon 0 Yellow Circle
+	Continue
+		Show # Stacks médios
+		StackSize > 500
+		SetFontSize 28
+		Continue
+			Show # Stacks grandes
+				StackSize > 1000
+				SetFontSize 32
+				SetBorderColor 170 140 60 180
 
+
+####################################
+# 
+# UNIQUES
+# 
+####################################
+
+Show # All Unique Items
+	Rarity Unique
+	SetFontSize 40
+	SetBorderColor 255 255 255 255
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 255 102 0
+	PlayEffect Orange
+	MinimapIcon 2 Orange Star
 
 
 #*********************************
@@ -372,37 +384,31 @@ Show # Pinnacle Key
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
 	PlayEffect Purple
-	MinimapIcon 2 Purple Star
+	MinimapIcon 2 Purple Square
 
-Show # Waystones tier 15+
-	BaseType = "Waystone"
-	WaystoneTier > 14
-	SetFontSize 40
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 2 Red Square
+Show # Waystones
+	BaseType == "Waystone"
+	WaystoneTier > 0
+	SetFontSize 32
+	SetBorderColor 0 200 200
+	SetBackgroundColor 0 0 0
+	PlayAlertSound 3 300
+	MinimapIcon 0 Red Square
+	Continue
+		Show # Waystones tier +10
+			WaystoneTier > 10
+			SetFontSize 36
+			SetBackgroundColor 100 100 100
+			PlayEffect Red
+			Continue
+				Show #Waystones 14+
+					WaystoneTier >= 14
+					SetFontSize 40
+					SetBackgroundColor 255 255 255
+					PlayAlertSound 4 300
+					MinimapIcon 2 Red Square
 
-Show # Waystones tier 10+
-	BaseType = "Waystone"
-	WaystoneTier > 9
-	SetFontSize 34
-	SetBorderColor 150 0 255 255
-	SetBackgroundColor 100 100 100 255
-	PlayAlertSound 4 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Square
 
-Show # Waystones tier 1+
-	BaseType = "Waystone"
-	WaystoneTier >= 1
-	SetFontSize 30
-	SetBorderColor 150 0 255 255
-	SetBackgroundColor 0 0 0 255
-	PlayAlertSound 4 300
-	PlayEffect White
-	MinimapIcon 0 White Square
 
 #*********************************
 #
@@ -417,7 +423,6 @@ Show # Expedition Artifacts
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 0 255 145 255
-	#PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 0 Yellow Circle
 
@@ -465,17 +470,23 @@ Show # Ritual Omens
 #
 #*********************************
 
-Show # Equipamentos Expert
+Show # Todos os equipamentos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Expert "
-	SetFontSize 26
-	SetBackgroundColor 90 0 140 255
+	SetFontSize 24
+	Continue
+		Show # Equips Advanced
+			BaseType "Advanced "	
+			SetFontSize 28
+			SetBackgroundColor 0 100 140 255
+			Continue
+				Show # Equipamentos Expert
+					BaseType "Expert "
+					SetBackgroundColor 90 0 140 255
+					Continue
+						Show # Itens de nivel alto
+							ItemLevel >= 82
+							SetBorderColor 255 255 0
 
-Show # Equipamentos Advanced
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Advanced "
-	SetFontSize 22
-	SetBackgroundColor 0 100 140 255
 
 #*********************************
 #
@@ -537,21 +548,12 @@ Show # Delirium Distillations
 #*********************************	
 
 Show # All Normal and Magic Items
-	Rarity Normal Magic
+	Rarity >= Normal
 	SetFontSize 22
-
-Show # All Rare Items
-	Rarity Rare
-	SetFontSize 26
-
-Show # All Unique Items
-	Rarity Unique
-	SetFontSize 40
-	SetBorderColor 255 255 255 255
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 102 0
-	PlayEffect Orange
-	MinimapIcon 2 Orange Star
+	Continue
+		Show #Itens Raros
+			Rarity >= Rare
+			SetFontSize 26
 
 Show #ALL OTHER ITEMS SAFEGUARD
-	SetFontSize 30
+	SetFontSize 28
