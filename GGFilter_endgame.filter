@@ -26,12 +26,29 @@ Show
 
 Show #Stack grande de gold
 	BaseType == "Gold"
-	StackSize >= 1000
+	StackSize > 1000
+	SetFontSize 32
+	SetBorderColor 170 140 60 180
+	MinimapIcon 0 Yellow Star
+
+Show #Stack médio de gold
+	AreaLevel <= 80
+	BaseType == "Gold"
+	StackSize > 500
 	SetFontSize 28
+	SetBorderColor 170 140 60 180
+	MinimapIcon 0 Yellow Star
 
 Show #Stack pequeno de gold
+	AreaLevel <= 70
 	BaseType == "Gold"
 	SetFontSize 22
+	MinimapIcon 0 Yellow Star
+
+Hide # Oculta stacks pequenos e médios de ouro no endgame
+	AreaLevel > 70
+	BaseType == "Gold"
+	StackSize < 1000
 
 
 #*********************************
@@ -518,7 +535,6 @@ Show # Equipamentos Expert Raros em mapas baixos
 	AreaLevel <= 70
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
-
 
 #*********************************
 #

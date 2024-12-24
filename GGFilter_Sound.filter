@@ -22,14 +22,22 @@
 ####################################
 
 Show #Stack grande de gold
+	StackSize > 1000
+	SetFontSize 32
+	SetBorderColor 170 140 60 180
+	MinimapIcon 0 Yellow Star
+
+Show #Stack médio de gold
 	BaseType == "Gold"
-	StackSize >= 1000
-	SetFontSize 26
+	StackSize > 500
+	SetFontSize 28
+	SetBorderColor 170 140 60 180
+	MinimapIcon 0 Yellow Star
 
 Show #Stack pequeno de gold
 	BaseType == "Gold"
-	SetFontSize 18
-
+	SetFontSize 22
+	MinimapIcon 0 Yellow Star
 
 #*********************************
 #
