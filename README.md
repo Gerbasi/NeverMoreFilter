@@ -1,3 +1,5 @@
+ESSA É A VERSAO CANDIDATA A RELEAS5. É UMA VERSAO DE TESTE. PARA A ESTAVE PROCURE NOS RELEASES
+</br>
 É um projeto da comunidade de Path of Exile brasileira de contruir um filtro para ajudar no jogo e divertir tambem.
 
 <ul><li>Saiba como instalar o filtro usando esse clip do nosso querido VigiaBR (https://www.twitch.tv/vigiabr/clip/SincereAbstemiousTitanVoteNay-KDpYIpFkfYBRKs8Z).</li></ul>
