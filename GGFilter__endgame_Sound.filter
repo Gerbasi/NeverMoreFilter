@@ -140,6 +140,12 @@ Show # Aneis, Amuletos e Cintos
 	SetFontSize 30
 	SetBackgroundColor 0 120 130 255
 
+Hide # Anéis, Amuletos e Cintos < Raro
+	Class "Ring" "Amulet" "Belt"
+	Rarity < Rare
+	ItemLevel < 76
+	AreaLevel > 65
+
 
 #*********************************
 #
@@ -683,6 +689,12 @@ Show # Equipamentos Expert Raros em mapas baixos
 	AreaLevel <= 65
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
+
+Hide #Esconde demais equips
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	Rarity < Rare
+	ItemLevel < 76
+	AreaLevel > 65	
 
 #*********************************
 #
