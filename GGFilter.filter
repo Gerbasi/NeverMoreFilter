@@ -25,6 +25,7 @@ Show #Stack pequeno de gold
 	BaseType == "Gold"
 	SetFontSize 22
 	MinimapIcon 0 Yellow Star
+	
 
 ##################################
 #

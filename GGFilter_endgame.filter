@@ -177,14 +177,14 @@ Show # Mostra Flasks no atlas que tiverem qualidade > 10
 	SetBackgroundColor 0 100 100
 
 Show # Mostra Ultimate Flasks Durante campanha
-	AreaLevel < 65
+	AreaLevel <= 65
 	Class "Flasks"
 	BaseType "Ultimate "
 	SetBackgroundColor 0 100 100
 	SetFontSize 32
 
 Show # Mostra os outros Flasks na campanha
-	AreaLevel < 65
+	AreaLevel <= 65
 	Class "Flasks"
 	SetFontSize 24
 
@@ -515,7 +515,8 @@ Show # Pinnacle Key
 
 Show # Waystones tier 15+
 	BaseType "Waystone"
-	WaystoneTier >= 14
+	WaystoneTier > 13
+	AreaLevel > 0
 	SetFontSize 40
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
@@ -525,33 +526,36 @@ Show # Waystones tier 15+
 
 Hide #Waystones 8- em mapas 10+
 	BaseType "Waystone"
-	WaystoneTier < 9
+	WaystoneTier <= 8
 	AreaLevel > 75
 
 Show # Waystones tier 10+
 	BaseType "Waystone"
 	WaystoneTier > 10
+	AreaLevel > 0
 	SetFontSize 30
-	SetBorderColor 150 0 255 255
+	SetBorderColor 255 255 0 255
 	SetBackgroundColor 100 100 100 255
 	PlayAlertSound 4 300
 	PlayEffect Red
-	MinimapIcon 1 Red Square
+	MinimapIcon 1 Yellow Square
 
 Hide #Waystones 3- em mapas 5+
 	BaseType "Waystone"
-	WaystoneTier < 4
+	WaystoneTier <= 3 
 	AreaLevel > 70
 
 Show # Waystones tier 1+ 
 	BaseType "Waystone"
-	WaystoneTier <= 10
+	WaystoneTier > 0
+	AreaLevel > 0
 	SetFontSize 26
-	SetBorderColor 150 0 255 255
+	SetBorderColor 255 255 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
 	PlayEffect Red
-	MinimapIcon 1 Red Square
+	MinimapIcon 1 White Square
+
 
 #*********************************
 #
