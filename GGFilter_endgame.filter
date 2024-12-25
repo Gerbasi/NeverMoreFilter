@@ -148,7 +148,7 @@ Hide # Anéis, Amuletos e Cintos < Raro
 	Class "Ring" "Amulet" "Belt"
 	Rarity < Rare
 	ItemLevel < 76
-	AreaLLevel > 65
+	AreaLevel > 65
 
 
 #*********************************
