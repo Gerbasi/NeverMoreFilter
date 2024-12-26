@@ -8,12 +8,6 @@
 # 
 ####################################
 
-Show #Stack grande de gold
-	BaseType == "Gold"
-	StackSize > 1000
-	SetFontSize 32
-	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Star
 
 Hide # Oculta stacks pequenos e médios de ouro no endgame
 	AreaLevel > 70
@@ -25,19 +19,23 @@ Hide # Oculta stacks pequenos e médios de ouro no endgame
 	BaseType == "Gold"
 	StackSize < 1000
 
+Show #Stack grande de gold
+	BaseType == "Gold"
+	StackSize > 1000
+	SetFontSize 32
+	SetBorderColor 170 140 60 180
+	MinimapIcon 1 Yellow Circle
+
 Show #Stack médio de gold
-	AreaLevel <= 80
 	BaseType == "Gold"
 	StackSize > 500
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Star
+	MinimapIcon 0 Yellow Circle
 
 Show #Stack pequeno de gold
-	AreaLevel <= 70
 	BaseType == "Gold"
 	SetFontSize 22
-	MinimapIcon 0 Yellow Star
 
 ##################################
 #
@@ -74,22 +72,20 @@ Show # Heavy Belt = Headhunter
 #
 #*********************************
 
-Show # Mostra todos os Charms durante a campanha
-	Class "Charms"
-	AreaLevel <= 65
-	SetFontSize 30
-	SetBorderColor 0 60 80 255
-	SetBackgroundColor 0 60 80 255
-
 Hide #Charms brancos no atlas
 	Class "Charms"
 	Rarity Normal
 	AreaLevel > 65
 
+Show # Mostra todos os Charms durante a campanha
+	Class "Charms"
+	SetFontSize 30
+	SetBorderColor 0 60 80 255
+	SetBackgroundColor 0 60 80 255
+
 Show # Charms apenas mágicos e raros no Atlas
 	Class "Charms"
 	Rarity > Normal
-	AreaLevel > 65
 	SetFontSize 30
 	SetBorderColor 0 60 80 255
 	SetBackgroundColor 0 60 80 255
@@ -97,7 +93,6 @@ Show # Charms apenas mágicos e raros no Atlas
 Show # GEMA TIME LOST
 	Class "Jewel"
 	BaseType "Time-Lost "
-	Rarity > Normal
 	SetFontSize 40
 	SetBackgroundColor 25 70 0 255
 	SetBorderColor 0 200 0
@@ -108,11 +103,16 @@ Show # GEMA TIME LOST
 Show # GEMA
 	Class "Jewel"
 	BaseType == "Ruby" "Sapphire" "Emerald"
-	Rarity > Normal
 	SetFontSize 30
 	SetBackgroundColor 25 70 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Circle
+
+Hide # Anéis, Amuletos e Cintos < Raro
+	Class "Ring" "Amulet" "Belt"
+	Rarity < Rare
+	ItemLevel < 76
+	AreaLevel > 65
 
 Show # Anéis de Fenda 
 	BaseType == "Breach Ring"
@@ -139,17 +139,9 @@ Show # Aneis, Amuletos e Cintos - bases top level
 	PlayEffect Cyan
 	
 Show # Aneis, Amuletos e Cintos
-	Rarity Rare
 	BaseType "Ring" "Amulet" "Belt"
-	SetFontSize 30
+	SetFontSize 28
 	SetBackgroundColor 0 120 130 255
-
-Hide # Anéis, Amuletos e Cintos < Raro
-	Class "Ring" "Amulet" "Belt"
-	Rarity < Rare
-	ItemLevel < 76
-	AreaLevel > 65
-
 
 
 #*********************************
@@ -169,23 +161,25 @@ Hide # Todos os outros flasks no atlas
 	AreaLevel > 65
 
 Show # Mostra Flasks no atlas que tiverem qualidade > 10
-	AreaLevel > 65
-	Quality > 10
 	Class "Flasks"
 	BaseType "Ultimate "
+	Quality > 10
 	SetFontSize 26
 	SetBorderColor 0 255 255
 	SetBackgroundColor 0 100 100
 
 Show # Mostra Ultimate Flasks Durante campanha
-	AreaLevel <= 65
 	Class "Flasks"
 	BaseType "Ultimate "
 	SetBackgroundColor 0 100 100
 	SetFontSize 32
 
+Show # Borda em flasks com qualidade
+	Class "Flasks"
+	SetFontSize 28
+	SetBorderColor 0 255 255
+
 Show # Mostra os outros Flasks na campanha
-	AreaLevel <= 65
 	Class "Flasks"
 	SetFontSize 24
 
@@ -194,6 +188,26 @@ Show # Mostra os outros Flasks na campanha
 # CURRENCIES
 #
 #*********************************
+
+Hide # T4 abaixo de mapas T5
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	AreaLevel > 65
+
+Hide # T5 em mapas altos
+	Class == "Stackable Currency"
+	BaseType "Transmutation Shard" "Artificer's Shard"
+	AreaLevel > 65
+
+Hide # Regal Shards em mapas mais altos
+	Class == "Stackable Currency"	
+	BaseType "Regal Shard"
+	AreaLevel > 75
+
+Hide # Scroll of Wisdom no Atlas
+	BaseType == "Scroll of Wisdom"
+	AreaLevel > 65
+	
 
 Show # RARIDADE TIER 0
 	Class == "Stackable Currency"
@@ -238,15 +252,9 @@ Show # TIER 2
 	PlayEffect White
 	MinimapIcon 2 Orange Circle
 
-Hide # T4 abaixo de mapas T5
-	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	AreaLevel > 70
-
 Show # TIER 4 - Até low tier maps
 	Class == "Stackable Currency"
 	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	AreaLevel <= 70
 	SetFontSize 30
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -259,35 +267,50 @@ Show # TIER 5 - Shards I
 	SetFontSize 32
 	SetBackgroundColor 80 0 60 255	
 
-Hide # T5 em mapas altos
-	Class == "Stackable Currency"
-	BaseType "Transmutation Shard" "Artificer's Shard" "Regal Shard"
-	AreaLevel > 70
-
 Show # TIER 5 - Shards II (Até mapas baixos)
 	Class == "Stackable Currency"
 	BaseType "Transmutation Shard" "Artificer's Shard" "Regal Shard"
-	AreaLevel <= 70
 	SetFontSize 26
 	SetBackgroundColor 80 0 60 255	
 
-Hide # Scroll of Wisdom no Atlas
-	BaseType == "Scroll of Wisdom"
-	AreaLevel > 65
-	
 Show # Scroll of Wisdom durante campanha
 	BaseType == "Scroll of Wisdom"
-	AreaLevel <= 65
 	SetFontSize 26
 	SetTextColor 255 0 0 255
 	#SetBorderColor 255 0 0 255
-	SetBackgroundColor 0 0 0 255	
+	SetBackgroundColor 0 0 0 255
+
+Show # Mostrar todas as outras currencies SAFEGUARD
+	Class "Currency"
+	SetFontSize 24
+	SetTextColor 255 0 160 255
+	SetBorderColor 255 0 160 255
 
 #*********************************
 #
 # GEMAS
 #
 #*********************************
+
+Hide # Gemas < 14 em mapas 10+
+	BaseType "Uncut Skill " "Uncut Spirit"
+	AreaLevel > 70
+	ItemLevel <= 14
+
+Hide # Gemas < 18 em mapas 13+
+	BaseType "Uncut Skill " "Uncut Spirit "
+	AreaLevel > 75
+	ItemLevel < 18
+
+Hide # Gemas Suport 3 em mapas 14+
+	BaseType "Uncut Support Gem"
+	AreaLevel > 79
+	ItemLevel >= 3
+
+Hide # Gemas Suporte 1 e 2 no atlas
+	BaseType "Uncut Support Gem"
+	AreaLevel > 65
+	ItemLevel < 3
 
 Show # Gemas uncut de skill tier > 18
 	BaseType == "Uncut Skill Gem"
@@ -300,14 +323,8 @@ Show # Gemas uncut de skill tier > 18
 	PlayEffect Red 
 	MinimapIcon 2 Red Star 
 
-Hide # Gemas < 18 em mapas 13+
-	BaseType == "Uncut Skill Gem"
-	AreaLevel > 75
-	ItemLevel > 14
-
 Show # Gemas uncut de skill tier > 14 em mapas 13-
 	BaseType == "Uncut Skill Gem"
-	AreaLevel <= 75
 	ItemLevel > 14
 	SetFontSize 36
 	SetTextColor 150 0 0 255
@@ -316,14 +333,8 @@ Show # Gemas uncut de skill tier > 14 em mapas 13-
 	PlayEffect Red 
 	MinimapIcon 1 Red Star 
 
-Hide # Gemas < 14 em mapas 10+
-	BaseType == "Uncut Skill Gem"
-	AreaLevel > 70
-	ItemLevel <= 14
-
 Show # Gemas uncut de skill até mapas 13
 	BaseType == "Uncut Skill Gem"
-	AreaLevel <= 70
 	ItemLevel <= 14
 	SetFontSize 36
 	SetTextColor 150 0 0 255
@@ -340,14 +351,8 @@ Show # Gemas uncut de Spirit tier > 18
 	PlayAlertSound 6 300
 	MinimapIcon 2 Green Star
 
-Hide # Gemas > 14 em mapas 13+
-	BaseType == "Uncut Spirit Gem"
-	AreaLevel > 75
-	ItemLevel > 14
-
 Show # Gemas uncut de Spirit tier > 14 em mapas 13-
 	BaseType == "Uncut Spirit Gem"
-	AreaLevel <= 75
 	ItemLevel > 14
 	SetFontSize 36
 	SetTextColor 0 150 0 255
@@ -355,25 +360,14 @@ Show # Gemas uncut de Spirit tier > 14 em mapas 13-
 	SetBackgroundColor 150 150 150 255
 	MinimapIcon 1 Green Star
 
-Hide # Gemas < 14 em mapas 10+
-	BaseType == "Uncut Spirit Gem"
-	AreaLevel > 70
-	ItemLevel <= 14
-
 Show # Gemas uncut de Spirit em mapas até 13
 	BaseType == "Uncut Spirit Gem"
-	AreaLevel <= 70
 	ItemLevel <= 14
 	SetFontSize 36
 	SetTextColor 0 150 0 255
 	SetBorderColor 0 150 0 255
 	SetBackgroundColor 0 0 0 255
 	MinimapIcon 1 Green Star
-
-Hide # Gemas Suportr 3 em mapas 14+
-	BaseType == "Uncut Support Gem"
-	AreaLevel > 79
-	ItemLevel >= 3
 
 Show # GEMA Suporte uncut tier 3 em mapas tier 13-
 	BaseType == "Uncut Support Gem"
@@ -385,14 +379,8 @@ Show # GEMA Suporte uncut tier 3 em mapas tier 13-
 	PlayEffect Blue
 	MinimapIcon 2 Blue Star
 
-Hide # Gemas Suporte 1 e 2 no atlas
-	BaseType == "Uncut Support Gem"
-	AreaLevel > 65
-	ItemLevel < 3
-
 Show # GEMA Suporte uncut tier 1 e 2 na campanha
 	BaseType == "Uncut Support Gem"
-	AreaLevel <= 65
 	ItemLevel < 3
 	SetFontSize 30
 	SetTextColor 0 0 200 255
@@ -514,6 +502,16 @@ Show # Pinnacle Key
 	PlayEffect Purple
 	MinimapIcon 2 Purple Star
 
+Hide #Waystones 8- em mapas 10+
+	BaseType "Waystone"
+	WaystoneTier <= 8
+	AreaLevel > 75
+
+Hide #Waystones 3- em mapas 5+
+	BaseType "Waystone"
+	WaystoneTier <= 3 
+	AreaLevel > 70
+
 Show # Waystones tier 15+
 	BaseType "Waystone"
 	WaystoneTier > 13
@@ -525,11 +523,6 @@ Show # Waystones tier 15+
 	PlayEffect Red
 	MinimapIcon 2 Red Square
 
-Hide #Waystones 8- em mapas 10+
-	BaseType "Waystone"
-	WaystoneTier <= 8
-	AreaLevel > 75
-
 Show # Waystones tier 10+
 	BaseType "Waystone"
 	WaystoneTier > 10
@@ -540,11 +533,6 @@ Show # Waystones tier 10+
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 1 Yellow Square
-
-Hide #Waystones 3- em mapas 5+
-	BaseType "Waystone"
-	WaystoneTier <= 3 
-	AreaLevel > 70
 
 Show # Waystones tier 1+ 
 	BaseType "Waystone"
@@ -605,7 +593,7 @@ Show # Expedition Logbook
 Show # Ritual Omens
 	Class "Omen"
 	BaseType "Omen of"
-	SetFontSize 45
+	SetFontSize 45 
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 255 110 0 255
@@ -684,7 +672,6 @@ Show # Equipamentos Expert Raros High level
 	BaseType "Expert "
 	Rarity >= Rare
 	ItemLevel <= 82
-	AreaLevel > 65
 	SetFontSize 24
 	SetBackgroundColor 90 0 140 255
 
@@ -693,7 +680,6 @@ Show # Equipamentos Expert Raros Top level
 	BaseType "Expert "
 	Rarity >= Rare
 	ItemLevel > 82
-	AreaLevel > 65
 	SetFontSize 30
 	SetBackgroundColor 90 0 140 255
 	SetBorderColor 255 255 0 255
@@ -704,9 +690,12 @@ Show # Equipamentos Expert Raros em mapas baixos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert " "Advanced "
 	Rarity Rare
-	AreaLevel <= 65
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
+
+Show # Demais equipamentos aparecem no atlas
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	SetFontSize 26
 
 
 
