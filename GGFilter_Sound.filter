@@ -98,6 +98,7 @@ Show # Charms
 	SetBackgroundColor 0 60 80 255
 
 Show # GEMA
+	Class "Jewel"
 	BaseType "Ruby" "Sapphire" "Emerald"
 	SetFontSize 30
 	SetBackgroundColor 25 70 0 255
@@ -120,7 +121,7 @@ Show # Anéis de Fenda
 	MinimapIcon 2 Yellow Circle
 
 Show # Aneis, Amuletos e Cintos
-	BaseType "Ring" "Amulet" "Belt"
+	Class "Ring" "Amulet" "Belt"
 	SetFontSize 30
 	SetBackgroundColor 0 120 130 255
 

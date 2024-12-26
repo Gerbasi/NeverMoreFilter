@@ -132,7 +132,7 @@ Show # Aneis, Amuletos e Cintos - bases desejáveis
 	SetBorderColor 0 255 255 255
 
 Show # Aneis, Amuletos e Cintos - bases top level
-	BaseType "Ring" "Amulet" "Belt"
+	Class "Ring" "Amulet" "Belt"
 	ItemLevel > 82
 	SetFontSize 36
 	SetBackgroundColor 0 120 130 255
@@ -150,7 +150,7 @@ Hide # Anéis, Amuletos e Cintos < Raro
 	Rarity < Rare
 	ItemLevel < 76
 	AreaLevel > 65
-	
+
 
 
 #*********************************
