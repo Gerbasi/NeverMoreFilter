@@ -128,6 +128,33 @@ Show #Flasks < Ultimate na campanha
 
 #*********************************
 #
+# FRAGMENTS
+#
+#*********************************
+
+Show # Fragments
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 6 300
+	PlayEffect Yellow
+	MinimapIcon 1 Red Star
+
+Show # Splinters
+	BaseType "Breach Splinter" "Simulacrum Splinter" 
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 255 255 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 2 Cyan Star
+
+
+#*********************************
+#
 # CURRENCIES
 #
 #*********************************
@@ -368,32 +395,6 @@ Show # Chaves Sekmas
 	SetBackgroundColor 0 0 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Cross
-
-#*********************************
-#
-# FRAGMENTS
-#
-#*********************************
-
-Show # Fragments
-	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
-	SetFontSize 40
-	SetTextColor 170 0 25 255
-	SetBorderColor 170 0 25 255
-	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 6 300
-	PlayEffect Yellow
-	MinimapIcon 1 Red Star
-
-Show # Splinters
-	BaseType "Breach Splinter" "Simulacrum Splinter" 
-	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 255 255 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 2 Cyan Star
 
 #*********************************
 #
