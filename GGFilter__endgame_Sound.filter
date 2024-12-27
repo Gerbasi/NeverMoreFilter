@@ -183,7 +183,7 @@ Show # Borda em flasks com qualidade
 #*********************************
 
 Show # Fragments
-	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Fragment"
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
 	SetFontSize 40
 	SetTextColor 170 0 25 255
 	SetBorderColor 170 0 25 255
