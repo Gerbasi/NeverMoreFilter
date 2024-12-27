@@ -33,9 +33,7 @@ Show #Stack médio de gold
 	SetBorderColor 170 140 60 180
 	MinimapIcon 0 Yellow Circle
 
-Show #Stack pequeno de gold
-	BaseType == "Gold"
-	SetFontSize 22
+
 
 ##################################
 #
@@ -139,7 +137,7 @@ Show # Aneis, Amuletos e Cintos - bases top level
 	PlayEffect Cyan
 	
 Show # Aneis, Amuletos e Cintos
-	BaseType "Ring" "Amulet" "Belt"
+	Class "Ring" "Amulet" "Belt"
 	SetFontSize 28
 	SetBackgroundColor 0 120 130 255
 
@@ -305,12 +303,6 @@ Show # Scroll of Wisdom durante campanha
 	SetTextColor 255 0 0 255
 	#SetBorderColor 255 0 0 255
 	SetBackgroundColor 0 0 0 255
-
-Show # Mostrar todas as outras currencies SAFEGUARD
-	Class "Currency"
-	SetFontSize 24
-	SetTextColor 255 0 160 255
-	SetBorderColor 255 0 160 255
 
 #*********************************
 #
@@ -690,12 +682,6 @@ Show # Equipamentos Expert Raros em mapas baixos
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
 
-Show # Demais equipamentos aparecem no atlas
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	SetFontSize 26
-
-
-
 #*********************************
 #
 # SOCKETABLES
@@ -764,6 +750,35 @@ Show # Qualidade 15+
 # DEFAULTS
 #
 #*********************************	
+Show #Stack pequeno de gold
+	BaseType == "Gold"
+	SetFontSize 24
+
+Show # Mostrar todas as outras currencies SAFEGUARD
+	Class "Currency"
+	SetFontSize 40
+	SetBorderColor 255 255 255
+
+Show #Todas as gemas uncut
+	BaseType "Uncut "
+	SetFontSize 40
+	SetBorderColor 255 255 255
+
+Show #Todas as Waystones e Tablets
+	Class "Waystone" "Tablet"
+	SetFontSize 40
+	SetBorderColor 255 255 255
+
+Show # Equipamentos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	SetFontSize 26
+	SetBorderColor 255 255 255
+
+Show #Socketables
+	Class == "Socketables"
+	SetFontSize 40
+	SetBorderColor 255 255 255
 
 Show # ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 60
+	SetBorderColor 255 255 255

@@ -648,11 +648,11 @@ Show # Delirium Distillations
 
 Show # All Normal and Magic Items
 	Rarity Normal Magic
-	SetFontSize 22
+	SetFontSize 24
 
 Show # All Rare Items
 	Rarity Rare
-	SetFontSize 26
+	SetFontSize 28
 
 Show #ALL OTHER ITEMS SAFEGUARD
-	SetFontSize 30
+	SetFontSize 60
