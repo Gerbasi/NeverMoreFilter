@@ -442,12 +442,12 @@ Show # Fragments
 Show # Fragments
 	BaseType "Breach Splinter" "Simulacrum Splinter" 
 	SetFontSize 40
-	SetTextColor 170 0 25 255
-	SetBorderColor 170 0 25 255
-	SetBackgroundColor 0 255 180 255
+	SetTextColor 0 0 0 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 255 255 255
 	PlayAlertSound 2 300
 	PlayEffect Yellow
-	MinimapIcon 1 Red Star
+	MinimapIcon 2 Cyan Star
 
 #*********************************
 #
