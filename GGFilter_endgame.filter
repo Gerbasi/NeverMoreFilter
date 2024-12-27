@@ -213,20 +213,15 @@ Show # Splinters
 #
 #*********************************
 
-Hide # T4 abaixo de mapas T5
+Hide # Atlas +
 	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	AreaLevel > 65
-
-Hide # T5 em mapas altos
-	Class == "Stackable Currency"
-	BaseType "Transmutation Shard" "Artificer's Shard"
+	BaseType "Transmutation Shard" "Artificer's Shard" "Orb of Transmutation" "Orb of Augmentation" 
 	AreaLevel > 65
 
 Hide # Regal Shards em mapas mais altos
 	Class == "Stackable Currency"	
 	BaseType "Regal Shard"
-	AreaLevel > 75
+	AreaLevel > 77
 
 Hide # Scroll of Wisdom no Atlas
 	BaseType == "Scroll of Wisdom"
@@ -284,6 +279,15 @@ Show # TIER 4 - Até low tier maps
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 0 150 255
 	MinimapIcon 2 White Circle	
+
+Show # TIER 4 - Item de qualidade
+	Class == "Stackable Currency"
+	BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	SetFontSize 36
+	SetTextColor 0 0 0 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 180 0 150 255
+	MinimapIcon 2 Pink Circle		
 
 Show # TIER 5 - Shards I
 	Class == "Stackable Currency"
@@ -775,7 +779,7 @@ Show # Equipamentos
 	SetBorderColor 255 255 255
 
 Show #Socketables
-	Class == "Socketables"
+	Class == "Socketable"
 	SetFontSize 40
 	SetBorderColor 255 255 255
 
