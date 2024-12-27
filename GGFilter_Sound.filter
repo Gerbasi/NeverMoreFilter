@@ -112,14 +112,6 @@ Show # Anéis de Fenda
 	SetBackgroundColor 100 100 0 255
 	MinimapIcon 2 Yellow Circle	
 	
-Show # Anéis de Fenda 
-	BaseType == "Breach Ring"
-	SetFontSize 38
-	SetBorderColor 255 255 0 255
-	SetBackgroundColor 100 100 0 255
-	PlayEffect Yellow
-	MinimapIcon 2 Yellow Circle
-
 Show # Aneis, Amuletos e Cintos
 	Class "Ring" "Amulet" "Belt"
 	SetFontSize 30

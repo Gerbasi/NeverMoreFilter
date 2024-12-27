@@ -125,7 +125,7 @@ Show # Anéis de Fenda
 
 Show # Aneis, Amuletos e Cintos - bases desejáveis
 	Class "Ring" "Amulet"
-	BaseType "Topaz" "Sapphire" "Ruby" "Amethyst" "Gold" "Solar" "Prismatic" "Breach" "Bloodstone"
+	BaseType "Topaz" "Sapphire" "Ruby" "Amethyst" "Gold" "Solar" "Prismatic" "Bloodstone"
 	ItemLevel > 75
 	SetFontSize 30
 	SetBackgroundColor 0 120 130 255
