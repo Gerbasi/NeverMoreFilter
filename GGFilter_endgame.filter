@@ -612,55 +612,150 @@ Hide # Esconde equips expert não-raros no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
 	Rarity < Rare
-	AreaLevel > 65	
-
-Hide #Esconde demais equips
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	Rarity < Rare
 	AreaLevel > 65
+	ItemLevel < 78 #Para permitir bases vendáveis	
+
+Show # Bases muito muito muito desejáveis para vender com qualidade > 10
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 78
+	Quality > 10
+	AreaLevel > 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+	SetFontSize 40
+	SetBorderColor 0 255 255
+	PlayEffect Pink
+	PlayAlertSound 6 300
+	MinimapIcon 2 Pink Star
+
+Show # Bases muito muito muito desejáveis para vender com qualidade > 10
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 78
+	AreaLevel > 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+	SetFontSize 36
+	SetBorderColor 255 255 0
+	PlayEffect Pink
+	PlayAlertSound 5 300
+	MinimapIcon 1 Pink Star
 
 Show # Bases muito desejaveis Armas com Qualidade > 10
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 45
-	SetBackgroundColor 255 0 255 255
+	SetFontSize 40
+	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
-	PlayAlertSound 6 300
-	MinimapIcon 2 Purple Cross
-
-Show # Bases desejaveis Armas com Qualidade > 10
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Dyad Crossbow" "Expert Warden Bow" "Expert Zealot Bow" "Expert Cultist Bow" "Expert Tense Crossbow" "Expert Warpick" "Expert Smithing Hammer" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Crackling Quarterstaff" "Expert Crescent Quarterstaff" "Expert Crystal Focus" "Expert Jingling Crest Shield" "Expert Rampart Tower Shield" "Expert Crescent Targe"
-	ItemLevel > 78
-	Quality > 10
-	SetFontSize 36
-	SetBackgroundColor 255 0 255 255
-	SetBorderColor 255 255 0
-	PlayAlertSound 3 300
-	MinimapIcon 1 Yellow Cross
+	PlayAlertSound 5 300
+	MinimapIcon 2 Purple Star
 
 Show # Bases muito desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
-	SetFontSize 42
-	SetBackgroundColor 255 0 255
-	SetBorderColor 0 130 130
-	PlayAlertSound 6 300
-	MinimapIcon 0 Purple Cross
+	SetFontSize 34
+	SetBackgroundColor 210 140 255
+	#SetBorderColor 0 255 255
+	PlayAlertSound 5 300
+	MinimapIcon 0 Purple Star
 
-Show # Bases desejaveis Armas
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Dyad Crossbow" "Expert Warden Bow" "Expert Zealot Bow" "Expert Cultist Bow" "Expert Tense Crossbow" "Expert Warpick" "Expert Smithing Hammer" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Crackling Quarterstaff" "Expert Crescent Quarterstaff" "Expert Crystal Focus" "Expert Jingling Crest Shield" "Expert Rampart Tower Shield" "Expert Crescent Targe"
+Show #BODY ARMOUR - Bases muito desejáveis com qualidade > 10
+	Class "Body Armour"
+	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
+	ItemLevel > 78
+	Quality > 10
+	SetFontSize 40
+	SetBackgroundColor 210 140 255
+	SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 5 300
+	MinimapIcon 2 Purple Star
+
+Show #BODY ARMOUR - Bases muito desejáveis
+	Class "Body Armour"
+	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
 	ItemLevel > 78
 	SetFontSize 34
-	SetBackgroundColor 255 0 255
-	SetBorderColor 130 130 0
+	SetBackgroundColor 210 140 255
+	#SetBorderColor 0 255 255
+	PlayEffect Purple
 	PlayAlertSound 3 300
-	MinimapIcon 0 Yellow Cross
+	MinimapIcon 1 Purple Star
+
+Show # HELMET - Bases muito desejáveis com qualidade > 10
+	Class "Helm"
+	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
+	ItemLevel > 78
+	Quality > 10
+	SetFontSize 40
+	SetBackgroundColor 210 140 255
+	SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 5 300
+	MinimapIcon 2 Purple Star
+
+Show # HELMET - Bases muito desejáveis
+	Class "Helm"
+	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
+	ItemLevel > 78
+	ItemLevel > 78
+	SetFontSize 34
+	SetBackgroundColor 210 140 255
+	#SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 3 300
+	MinimapIcon 1 Purple Star
+
+Show # GLOVES - Bases muito desejáveis com qualidade > 10
+	Class "Gloves"
+	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
+	ItemLevel > 78
+	Quality > 10
+	SetFontSize 40
+	SetBackgroundColor 210 140 255
+	SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 5 300
+	MinimapIcon 2 Purple Star
+
+Show # GLOVES - Bases muito desejáveis
+	Class "Gloves"
+	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
+	ItemLevel > 78
+	ItemLevel > 78
+	SetFontSize 34
+	SetBackgroundColor 210 140 255
+	#SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 3 300
+	MinimapIcon 1 Purple Star
+
+Show # BOOTS - Bases muito desejáveis com qualidade > 10
+	Class "Boots"
+	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
+	ItemLevel > 78
+	Quality > 10
+	SetFontSize 40
+	SetBackgroundColor 210 140 255
+	SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 5 300
+	MinimapIcon 2 Purple Star
+
+Show # BOOTS - Bases muito desejáveis
+	Class "Boots"
+	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
+	ItemLevel > 78
+	ItemLevel > 78
+	SetFontSize 34
+	SetBackgroundColor 210 140 255
+	#SetBorderColor 0 255 255
+	PlayEffect Purple
+	PlayAlertSound 3 300
+	MinimapIcon 1 Purple Star
 
 Show # Equipamentos Expert Raros High level
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
@@ -687,6 +782,11 @@ Show # Equipamentos Expert Raros em mapas baixos
 	Rarity Rare
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
+
+Hide #Esconde demais equips
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	Rarity < Rare
+	AreaLevel > 65
 
 #*********************************
 #
