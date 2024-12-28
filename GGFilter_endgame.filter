@@ -617,7 +617,7 @@ Hide # Esconde equips expert não-raros no atlas
 
 Show # Bases muito muito muito desejáveis para vender com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
-	ItemLevel > 78
+	#ItemLevel > 78
 	Quality > 10
 	AreaLevel > 65
 	SetBackgroundColor 255 150 200
@@ -630,7 +630,7 @@ Show # Bases muito muito muito desejáveis para vender com qualidade > 10
 
 Show # Bases muito muito muito desejáveis para vender com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
-	ItemLevel > 78
+	#ItemLevel > 78
 	AreaLevel > 65
 	SetBackgroundColor 255 150 200
 	SetTextColor 255 0 110
