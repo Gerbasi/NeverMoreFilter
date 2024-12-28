@@ -615,7 +615,7 @@ Show # Bases muito muito muito desejáveis para vender com qualidade > 10
 	SetFontSize 40
 	SetBorderColor 0 255 255
 	PlayEffect Pink
-	PlayAlertSound 6 300
+	PlayAlertSound 5 300
 	MinimapIcon 2 Pink Star
 
 Show # Bases muito muito muito desejáveis para vender com qualidade > 10
@@ -627,7 +627,7 @@ Show # Bases muito muito muito desejáveis para vender com qualidade > 10
 	SetFontSize 36
 	SetBorderColor 255 255 0
 	PlayEffect Pink
-	PlayAlertSound 5 300
+	PlayAlertSound 4 300
 	MinimapIcon 1 Pink Star
 
 Show # Bases muito desejaveis Armas com Qualidade > 10
@@ -855,28 +855,23 @@ Show #Stack pequeno de gold
 Show # Mostrar todas as outras currencies SAFEGUARD
 	Class "Currency"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show #Todas as gemas uncut
 	BaseType "Uncut "
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show #Todas as Waystones e Tablets
 	Class "Waystone" "Tablet"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show # Equipamentos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	SetFontSize 26
-	SetBorderColor 255 255 255
-
+	
 Show #Socketables
 	Class == "Socketable"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show # ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 60
 	SetBorderColor 255 255 255
