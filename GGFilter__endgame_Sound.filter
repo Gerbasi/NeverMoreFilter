@@ -611,15 +611,14 @@ Hide #Esconde demais equips
 
 Show # Bases muito desejaveis Armas com Qualidade > 10
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
+	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
-	SetBackgroundColor 90 0 140 255
+	SetFontSize 45
+	SetBackgroundColor 255 0 255 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
-	PlayAlertSound 5 300
-	#CustomAlertSound "topquality.mp3" 300 
+	PlayAlertSound 6 300
 	MinimapIcon 2 Purple Cross
 
 Show # Bases desejaveis Armas com Qualidade > 10
@@ -628,27 +627,29 @@ Show # Bases desejaveis Armas com Qualidade > 10
 	ItemLevel > 78
 	Quality > 10
 	SetFontSize 36
-	SetBackgroundColor 90 0 140 255
+	SetBackgroundColor 255 0 255 255
 	SetBorderColor 255 255 0
 	PlayAlertSound 3 300
 	MinimapIcon 1 Yellow Cross
 
 Show # Bases muito desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
+	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
-	SetFontSize 36
-	SetBackgroundColor 90 0 140 255
+	SetFontSize 42
+	SetBackgroundColor 255 0 255
 	SetBorderColor 0 130 130
+	PlayAlertSound 6 300
 	MinimapIcon 0 Purple Cross
 
 Show # Bases desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Dyad Crossbow" "Expert Warden Bow" "Expert Zealot Bow" "Expert Cultist Bow" "Expert Tense Crossbow" "Expert Warpick" "Expert Smithing Hammer" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Crackling Quarterstaff" "Expert Crescent Quarterstaff" "Expert Crystal Focus" "Expert Jingling Crest Shield" "Expert Rampart Tower Shield" "Expert Crescent Targe"
 	ItemLevel > 78
-	SetFontSize 30
-	SetBackgroundColor 90 0 140 255
+	SetFontSize 34
+	SetBackgroundColor 255 0 255
 	SetBorderColor 130 130 0
+	PlayAlertSound 3 300
 	MinimapIcon 0 Yellow Cross
 
 Show # Equipamentos Expert Raros High level
