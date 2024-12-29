@@ -612,10 +612,10 @@ Show # Bases vendáveis com qualidade > 10
 	AreaLevel > 65
 	SetBackgroundColor 255 150 200
 	SetTextColor 255 0 110
-	SetFontSize 40
+	SetFontSize 36
 	SetBorderColor 0 255 255
 	PlayEffect Pink
-	PlayAlertSound 5 300
+	PlayAlertSound 2 200
 	MinimapIcon 2 Pink Star
 
 Show # Bases vendáveis
@@ -624,10 +624,10 @@ Show # Bases vendáveis
 	AreaLevel > 65
 	SetBackgroundColor 255 150 200
 	SetTextColor 255 0 110
-	SetFontSize 36
+	SetFontSize 30
 	SetBorderColor 255 255 0
 	PlayEffect Pink
-	PlayAlertSound 4 300
+	PlayAlertSound 2 200
 	MinimapIcon 1 Pink Star
 
 Show # Bases muito desejaveis Armas com Qualidade > 10
