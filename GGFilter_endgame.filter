@@ -645,7 +645,8 @@ Show # Bases muito desejaveis Armas com Qualidade > 10
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
+	SetFontSize 36
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -656,7 +657,8 @@ Show # Bases muito desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
 	ItemLevel > 78
-	SetFontSize 34
+	SetFontSize 30
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	#SetBorderColor 0 255 255
 	#PlayAlertSound 5 300
@@ -667,7 +669,8 @@ Show #BODY ARMOUR - Bases muito desejáveis com qualidade > 10
 	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
+	SetFontSize 36
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -678,7 +681,8 @@ Show #BODY ARMOUR - Bases muito desejáveis
 	Class "Body Armour"
 	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
 	ItemLevel > 78
-	SetFontSize 34
+	SetFontSize 30
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	#SetBorderColor 0 255 255
 	#PlayEffect Purple
@@ -690,7 +694,8 @@ Show # HELMET - Bases muito desejáveis com qualidade > 10
 	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
+	SetFontSize 36
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -702,7 +707,8 @@ Show # HELMET - Bases muito desejáveis
 	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
 	ItemLevel > 78
 	ItemLevel > 78
-	SetFontSize 34
+	SetFontSize 30
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	#SetBorderColor 0 255 255
 	#PlayEffect Purple
@@ -714,7 +720,8 @@ Show # GLOVES - Bases muito desejáveis com qualidade > 10
 	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
+	SetFontSize 36
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -725,8 +732,8 @@ Show # GLOVES - Bases muito desejáveis
 	Class "Gloves"
 	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
 	ItemLevel > 78
-	ItemLevel > 78
-	SetFontSize 34
+	SetFontSize 30
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	#SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -738,7 +745,8 @@ Show # BOOTS - Bases muito desejáveis com qualidade > 10
 	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
 	ItemLevel > 78
 	Quality > 10
-	SetFontSize 40
+	SetFontSize 36
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	SetBorderColor 0 255 255
 	PlayEffect Purple
@@ -749,8 +757,8 @@ Show # BOOTS - Bases muito desejáveis
 	Class "Boots"
 	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
 	ItemLevel > 78
-	ItemLevel > 78
-	SetFontSize 34
+	SetFontSize 30
+	SetTextColor 90 80 0
 	SetBackgroundColor 210 140 255
 	#SetBorderColor 0 255 255
 	#PlayEffect Purple
