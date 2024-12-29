@@ -602,49 +602,50 @@ Hide # Esconde equips expert não-raros no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
 	Rarity < Rare
-	AreaLevel > 65	
-
-Hide #Esconde demais equips
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	Rarity < Rare
 	AreaLevel > 65
+	ItemLevel < 78
+
+Show # Bases vendáveis com qualidade > 10
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 80
+	Quality > 10
+	AreaLevel > 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+	SetFontSize 36
+	SetBorderColor 0 255 255
+	PlayEffect Pink
+	PlayAlertSound 2 200
+	MinimapIcon 2 Pink Star
+
+Show # Bases vendáveis
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 80
+	AreaLevel > 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+	SetFontSize 30
+	SetBorderColor 255 255 0
+	PlayEffect Pink
+	PlayAlertSound 2 200
+	MinimapIcon 1 Pink Star
 
 Show # Bases muito desejaveis Armas com Qualidade > 10
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
-	ItemLevel > 78
-	Quality > 10
-	SetFontSize 45
-	SetBackgroundColor 255 0 255 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	PlayAlertSound 2 300
-	MinimapIcon 2 Purple Cross
-
-Show # Bases desejaveis Armas com Qualidade > 10
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Dyad Crossbow" "Expert Warden Bow" "Expert Zealot Bow" "Expert Cultist Bow" "Expert Tense Crossbow" "Expert Warpick" "Expert Smithing Hammer" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Crackling Quarterstaff" "Expert Crescent Quarterstaff" "Expert Crystal Focus" "Expert Jingling Crest Shield" "Expert Rampart Tower Shield" "Expert Crescent Targe"
-	ItemLevel > 78
+	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
-	SetBackgroundColor 255 0 255 255
-	SetBorderColor 255 255 0
-	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Cross
+	SetTextColor 90 80 0
+	SetBackgroundColor 210 140 255
+	SetBorderColor 0 255 255
+	PlayEffect Purple
+	#PlayAlertSound 1 300
+	MinimapIcon 2 Purple Star
 
 Show # Bases muito desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
-	ItemLevel > 78
-	SetFontSize 42
-	SetBackgroundColor 255 0 255
-	SetBorderColor 0 130 130
-	PlayAlertSound 1 300
-	MinimapIcon 0 Purple Cross
-
-Show # Bases desejaveis Armas
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Dyad Crossbow" "Expert Warden Bow" "Expert Zealot Bow" "Expert Cultist Bow" "Expert Tense Crossbow" "Expert Warpick" "Expert Smithing Hammer" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Crackling Quarterstaff" "Expert Crescent Quarterstaff" "Expert Crystal Focus" "Expert Jingling Crest Shield" "Expert Rampart Tower Shield" "Expert Crescent Targe"
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -779,6 +780,11 @@ Show # Equipamentos Expert Raros em mapas baixos
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
 
+Hide #Esconde demais equips
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	Rarity < Rare
+	AreaLevel > 65
+
 
 #*********************************
 #
@@ -856,28 +862,23 @@ Show #Stack pequeno de gold
 Show # Mostrar todas as outras currencies SAFEGUARD
 	Class "Currency"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show #Todas as gemas uncut
 	BaseType "Uncut "
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show #Todas as Waystones e Tablets
 	Class "Waystone" "Tablet"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show # Equipamentos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	SetFontSize 26
-	SetBorderColor 255 255 255
-
+	
 Show #Socketables
 	Class == "Socketable"
 	SetFontSize 40
-	SetBorderColor 255 255 255
-
+	
 Show # ALL OTHER ITEMS SAFEGUARD
 	SetFontSize 60
 	SetBorderColor 255 255 255
