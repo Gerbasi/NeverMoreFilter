@@ -8,6 +8,8 @@
 (NSFW) Sound Pack do NDox_138 (Miau): https://drive.google.com/file/d/1cf76VsFhWhgxoNPedo3vv6WukOt9_bQM/view?usp=drive_link
 (NSFW) Sound Pack do Velho_P: https://drive.google.com/file/d/1AceJuY7IM9GU9CT_At2AirEjAcUt99Im/view?usp=drive_link</br>
 (NSFW) Sound Pack da Michelle_Rezende: https://drive.google.com/file/d/1Ef5JWxTs_X3xRD_xCsy9fMvyuGxdyCtQ/view?usp=drive_link</br>
+(NSFW) Sound Pack de Diablo 2: https://drive.google.com/file/d/1Ef5JWxTs_X3xRD_xCsy9fMvyuGxdyCtQ/view?usp=drive_link</br>
+
 </p>
 </br>
 Obrigado a todos da comunidade pelos feedbacks, principalmente para o Guinnyn que está carregando o filtro nas costas, e para o Sche_ por extrair 99% desses áudios maravilhosos.
