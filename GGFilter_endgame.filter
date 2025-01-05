@@ -850,12 +850,12 @@ Show # Breach Catalysts
 	Class == "Currency"
 	BaseType "Catalyst"
 	SetFontSize 38
-	SetTextColor 80 0 80 255
-	SetBorderColor 80 0 80 255
-	SetBackgroundColor 100 0 190 255
+	SetTextColor 130 0 255 255
+	SetBorderColor 130 0 255 255
+	SetBackgroundColor 80 0 80 255
 	PlayAlertSound 2 300
-	PlayEffect Cyan
-	MinimapIcon 1 Cyan Star
+	PlayEffect Purple
+	MinimapIcon 1 Purple Star
 
 #*********************************
 #
