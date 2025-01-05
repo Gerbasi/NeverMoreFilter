@@ -125,7 +125,7 @@ Show # GEMA
 Hide # Anéis, Amuletos e Cintos < Raro
 	Class "Ring" "Amulet" "Belt"
 	Rarity < Rare
-	ItemLevel < 78
+	ItemLevel < 80
 	AreaLevel > 65
 
 Show # Anéis de Fenda 
@@ -333,7 +333,7 @@ Hide # Gemas < 18 em mapas 13+
 
 Hide # Gemas Suport 3 em mapas 14+
 	BaseType "Uncut Support Gem"
-	AreaLevel > 79
+	AreaLevel > 77
 	ItemLevel >= 3
 
 Hide # Gemas Suporte 1 e 2 no atlas
@@ -356,8 +356,8 @@ Show # Gemas uncut de skill tier > 14 em mapas 13-
 	BaseType == "Uncut Skill Gem"
 	ItemLevel > 14
 	SetFontSize 34
-	SetTextColor 150 0 0 255
-	SetBorderColor 150 0 0 255	
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255	
 	SetBackgroundColor 80 80 80 255
 	PlayEffect Red 
 	MinimapIcon 1 Red Star 
@@ -366,8 +366,8 @@ Show # Gemas uncut de skill até mapas 13
 	BaseType == "Uncut Skill Gem"
 	ItemLevel <= 14
 	SetFontSize 36
-	SetTextColor 150 0 0 255
-	SetBorderColor 150 0 0 255	
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255	
 	SetBackgroundColor 0 0 0 255
 
 Show # Gemas uncut de Spirit tier > 18
@@ -384,8 +384,8 @@ Show # Gemas uncut de Spirit tier > 14 em mapas 13-
 	BaseType == "Uncut Spirit Gem"
 	ItemLevel > 14
 	SetFontSize 36
-	SetTextColor 0 150 0 255
-	SetBorderColor 0 150 0 255
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
 	SetBackgroundColor 80 80 80 255
 	MinimapIcon 1 Green Star
 
@@ -393,8 +393,8 @@ Show # Gemas uncut de Spirit em mapas até 13
 	BaseType == "Uncut Spirit Gem"
 	ItemLevel <= 14
 	SetFontSize 36
-	SetTextColor 0 150 0 255
-	SetBorderColor 0 150 0 255
+	SetTextColor 0 255 0 255
+	SetBorderColor 0 255 0 255
 	SetBackgroundColor 0 0 0 255
 	MinimapIcon 1 Green Star
 
@@ -413,8 +413,8 @@ Show # GEMA Suporte uncut tier 1 e 2 na campanha
 	BaseType == "Uncut Support Gem"
 	ItemLevel < 3
 	SetFontSize 30
-	SetTextColor 0 0 200 255
-	SetBorderColor 0 0 200 255
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayEffect Blue
 	MinimapIcon 2 Blue Star
@@ -622,14 +622,21 @@ Hide # Esconde equips Advanced no atlas
 Hide # Equips sem qualificação (Advanced/Expert)
 	Class "Quiver" "Staff" "Wand" "Sceptre"
 	AreaLevel > 65
-	ItemLevel < 78 # Para permitir bases vendáveis	
+	ItemLevel <= 80 # Para permitir bases vendáveis	
 
 Hide # Esconde equips expert não-raros no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
 	Rarity < Rare
 	AreaLevel > 65
-	ItemLevel < 78 #Para permitir bases vendáveis	
+	ItemLevel <= 80 #Para permitir bases vendáveis	
+
+Hide #Esconde todos os equipamentos de ilvl baixo nos mapas mais altos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	AreaLevel >= 78
+	ItemLevel <= 80
+	#Identified False
+	#TierLevel < 5
 
 Show # Bases vendáveis com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
@@ -814,7 +821,7 @@ Show # Equipamentos Expert Raros em mapas baixos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert " "Advanced "
 	Rarity Rare
-	AreaLevel < 76
+	AreaLevel < 70
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
 
@@ -910,7 +917,7 @@ Show #Todas as Waystones e Tablets
 	
 Show # Equipamentos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	SetFontSize 26
+	SetFontSize 16
 	
 Show #Socketables
 	Class == "Socketable"
