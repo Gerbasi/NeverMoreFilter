@@ -18,20 +18,21 @@ Hide # Oculta stacks pequenos e médios de ouro no endgame
 	AreaLevel > 78
 	BaseType == "Gold"
 	StackSize < 1000
+	MinimapIcon 2 Yellow Circle
 
 Show #Stack grande de gold
 	BaseType == "Gold"
 	StackSize > 1000
 	SetFontSize 32
 	SetBorderColor 170 140 60 180
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 Show #Stack médio de gold
 	BaseType == "Gold"
 	StackSize > 500
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Circle
+	MinimapIcon 1 Yellow Circle
 
 
 
@@ -54,14 +55,16 @@ Show # All Unique Items
 # Bases para usar Orb of Chance
 ##################################
 
-Show # Heavy Belt = Headhunter
-	Class "Belt"
-	BaseType == "Heavy Belt"
+Show # Heavy Belt = Headhunter; Sapphire Ring = ; Stellar Amulet = Astramentis
+	Class "Belt" "Ring" "Amulet"
+	BaseType "Heavy Belt" "Sapphire Ring" "Stellar Amulet"
 	Rarity Normal
 	ItemLevel > 75
-	SetFontSize 36
+	SetFontSize 40
 	SetBackgroundColor 0 180 0
 	SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+	PlayAlertSound 8 300
 	PlayEffect Green
 
 #*********************************
@@ -75,15 +78,26 @@ Hide #Charms brancos no atlas
 	Rarity Normal
 	AreaLevel > 65
 
+Show # Mostra sempre Charms de Magic Find
+	Class "Charms"
+	BaseType "Golden"
+	AreaLevel <= 65
+	SetFontSize 36
+	SetBorderColor 0 60 80 255
+	SetBackgroundColor 0 60 80 255
+	SetTextColor 0 60 80 255
+
 Show # Mostra todos os Charms durante a campanha
 	Class "Charms"
+	AreaLevel <= 65
 	SetFontSize 30
 	SetBorderColor 0 60 80 255
 	SetBackgroundColor 0 60 80 255
 
-Show # Charms apenas mágicos e raros no Atlas
+Show # Charms apenas mágicos no Atlas até T6
 	Class "Charms"
 	Rarity > Normal
+	AreaLevel <= 75
 	SetFontSize 30
 	SetBorderColor 0 60 80 255
 	SetBackgroundColor 0 60 80 255
@@ -103,13 +117,14 @@ Show # GEMA
 	BaseType == "Ruby" "Sapphire" "Emerald"
 	SetFontSize 30
 	SetBackgroundColor 25 70 0 255
+	SetTextColor 90 255 0
 	PlayEffect Green
-	MinimapIcon 1 Green Circle
+	MinimapIcon 2 Green Circle
 
 Hide # Anéis, Amuletos e Cintos < Raro
 	Class "Ring" "Amulet" "Belt"
 	Rarity < Rare
-	ItemLevel < 76
+	ItemLevel < 78
 	AreaLevel > 65
 
 Show # Anéis de Fenda 
@@ -123,17 +138,19 @@ Show # Anéis de Fenda
 Show # Aneis, Amuletos e Cintos - bases desejáveis
 	Class "Ring" "Amulet"
 	BaseType "Topaz" "Sapphire" "Ruby" "Amethyst" "Gold" "Solar" "Prismatic" "Bloodstone"
-	ItemLevel > 75
-	SetFontSize 30
+	ItemLevel >= 78
+	SetFontSize 28
 	SetBackgroundColor 0 120 130 255
 	SetBorderColor 0 255 255 255
+	SetTextColor 0 120 130
 
 Show # Aneis, Amuletos e Cintos - bases top level
 	Class "Ring" "Amulet" "Belt"
-	ItemLevel > 82
-	SetFontSize 36
+	ItemLevel >= 82
+	SetFontSize 34
 	SetBackgroundColor 0 120 130 255
-	SetBorderColor 255 255 0 255
+	SetBorderColor 0 255 255 255
+	SetTextColor 0 120 130
 	PlayEffect Cyan
 	
 Show # Aneis, Amuletos e Cintos
@@ -250,43 +267,32 @@ Show # TIER 1
 	PlayEffect Yellow
 	MinimapIcon 0 Orange Circle
 
-#Show # TIER 1 - EXALTED ORB
-#	Class == "Stackable Currency"
-#	BaseType "Exalted Orb"
-#	SetFontSize 36
-#	SetTextColor 255 255 255 255
-#	SetBorderColor 255 255 255 255
-#	SetBackgroundColor 240 90 35 255
-#	PlayEffect White
-#	MinimapIcon 0 Orange Circle
-	
 Show # TIER 2
 	Class == "Stackable Currency"
 	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration"
 	SetFontSize 40
 	SetTextColor 255 0 160 255
 	SetBorderColor 255 0 160 255
-	SetBackgroundColor 0 0 0 255
+	SetBackgroundColor 80 0 50 255
 	PlayAlertSound 3 300
-	PlayEffect White
 	MinimapIcon 2 Orange Circle
 
 Show # TIER 4 - Até low tier maps
 	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+	BaseType "Orb of Transmutation" "Orb of Augmentation"
+	AreaLevel < 70
 	SetFontSize 30
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 0 150 255
-	MinimapIcon 2 White Circle	
 
 Show # TIER 4 - Item de qualidade
 	Class == "Stackable Currency"
 	BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 36
-	SetTextColor 0 0 0 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 180 0 150 255
+	SetFontSize 30
+	SetTextColor 190 0 160 255
+	SetBorderColor 190 0 160 255
+	SetBackgroundColor 60 0 50 255
 	MinimapIcon 2 Pink Circle		
 
 Show # TIER 5 - Shards I
@@ -348,10 +354,10 @@ Show # Gemas uncut de skill tier > 18
 Show # Gemas uncut de skill tier > 14 em mapas 13-
 	BaseType == "Uncut Skill Gem"
 	ItemLevel > 14
-	SetFontSize 36
+	SetFontSize 34
 	SetTextColor 150 0 0 255
 	SetBorderColor 150 0 0 255	
-	SetBackgroundColor 150 150 150 255
+	SetBackgroundColor 80 80 80 255
 	PlayEffect Red 
 	MinimapIcon 1 Red Star 
 
@@ -379,7 +385,7 @@ Show # Gemas uncut de Spirit tier > 14 em mapas 13-
 	SetFontSize 36
 	SetTextColor 0 150 0 255
 	SetBorderColor 0 150 0 255
-	SetBackgroundColor 150 150 150 255
+	SetBackgroundColor 80 80 80 255
 	MinimapIcon 1 Green Star
 
 Show # Gemas uncut de Spirit em mapas até 13
@@ -393,6 +399,7 @@ Show # Gemas uncut de Spirit em mapas até 13
 
 Show # GEMA Suporte uncut tier 3 em mapas tier 13-
 	BaseType == "Uncut Support Gem"
+	AreaLevel < 78
 	ItemLevel >= 3
 	SetFontSize 36
 	SetTextColor 0 0 200 255
@@ -441,7 +448,7 @@ Show # Chaves Sekmas
 	SetFontSize 25
 	SetTextColor 0 255 0  255
 	SetBorderColor 0 255 0 255
-	SetBackgroundColor 0 150 0 255
+	SetBackgroundColor 0 100 0 255
 	PlayEffect Green
 	MinimapIcon 1 Green Cross
 
@@ -454,9 +461,9 @@ Show # Chaves Sekmas
 Show # Essences
 	BaseType "Essence of"
 	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 145 0 100 255
-	SetBackgroundColor 145 0 100 255
+	SetTextColor 190 0 130 255
+	SetBorderColor 190 0 130 255
+	SetBackgroundColor 85 0 60 255
 	# PlayAlertSound 2 300
 	# PlayEffect Yellow
 	# MinimapIcon 1 Yellow Circle
@@ -464,9 +471,9 @@ Show # Essences
 Show # Greater Essences
 	BaseType "Greater Essence of"
 	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 145 0 100 255
-	SetBackgroundColor 145 0 100 255
+	SetTextColor 190 0 130 255
+	SetBorderColor 190 0 130 255
+	SetBackgroundColor 85 0 60 255
 	PlayAlertSound 4 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink Circle	
@@ -481,7 +488,7 @@ Show # Greater Essences
 Show # Tablets
 	BaseType "Tablet"
 	SetFontSize 35
-	# SetTextColor 230 255 0 255
+	SetTextColor 230 255 0 255
 	SetBorderColor 230 255 0 255
 	SetBackgroundColor 100 10 0 255
 	PlayAlertSound 4 300
@@ -513,6 +520,7 @@ Show # Waystones tier 15+
 	WaystoneTier > 13
 	AreaLevel > 0
 	SetFontSize 40
+	SetTextColor 255 0 0
 	SetBorderColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 4 300
@@ -523,9 +531,10 @@ Show # Waystones tier 10+
 	BaseType "Waystone"
 	WaystoneTier > 10
 	AreaLevel > 0
-	SetFontSize 30
+	SetFontSize 34
+	SetTextColor 255 255 0
 	SetBorderColor 255 255 0 255
-	SetBackgroundColor 100 100 100 255
+	SetBackgroundColor 80 80 80 255
 	PlayAlertSound 4 300
 	PlayEffect Red
 	MinimapIcon 1 Yellow Square
@@ -534,7 +543,8 @@ Show # Waystones tier 1+
 	BaseType "Waystone"
 	WaystoneTier > 0
 	AreaLevel > 0
-	SetFontSize 26
+	SetFontSize 28
+	SetTextColor 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
@@ -554,7 +564,7 @@ Show # Expedition Artifacts
 	SetFontSize 35
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 255 145 255
+	SetBackgroundColor 0 140 80 255
 	#PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 0 Yellow Circle
@@ -563,9 +573,9 @@ Show # Expedition Coinage
 	Class "Currency"
 	BaseType "Coinage"
 	SetFontSize 35
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 255 145 255
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	SetBackgroundColor 0 140 80 255
 	#PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle
@@ -573,8 +583,8 @@ Show # Expedition Coinage
 Show # Expedition Logbook
 	BaseType "Expedition Logbook"
 	SetFontSize 45
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
+	SetTextColor 0 70 35 255
+	SetBorderColor 255 255 255
 	SetBackgroundColor 0 255 145 255
 	#PlayAlertSound 2 300
 	PlayEffect Yellow
@@ -590,9 +600,9 @@ Show # Ritual Omens
 	Class "Omen"
 	BaseType "Omen of"
 	SetFontSize 45 
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 255 110 0 255
+	SetTextColor 255 110 0 255
+	SetBorderColor 255 110 0 255
+	SetBackgroundColor 90 40 0 255
 	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
@@ -643,6 +653,7 @@ Show # Bases vendáveis
 Show # Bases muito desejaveis Armas com Qualidade > 10
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
+	AreaLevel < 78
 	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
@@ -656,6 +667,7 @@ Show # Bases muito desejaveis Armas com Qualidade > 10
 Show # Bases muito desejaveis Armas
 	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
 	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
+	AreaLevel < 78	
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -667,6 +679,7 @@ Show # Bases muito desejaveis Armas
 Show #BODY ARMOUR - Bases muito desejáveis com qualidade > 10
 	Class "Body Armour"
 	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
+	AreaLevel < 78
 	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
@@ -680,6 +693,7 @@ Show #BODY ARMOUR - Bases muito desejáveis com qualidade > 10
 Show #BODY ARMOUR - Bases muito desejáveis
 	Class "Body Armour"
 	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
+	AreaLevel < 78
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -692,6 +706,7 @@ Show #BODY ARMOUR - Bases muito desejáveis
 Show # HELMET - Bases muito desejáveis com qualidade > 10
 	Class "Helm"
 	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
+	AreaLevel < 78
 	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
@@ -705,6 +720,7 @@ Show # HELMET - Bases muito desejáveis com qualidade > 10
 Show # HELMET - Bases muito desejáveis
 	Class "Helm"
 	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
+	AreaLevel < 78
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -717,6 +733,7 @@ Show # HELMET - Bases muito desejáveis
 Show # GLOVES - Bases muito desejáveis com qualidade > 10
 	Class "Gloves"
 	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
+	AreaLevel < 78
 	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
@@ -730,6 +747,7 @@ Show # GLOVES - Bases muito desejáveis com qualidade > 10
 Show # GLOVES - Bases muito desejáveis
 	Class "Gloves"
 	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
+	AreaLevel < 78
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -742,6 +760,7 @@ Show # GLOVES - Bases muito desejáveis
 Show # BOOTS - Bases muito desejáveis com qualidade > 10
 	Class "Boots"
 	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
+	AreaLevel < 78
 	ItemLevel > 80
 	Quality > 10
 	SetFontSize 36
@@ -755,6 +774,7 @@ Show # BOOTS - Bases muito desejáveis com qualidade > 10
 Show # BOOTS - Bases muito desejáveis
 	Class "Boots"
 	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
+	AreaLevel < 78
 	ItemLevel > 80
 	SetFontSize 30
 	SetTextColor 90 80 0
@@ -768,9 +788,10 @@ Show # Equipamentos Expert Raros High level
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert "
 	Rarity >= Rare
+	AreaLevel < 78
 	ItemLevel <= 82
 	SetFontSize 24
-	SetBackgroundColor 90 0 140 255
+	SetBorderColor 255 255 0
 
 Show # Equipamentos Expert Raros Top level
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
@@ -787,6 +808,7 @@ Show # Equipamentos Expert Raros em mapas baixos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Expert " "Advanced "
 	Rarity Rare
+	AreaLevel < 76
 	SetFontSize 26
 	SetBackgroundColor 90 0 140 255
 
@@ -823,9 +845,9 @@ Show # Breach Catalysts
 	Class == "Currency"
 	BaseType "Catalyst"
 	SetFontSize 38
-	SetTextColor 0 0 0 255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 190 0 115 255
+	SetTextColor 80 0 80 255
+	SetBorderColor 80 0 80 255
+	SetBackgroundColor 100 0 190 255
 	PlayAlertSound 2 300
 	PlayEffect Cyan
 	MinimapIcon 1 Cyan Star
@@ -840,9 +862,9 @@ Show # Delirium Distillations
 	Class == "Currency"
 	BaseType "Distilled"
 	SetFontSize 38
-	SetTextColor 0 0 0 255
-	# SetBorderColor 0 0 0 255
-	SetBackgroundColor 190 0 115 255
+	SetTextColor 80 0 80 255
+	# SetBorderColor 80 0 80 255
+	SetBackgroundColor 100 0 190 255
 	PlayAlertSound 2 300
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Circle	
@@ -855,8 +877,9 @@ Show # Delirium Distillations
 
 Show # Qualidade 15+
 	Quality > 14
-	SetFontSize 32
-	SetBorderColor 255 255 0 255
+	SetFontSize 36
+	SetBorderColor 0 255 255 255
+	PlayEffect Cyan
 
 #*********************************
 #
