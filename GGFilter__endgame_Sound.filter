@@ -56,9 +56,10 @@ Show # All Unique Items
 # Bases para usar Orb of Chance
 ##################################
 
-Show # Heavy Belt = Headhunter; Sapphire Ring = ; Stellar Amulet = Astramentis
-	Class "Belt" "Ring" "Amulet"
-	BaseType "Heavy Belt" "Sapphire Ring" "Stellar Amulet"
+Show # Sapphire Ring = Dream Fragment; 
+	 # Stellar Amulet = Astramentis
+	Class "Ring" "Amulet"
+	BaseType "Sapphire Ring" "Stellar Amulet"
 	Rarity Normal
 	ItemLevel > 75
 	SetFontSize 40
