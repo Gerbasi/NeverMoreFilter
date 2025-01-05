@@ -75,19 +75,18 @@ Show # Sapphire Ring = Dream Fragment;
 #
 #*********************************
 
-Hide #Charms brancos no atlas
-	Class "Charms"
-	Rarity Normal
-	AreaLevel > 65
-
 Show # Mostra sempre Charms de Magic Find
 	Class "Charms"
 	BaseType "Golden"
-	AreaLevel <= 65
 	SetFontSize 36
 	SetBorderColor 0 60 80 255
 	SetBackgroundColor 0 60 80 255
 	SetTextColor 0 60 80 255
+
+Hide #Charms brancos no atlas
+	Class "Charms"
+	Rarity < Rare
+	AreaLevel > 65	
 
 Show # Mostra todos os Charms durante a campanha
 	Class "Charms"
@@ -619,6 +618,11 @@ Hide # Esconde equips Advanced no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	BaseType "Advanced "
 	AreaLevel > 65
+
+Hide # Equips sem qualificação (Advanced/Expert)
+	Class "Quiver" "Staff" "Wand" "Sceptre"
+	AreaLevel > 65
+	ItemLevel < 78 # Para permitir bases vendáveis	
 
 Hide # Esconde equips expert não-raros no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
