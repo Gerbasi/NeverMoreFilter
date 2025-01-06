@@ -2,6 +2,95 @@
 #Criado por Gerbasi
 #Expandido por Guinnyn
 
+
+##################################
+#
+#  FILTROS ESPECIAIS
+#
+##################################
+
+### Uniques especialmente valiosos
+
+Show # Sekhema's Resolve
+	Rarity Unique
+	BaseType == "Ring"
+	Sockets > 0
+	SetFontSize 50
+	SetBorderColor 255 100 0
+	SetTextColor 255 100 0
+	SetBackgroundColor 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Orange
+	MinimapIcon 0 Brown Diamond
+
+Show # Outros uniques valiosos
+	Rarity Unique
+	BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
+	SetFontSize 50
+	SetBorderColor 255 100 0
+	SetTextColor 255 100 0
+	SetBackgroundColor 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Brown
+	MinimapIcon 0 Brown Diamond
+		# 	Alpha's Howl Armoured Cap; 
+		#	Grand Spectrum Emerald/Ruby/Sapphire; 
+		#	Hand of Wisdom and Action Furtive Wraps; 
+		#	The Last Flame Incense Relic; 
+		#	Rhyslatha's Coil Ornate Belt; 
+		#	All Unique Rings; 
+		#	Queen of the Forest Smuggler Coat; 
+		#	The Surrender Stone Tower Shield; 
+		#	Against the Darkness Time-lost Diamond; 
+		#	Heroic Tragedy Timeless Jewel; 
+		#	Olroth's Resolve Ultimate Life Flask; 
+		#	Melting Maelstrom Ultimate Mana Flask; 
+		#	Ingenuity Utility Belt; 
+		#	The Desperate Alliance Vase Relic
+
+##### Currencies de valor muito alto
+
+Show 
+	Class == "Stackable Currency"
+	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
+	SetFontSize 50
+	SetTextColor 255 0 200 255
+	SetBorderColor 255 0 200 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Pink Diamond
+
+##### Itens de Delirium valiosos
+
+Show # Delirium Distillations
+	Class == "Currency"
+	BaseType == "Distilled Isolation" "Distilled Suffering"
+	SetFontSize 50
+	SetTextColor 170 0 255
+	SetBorderColor 170 0 255
+	SetBackgroundColor 60 0 90
+	PlayAlertSound 6 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Diamond
+
+##### Bases para usar Orb of Chance
+
+Show 
+	BaseType == "Sapphire Ring" "Stellar Amulet" "Heavy Belt"
+	Rarity Normal
+	ItemLevel > 75
+	SetFontSize 40
+	SetBackgroundColor 0 180 0
+	SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+	PlayAlertSound 7 300
+	PlayEffect Green Temp
+		# 05/01/2025
+		#	Dream Fragment Sapphire Ring; 
+		#	Astramentis Stellar Amulet; 
+		#	Headhunter Heavy Belt 
+
 ####################################
 # 
 # GOLD
@@ -10,31 +99,555 @@
 
 
 Hide # Oculta stacks pequenos e médios de ouro no endgame
-	AreaLevel > 70
-	BaseType == "Gold"
-	StackSize < 500
-
-Hide # Oculta stacks pequenos e médios de ouro no endgame
 	AreaLevel > 78
 	BaseType == "Gold"
 	StackSize < 1000
+
+Hide # Oculta stacks pequenos e médios de ouro no endgame
+	AreaLevel > 70
+	BaseType == "Gold"
+	StackSize < 500
 	MinimapIcon 2 Yellow Circle
 
 Show #Stack grande de gold
 	BaseType == "Gold"
 	StackSize > 1000
-	SetFontSize 32
+	SetFontSize 30
 	SetBorderColor 170 140 60 180
-	MinimapIcon 0 Yellow Circle
+	PlayEffect Yellow Temp
+	MinimapIcon 1 Yellow Circle
 
 Show #Stack médio de gold
 	BaseType == "Gold"
 	StackSize > 500
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 2 Yellow Circle
 
 
+#*********************************
+#
+# GEMAS
+#
+#*********************************
+
+Hide # Gemas Suporte 1 e 2 no atlas
+	BaseType "Uncut Support Gem"
+	AreaLevel > 68
+	ItemLevel < 3
+
+Hide # Gemas Suporte 3 em mapas 14+
+	BaseType "Uncut Support Gem"
+	ItemLevel >= 3
+	AreaLevel > 77
+
+Hide #Gemas Uncut 16- em mapas 14+
+	BaseType "Uncut "
+	ItemLevel <= 16
+	AreaLevel > 77
+
+Hide # Gemas Uncut 10- em mapas 8-
+	BaseType "Uncut "	
+	ItemLevel <= 10
+	AreaLevel > 73
+
+Hide # Gemas Uncut 5- no atlas
+	BaseType "Uncut "
+	ItemLevel <= 5
+	AreaLevel > 68
+
+Show # Gemas Skill Tier 20
+	BaseType == "Uncut Skill Gem"
+	ItemLevel == 20
+	SetFontSize 50
+	SetTextColor 200 0 0 255
+	SetBorderColor 200 0 0 255	
+	SetBackgroundColor 255 255 255 255	
+	PlayAlertSound 6 300
+	PlayEffect Red 
+	MinimapIcon 0 Red Hexagon
+
+Show # Gemas Spirit Tier 20
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel == 20
+	SetFontSize 50
+	SetTextColor 0 200 0 255
+	SetBorderColor 0 200  0 255	
+	SetBackgroundColor 255 255 255 255	
+	PlayAlertSound 6 300
+	PlayEffect Green
+	MinimapIcon 0 Green Hexagon
+
+Show # Gemas Skill durante a campanha
+	BaseType == "Uncut Skill Gem"
+	AreaLevel < 68
+	SetFontSize 36
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255	
+	SetBackgroundColor 0 0 0
+	PlayEffect Red Temp
+	MinimapIcon 2 Red Hexagon
+
+Show # Gemas Spirit durante a campanha
+	BaseType == "Uncut Spirit Gem"
+	AreaLevel < 68
+	SetFontSize 36
+	SetTextColor 0 255 0
+	SetBorderColor 0 255 0 
+	SetBackgroundColor 0 0 0
+	PlayEffect Green Temp
+	MinimapIcon 2 Green Hexagon
+
+Show # Gemas Suporte durante a campanha
+	BaseType == "Uncut Support Gem"
+	AreaLevel < 68
+	SetFontSize 36
+	SetTextColor 0 0 255
+	SetBorderColor 0 0 255	
+	SetBackgroundColor 0 0 0
+	PlayEffect Blue Temp
+	MinimapIcon 2 Blue Hexagon	
+
+Show # Gemas Uncut Skill <= 18
+	BaseType == "Uncut Skill Gem"
+	ItemLevel <= 18
+	SetFontSize 34
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255	
+	SetBackgroundColor 0 0 0
+	
+Show # Gemas Uncut Spirit <= 18
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel <= 18
+	SetFontSize 34
+	SetTextColor 0 255 0
+	SetBorderColor 0 255 0
+	SetBackgroundColor 0 0 0	
+
+Show # Gemas Uncut Support 3
+	BaseType == "Uncut Support Gem"
+	ItemLevel == 3
+	SetFontSize 34
+	SetTextColor 0 0 255
+	SetBorderColor 0 0 255
+	SetBackgroundColor 0 0 0
+	PlayEffect Blue Temp
+
+Show # Gemas Uncut Skill 19
+	BaseType == "Uncut Skill Gem"
+	ItemLevel == 19
+	SetFontSize 38
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 0
+	PlayEffect Red Temp
+	PlayAlertSound 2 300
+	MinimapIcon 1 Red Hexagon
+
+Show # Gemas Uncut Spirit 19
+	BaseType == "Uncut Spirit Gem"
+	ItemLevel == 19
+	SetFontSize 38
+	SetTextColor 0 255 0
+	SetBorderColor 0 255 0
+	SetBackgroundColor 0 0 0
+	PlayEffect Green Temp
+	PlayAlertSound 2 300
+	MinimapIcon 1 Green Hexagon
+
+##################################
+#
+# EQUIPAMENTOS ESPECIAIS
+#
+##################################
+
+Show # Socketables de Mecânica
+	Class == "Socketable"
+	BaseType "Soul Core" "Timeless"
+	SetFontSize 40
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
+	PlayAlertSound 4 300
+	PlayEffect Cyan
+	MinimapIcon 1 Cyan Cross
+
+Show # Runas
+	Class == "Socketable"
+	BaseType "Rune"
+	SetFontSize 35
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
+	PlayAlertSound 2 300
+	PlayEffect Cyan Temp
+
+Show # Anéis de Fenda Raros
+	BaseType == "Breach Ring"
+	Rarity >= Rare
+	SetFontSize 40
+	SetBorderColor 255 255 0
+	SetTextColor 255 255 0
+	SetBackgroundColor 0 120 130
+	PlayAlertSound 3 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Star
+
+Show # Anéis de Fenda Magicos/Normais
+	BaseType == "Breach Ring"
+	Rarity < Rare
+	SetFontSize 32
+	SetBorderColor 255 255 0
+	SetTextColor 255 255 0
+	SetBackgroundColor 0 120 130
+	PlayEffect Yellow Temp
+	MinimapIcon 2 Yellow Star	
+
+Show # Reliquias Sekhemas
+	Class "Relics"
+	SetFontSize 30
+	SetTextColor 0 255 0  255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 150 0 255
+	PlayEffect Green Temp
+	MinimapIcon 2 Green Star
+
+Show # Gemas
+	Class "Jewel"
+	Rarity <= Rare
+	SetFontSize 36
+	SetBackgroundColor 25 70 0 255
+	SetTextColor 90 255 0
+	PlayEffect Green Temp
+	MinimapIcon 2 Green Cross
+
+Show # Charms de Magic Find
+	Class "Charms"
+	BaseType "Golden "
+	SetFontSize 36
+	SetBorderColor 0 60 80 255
+	SetBackgroundColor 0 60 80 255
+	SetTextColor 0 60 80 255
+	PlayEffect Yellow Temp
+
+Hide # Charms em mapas altos
+	Class "Charms"
+	AreaLevel > 77
+
+Show # Demais Charms
+	Class "Charms"
+	SetFontSize 32
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
+	PlayEffect Cyan Temp	
+
+
+#*********************************
+#
+# CURRENCIES
+#
+#*********************************
+	
+Show # TIER 1
+	Class == "Stackable Currency"
+	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 255 0 200 255
+	PlayAlertSound 4 300
+	PlayEffect Yellow
+	MinimapIcon 0 Pink Triangle
+
+Show # TIER 2
+	Class == "Stackable Currency"
+	BaseType "Gemcutter's Prism" "Chaos Orb" "Orb of Alchemy" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration" "Regal Orb" "Lesser Jeweller's Orb" "Chance Shard"
+	SetFontSize 40
+	SetTextColor 255 0 160 255
+	SetBorderColor 255 0 160 255
+	SetBackgroundColor 80 0 50 255
+	PlayAlertSound 3 300
+	MinimapIcon 1 Pink Triangle
+
+Show # TIER 3
+	Class == "Stackable Currency"
+	BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher" 
+	SetFontSize 30
+	SetTextColor 190 0 160 255
+	SetBorderColor 190 0 160 255
+	SetBackgroundColor 60 0 50 255
+	MinimapIcon 2 Pink Triangle
+
+Hide # Transmute/Augment em mapas altos
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation"
+	AreaLevel > 74
+
+Show # TIER 4
+	Class == "Stackable Currency"
+	BaseType "Orb of Transmutation" "Orb of Augmentation"
+	SetFontSize 30
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 180 0 150 255
+
+Hide # Regal Shards em mapas mais altos
+	Class == "Stackable Currency"	
+	BaseType "Regal Shard"
+	AreaLevel > 77
+
+Hide # Demais Shards no atlas
+	Class == "Stackable Currency"
+	BaseType " Shard"
+	AreaLevel > 68
+
+Show # TIER 5 - Shards II (Até mapas baixos)
+	Class == "Stackable Currency"
+	BaseType "Transmutation Shard" "Artificer's Shard" "Regal Shard"
+	SetFontSize 26
+	SetBackgroundColor 80 0 60 255	
+
+Show # Scroll of Wisdom durante campanha
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 26
+	SetTextColor 255 0 0 255
+	#SetBorderColor 255 0 0 255
+	SetBackgroundColor 0 0 0 255
+
+Show # Essências e Destilados Maiores
+	Class "Currency"
+	BaseType "Greater Essence of" "Distilled Fear" "Distilled Despair"
+	SetFontSize 40
+	SetTextColor 190 0 130 255
+	SetBorderColor 190 0 130 255
+	SetBackgroundColor 85 0 60 255
+	PlayAlertSound 4 300
+	PlayEffect Pink
+	MinimapIcon 1 Pink UpsideDownHouse
+
+Show # Essências, Destilados e Catalistas menores
+	Class "Currency"
+	BaseType "Essence of" "Distilled" "Catalyst"
+	SetFontSize 40
+	SetTextColor 190 0 130 255
+	SetBorderColor 190 0 130 255
+	SetBackgroundColor 85 0 60 255
+
+Show # Splinters
+	Class "Currency"
+	BaseType "Breach Splinter" "Simulacrum Splinter" " Artifact"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 255 255 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 2 Cyan UpsideDownHouse
+
+Show # Ritual Omens
+	Class "Omen"
+	BaseType "Omen of"
+	SetFontSize 45 
+	SetTextColor 255 110 0 255
+	SetBorderColor 255 110 0 255
+	SetBackgroundColor 90 40 0 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow UpsideDownHouse
+
+Show # Currencies diversas
+	Class "Currency"
+	SetFontSize 50
+	PlayEffect White
+	MinimapIcon 1 White Star
+
+#*********************************
+#
+# FRAGMENTS
+#
+#*********************************
+
+Show # Fragments
+	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+	SetFontSize 40
+	SetTextColor 170 0 25 255
+	SetBorderColor 170 0 25 255
+	SetBackgroundColor 0 255 180 255
+	PlayAlertSound 6 300
+	PlayEffect Yellow
+	MinimapIcon 0 Cyan Star
+
+Show # Moeda de Sanctum e Ultimatum
+	Class == "Trial Coins" "Inscribed Ultimatum"
+	SetFontSize 35
+	SetTextColor 0 80 100 255
+	SetBorderColor 0 80 100 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 2 300
+	PlayEffect Yellow
+	MinimapIcon 2 White Circle
+	
+Show # Chaves Sekmas
+	BaseType == "Bronze Key" "Silver Key" "Gold Key"
+	SetFontSize 25
+	SetTextColor 0 255 0  255
+	SetBorderColor 0 255 0 255
+	SetBackgroundColor 0 100 0 255
+	PlayEffect Green
+	MinimapIcon 2 Green Cross
+
+Show # Tablets
+	BaseType "Tablet"
+	SetFontSize 35
+	SetTextColor 230 255 0 255
+	SetBorderColor 230 255 0 255
+	SetBackgroundColor 100 10 0 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 1 Purple Square
+
+Show # Pinnacle Key
+	Class "Pinnacle Keys"	
+	SetFontSize 45
+	SetTextColor 150 0 255 255
+	SetBorderColor 150 0 255 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Purple
+	MinimapIcon 0 Purple Star
+
+
+#*********************************
+#
+# WAYSTONES
+#
+#*********************************
+
+Show # Waystones tier 5-
+	BaseType "Waystone"
+	WaystoneTier <= 5
+	AreaLevel < 75
+	SetFontSize 34
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 0 0 0 255
+	PlayAlertSound 4 300
+	PlayEffect White
+	MinimapIcon 1 White Square
+
+Show # Waystones tier 10-
+	BaseType "Waystone"
+	WaystoneTier <= 10
+	AreaLevel < 80
+	SetFontSize 34
+	SetTextColor 255 255 0
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 0 0 0 255
+	PlayAlertSound 4 300
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Square
+
+Show # Waystones tier 13-
+	BaseType "Waystone"
+	WaystoneTier <= 13
+	AreaLevel < 85
+	SetFontSize 34
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 0
+	PlayAlertSound 2 300
+	PlayEffect Red
+	MinimapIcon 1 Red Square
+
+Show # Waystones tier 14+
+	BaseType "Waystone"
+	WaystoneTier >= 14
+	SetFontSize 40
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
+
+Hide # Esconder os Waystones restantes
+	BaseType "Waystone" 
+	WaystoneTier < 14
+
+
+#*********************************
+#
+# JEWELRY
+#
+#*********************************
+
+Show # Acessórios Raros
+	Class "Ring" "Amulet" "Belt"
+	Rarity >= Rare
+	SetFontSize 32
+	SetBackgroundColor 0 70 70
+	SetBorderColor 0 255 255 255
+	#SetTextColor 0 120 130
+
+Show # Acessórios em mapas altos
+	Class "Ring" "Amulet" "Belt"
+	Rarity < Rare
+	AreaLevel > 78
+	ItemLevel > 80
+	SetFontSize 30
+	SetBackgroundColor 0 70 70
+	SetBorderColor 0 255 255
+	#SetTextColor 0 120 130
+
+Show # Acessórios em mapas baixos
+	Class "Ring" "Amulet" "Belt"
+	Rarity Magic
+	AreaLevel <= 78
+	SetFontSize 26
+	SetBackgroundColor 0 70 70
+	#SetTextColor 0 120 130
+
+Hide # Anéis, Amuletos e Cintos < Raro
+	Class "Ring" "Amulet" "Belt"
+
+#*********************************
+#
+# EXPEDITION
+#
+#*********************************
+
+Show # Expedition Artifacts
+	Class "Currency"
+	BaseType "Artifact"
+	SetFontSize 32
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 0 140 80 255
+	#PlayAlertSound 2 300
+	PlayEffect Green
+	MinimapIcon 2 Green UpsideDownHouse
+
+Show # Expedition Coinage
+	Class "Currency"
+	BaseType "Coinage"
+	SetFontSize 36
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	SetBackgroundColor 0 140 80 255
+	#PlayAlertSound 2 300
+	PlayEffect Green
+	MinimapIcon 1 Green UpsideDownHouse
+
+Show # Expedition Logbook
+	BaseType "Expedition Logbook"
+	SetFontSize 45
+	SetTextColor 0 70 35 255
+	SetBorderColor 255 255 255
+	SetBackgroundColor 0 255 145 255
+	#PlayAlertSound 2 300
+	PlayEffect Green
+	MinimapIcon 0 Green UpsideDownHouse
 
 ##################################
 #
@@ -48,116 +661,100 @@ Show # All Unique Items
 	SetBorderColor 255 255 255 255
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 102 0
-	PlayEffect Orange
-	MinimapIcon 2 Orange Star
-
-##################################
-# Bases para usar Orb of Chance
-##################################
-
-Show #	Sapphire Ring = Dream Fragment; 
-	 #	Stellar Amulet = Astramentis
-	Class "Ring" "Amulet"
-	BaseType "Sapphire Ring" "Stellar Amulet"
-	Rarity Normal
-	ItemLevel > 75
-	SetFontSize 40
-	SetBackgroundColor 0 180 0
-	SetBorderColor 255 255 255
-	SetTextColor 255 255 255
-	PlayAlertSound 8 300
-	PlayEffect Green
+	PlayEffect Brown
+	MinimapIcon 1 Brown Star
 
 #*********************************
 #
-# JEWELRY E CHARMS
+# EQUIPAMENTO
 #
 #*********************************
 
-Show # Mostra sempre Charms de Magic Find
-	Class "Charms"
-	BaseType "Golden"
+Hide # Equipamento de nivel baixo em mapas altos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	DropLevel < 50
+	AreaLevel > 72
+	Rarity < Rare
+
+Hide # Equipamento de nivel baixo em mapas 14+
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	ItemLevel < 78
+	AreaLevel > 80
+
+Show # Bases vendáveis com qualidade > 10
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 80
+	Quality > 10
+	AreaLevel > 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
 	SetFontSize 36
-	SetBorderColor 0 60 80 255
-	SetBackgroundColor 0 60 80 255
-	SetTextColor 0 60 80 255
+	SetBorderColor 0 255 255
+	PlayEffect Pink
+	PlayAlertSound 2 200
+	MinimapIcon 2 Pink Star
 
-Hide #Charms brancos no atlas
-	Class "Charms"
-	Rarity < Rare
+Show # Bases vendáveis
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	ItemLevel > 80
 	AreaLevel > 65
-
-Show # Mostra todos os Charms durante a campanha
-	Class "Charms"
-	AreaLevel <= 65
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
 	SetFontSize 30
-	SetBorderColor 0 60 80 255
-	SetBackgroundColor 0 60 80 255
+	#SetBorderColor 255 255 0
+	PlayEffect Pink Temp
+	#PlayAlertSound 2 200
+	#MinimapIcon 1 Pink Star
 
-Show # Charms apenas mágicos no Atlas até T6
-	Class "Charms"
-	Rarity > Normal
-	AreaLevel <= 75
-	SetFontSize 30
-	SetBorderColor 0 60 80 255
-	SetBackgroundColor 0 60 80 255
-
-Show # GEMA TIME LOST
-	Class "Jewel"
-	BaseType "Time-Lost "
+Show # Bases Raras a serem mostradas
+	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
+	AreaLevel > 68
+	Rarity >= Rare
+	SetBackgroundColor 60 0 100
+	SetTextColor 255 255 0
+	SetBorderColor 255 255 0
 	SetFontSize 40
-	SetBackgroundColor 25 70 0 255
-	SetBorderColor 0 200 0
-	PlayEffect Green
-	PlayAlertSound 4 300
-	MinimapIcon 1 Green Circle
+	PlayEffect Purple Temp
+	MinimapIcon 1 Purple Star
 
-Show # GEMA
-	Class "Jewel"
-	BaseType == "Ruby" "Sapphire" "Emerald"
+Show # Bases Magicas a serem mostradas
+	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
+	AreaLevel > 68
+	Rarity Magic
+	SetBackgroundColor 60 0 100
+	SetTextColor 0 70 255
+	SetBorderColor 0 70 255
+	SetFontSize 36
+	PlayEffect Purple Temp
+	MinimapIcon 2 Purple Star
+
+Show # Bases Normais a serem mostradas
+	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
+	AreaLevel > 68
+	Rarity Normal
+	SetBackgroundColor 60 0 100
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	SetFontSize 32
+
+Show # Itens com qualidade alta
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	Quality > 10
 	SetFontSize 30
-	SetBackgroundColor 25 70 0 255
-	SetTextColor 90 255 0
-	PlayEffect Green
-	MinimapIcon 2 Green Circle
+	SetBorderColor 0 255 255
+	PlayEffect White Temp
 
-Hide # Anéis, Amuletos e Cintos < Raro
-	Class "Ring" "Amulet" "Belt"
-	Rarity < Rare
-	ItemLevel < 80
-	AreaLevel > 65
+Show # Itens com sockets
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	Sockets > 0
+	SetFontSize 30
+	SetBorderColor 0 255 255
+	PlayEffect White Temp
 
-Show # Anéis de Fenda 
-	BaseType == "Breach Ring"
-	SetFontSize 38
-	SetBorderColor 255 255 0 255
-	SetTextColor 255 255 0 255
-	SetBackgroundColor 100 100 0 255
-	MinimapIcon 2 Yellow Circle	
-
-Show # Aneis, Amuletos e Cintos - bases desejáveis
-	Class "Ring" "Amulet"
-	BaseType "Topaz" "Sapphire" "Ruby" "Amethyst" "Gold" "Solar" "Prismatic" "Bloodstone"
-	ItemLevel >= 78
-	SetFontSize 28
-	SetBackgroundColor 0 120 130 255
-	SetBorderColor 0 255 255 255
-	SetTextColor 0 120 130
-
-Show # Aneis, Amuletos e Cintos - bases top level
-	Class "Ring" "Amulet" "Belt"
-	ItemLevel >= 82
-	SetFontSize 34
-	SetBackgroundColor 0 120 130 255
-	SetBorderColor 0 255 255 255
-	SetTextColor 0 120 130
-	PlayEffect Cyan
-	
-Show # Aneis, Amuletos e Cintos
-	Class "Ring" "Amulet" "Belt"
-	SetFontSize 28
-	SetBackgroundColor 0 120 130 255
-
+Show # Mostrar demais equips por segurança
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	SetFontSize 26
+	SetBorderColor 0 0 255
 
 #*********************************
 #
@@ -198,700 +795,6 @@ Show # Mostra os outros Flasks na campanha
 	Class "Flasks"
 	SetFontSize 24
 
-#*********************************
-#
-# FRAGMENTS
-#
-#*********************************
-
-Show # Fragments
-	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
-	SetFontSize 40
-	SetTextColor 170 0 25 255
-	SetBorderColor 170 0 25 255
-	SetBackgroundColor 0 255 180 255
-	PlayAlertSound 6 300
-	PlayEffect Yellow
-	MinimapIcon 1 Red Star
-
-Show # Splinters
-	BaseType "Breach Splinter" "Simulacrum Splinter" 
-	SetFontSize 40
-	SetTextColor 0 0 0 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 255 255 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 2 Cyan Star
-
-#*********************************
-#
-# CURRENCIES
-#
-#*********************************
-
-Hide # Atlas +
-	Class == "Stackable Currency"
-	BaseType "Transmutation Shard" "Artificer's Shard" "Orb of Transmutation" "Orb of Augmentation" 
-	AreaLevel > 65
-
-Hide # Regal Shards em mapas mais altos
-	Class == "Stackable Currency"	
-	BaseType "Regal Shard"
-	AreaLevel > 77
-
-Hide # Scroll of Wisdom no Atlas
-	BaseType == "Scroll of Wisdom"
-	AreaLevel > 65
-	
-
-Show # RARIDADE TIER 0
-	Class == "Stackable Currency"
-	BaseType "Divine Orb" "Mirror of Kalandra" "Perfect Jeweller's Orb"
-	SetFontSize 50
-	SetTextColor 255 0 200 255
-	SetBorderColor 255 0 200 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
-	PlayEffect Red
-	MinimapIcon 0 Red Star
-	
-Show # TIER 1
-	Class == "Stackable Currency"
-	BaseType "Exalted Orb" "Orb of Annulment" "Orb of Chance" "Gemcutter's Prism" "Greater Jeweller's Orb"
-	SetFontSize 40
-	SetTextColor 255 255 255 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 255 0 200 255
-	PlayAlertSound 4 300
-	PlayEffect Yellow
-	MinimapIcon 0 Orange Circle
-
-Show # TIER 2
-	Class == "Stackable Currency"
-	BaseType "Regal Orb" "Chaos Orb" "Orb of Alchemy" "Lesser Jeweller's Orb" "Artificer's Orb" "Glassblower's Bauble" "Vaal Orb" "Orb of Alteration"
-	SetFontSize 40
-	SetTextColor 255 0 160 255
-	SetBorderColor 255 0 160 255
-	SetBackgroundColor 80 0 50 255
-	PlayAlertSound 3 300
-	MinimapIcon 2 Orange Circle
-
-Show # TIER 4 - Até low tier maps
-	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation"
-	AreaLevel < 70
-	SetFontSize 30
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 180 0 150 255
-
-Show # TIER 4 - Item de qualidade
-	Class == "Stackable Currency"
-	BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
-	SetFontSize 30
-	SetTextColor 190 0 160 255
-	SetBorderColor 190 0 160 255
-	SetBackgroundColor 60 0 50 255
-	MinimapIcon 2 Pink Circle		
-
-Show # TIER 5 - Shards I
-	Class == "Stackable Currency"
-	BaseType "Chance Shard"
-	SetFontSize 32
-	SetBackgroundColor 80 0 60 255	
-
-Show # TIER 5 - Shards II (Até mapas baixos)
-	Class == "Stackable Currency"
-	BaseType "Transmutation Shard" "Artificer's Shard" "Regal Shard"
-	SetFontSize 26
-	SetBackgroundColor 80 0 60 255	
-
-Show # Scroll of Wisdom durante campanha
-	BaseType == "Scroll of Wisdom"
-	SetFontSize 26
-	SetTextColor 255 0 0 255
-	#SetBorderColor 255 0 0 255
-	SetBackgroundColor 0 0 0 255
-
-#*********************************
-#
-# GEMAS
-#
-#*********************************
-
-Hide # Gemas < 14 em mapas 10+
-	BaseType "Uncut Skill " "Uncut Spirit"
-	AreaLevel > 70
-	ItemLevel <= 14
-
-Hide # Gemas < 18 em mapas 13+
-	BaseType "Uncut Skill " "Uncut Spirit "
-	AreaLevel > 75
-	ItemLevel < 18
-
-Hide # Gemas Suport 3 em mapas 14+
-	BaseType "Uncut Support Gem"
-	AreaLevel > 77
-	ItemLevel >= 3
-
-Hide # Gemas Suporte 1 e 2 no atlas
-	BaseType "Uncut Support Gem"
-	AreaLevel > 65
-	ItemLevel < 3
-
-Show # Gemas uncut de skill tier > 18
-	BaseType == "Uncut Skill Gem"
-	ItemLevel > 18
-	SetFontSize 45
-	SetTextColor 200 0 0 255
-	SetBorderColor 200 0 0 255	
-	SetBackgroundColor 255 255 255 255	
-	PlayAlertSound 6 300
-	PlayEffect Red 
-	MinimapIcon 2 Red Star 
-
-Show # Gemas uncut de skill tier > 14 em mapas 13-
-	BaseType == "Uncut Skill Gem"
-	ItemLevel > 14
-	SetFontSize 34
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255	
-	SetBackgroundColor 80 80 80 255
-	PlayEffect Red 
-	MinimapIcon 1 Red Star 
-
-Show # Gemas uncut de skill até mapas 13
-	BaseType == "Uncut Skill Gem"
-	ItemLevel <= 14
-	SetFontSize 36
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255	
-	SetBackgroundColor 0 0 0 255
-
-Show # Gemas uncut de Spirit tier > 18
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel > 18
-	SetFontSize 45
-	SetTextColor 0 200 0 255
-	SetBorderColor 0 200 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
-	MinimapIcon 2 Green Star
-
-Show # Gemas uncut de Spirit tier > 14 em mapas 13-
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel > 14
-	SetFontSize 36
-	SetTextColor 0 255 0 255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 80 80 80 255
-	MinimapIcon 1 Green Star
-
-Show # Gemas uncut de Spirit em mapas até 13
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel <= 14
-	SetFontSize 36
-	SetTextColor 0 255 0 255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 0 0 0 255
-	MinimapIcon 1 Green Star
-
-Show # GEMA Suporte uncut tier 3 em mapas tier 13-
-	BaseType == "Uncut Support Gem"
-	AreaLevel < 78
-	ItemLevel >= 3
-	SetFontSize 36
-	SetTextColor 0 0 200 255
-	SetBorderColor 0 0 200 255
-	SetBackgroundColor 255 255 255 255
-	PlayEffect Blue
-	MinimapIcon 2 Blue Star
-
-Show # GEMA Suporte uncut tier 1 e 2 na campanha
-	BaseType == "Uncut Support Gem"
-	ItemLevel < 3
-	SetFontSize 30
-	SetTextColor 0 0 255 255
-	SetBorderColor 0 0 255 255
-	SetBackgroundColor 0 0 0 255
-	PlayEffect Blue
-	MinimapIcon 2 Blue Star
-
-#*********************************
-#
-# SANCTUM E ULTIMATUM
-#
-#*********************************
-
-Show # Moeda de Sanctum e Ultimatum
-	Class == "Trial Coins" "Inscribed Ultimatum"
-	SetFontSize 35
-	SetTextColor 0 80 100 255
-	SetBorderColor 0 80 100 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
-	
-Show # Reliquias Sekhemas
-	Class "Relics"
-	SetFontSize 30
-	SetTextColor 0 255 0  255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 150 0 255
-	PlayEffect Green
-	MinimapIcon 1 Green Raindrop
-	
-Show # Chaves Sekmas
-	BaseType == "Bronze Key" "Silver Key" "Gold Key"
-	SetFontSize 25
-	SetTextColor 0 255 0  255
-	SetBorderColor 0 255 0 255
-	SetBackgroundColor 0 100 0 255
-	PlayEffect Green
-	MinimapIcon 1 Green Cross
-
-#*********************************
-#
-# ESSÊNCIAS
-#
-#*********************************
-
-Show # Essences
-	BaseType "Essence of"
-	SetFontSize 40
-	SetTextColor 190 0 130 255
-	SetBorderColor 190 0 130 255
-	SetBackgroundColor 85 0 60 255
-	# PlayAlertSound 2 300
-	# PlayEffect Yellow
-	# MinimapIcon 1 Yellow Circle
-
-Show # Greater Essences
-	BaseType "Greater Essence of"
-	SetFontSize 40
-	SetTextColor 190 0 130 255
-	SetBorderColor 190 0 130 255
-	SetBackgroundColor 85 0 60 255
-	PlayAlertSound 4 300
-	PlayEffect Pink
-	MinimapIcon 1 Pink Circle	
-
-
-#*********************************
-#
-# WAYSTONES
-#
-#*********************************
-
-Show # Tablets
-	BaseType "Tablet"
-	SetFontSize 35
-	SetTextColor 230 255 0 255
-	SetBorderColor 230 255 0 255
-	SetBackgroundColor 100 10 0 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 2 Red Square
-
-Show # Pinnacle Key
-	Class "Pinnacle Keys"	
-	SetFontSize 45
-	SetTextColor 150 0 255 255
-	SetBorderColor 150 0 255 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
-	PlayEffect Purple
-	MinimapIcon 2 Purple Star
-
-Hide #Waystones 8- em mapas 10+
-	BaseType "Waystone"
-	WaystoneTier <= 8
-	AreaLevel > 75
-
-Hide #Waystones 3- em mapas 5+
-	BaseType "Waystone"
-	WaystoneTier <= 3 
-	AreaLevel > 70
-
-Show # Waystones tier 15+
-	BaseType "Waystone"
-	WaystoneTier > 13
-	AreaLevel > 0
-	SetFontSize 40
-	SetTextColor 255 0 0
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 2 Red Square
-
-Show # Waystones tier 10+
-	BaseType "Waystone"
-	WaystoneTier > 10
-	AreaLevel > 0
-	SetFontSize 34
-	SetTextColor 255 255 0
-	SetBorderColor 255 255 0 255
-	SetBackgroundColor 80 80 80 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 1 Yellow Square
-
-Show # Waystones tier 1+ 
-	BaseType "Waystone"
-	WaystoneTier > 0
-	AreaLevel > 0
-	SetFontSize 28
-	SetTextColor 255 255 255
-	SetBorderColor 255 255 255 255
-	SetBackgroundColor 0 0 0 255
-	PlayAlertSound 4 300
-	PlayEffect Red
-	MinimapIcon 1 White Square
-
-
-#*********************************
-#
-# EXPEDITION
-#
-#*********************************
-
-Show # Expedition Artifacts
-	Class "Currency"
-	BaseType "Artifact"
-	SetFontSize 35
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 0 140 80 255
-	#PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 0 Yellow Circle
-
-Show # Expedition Coinage
-	Class "Currency"
-	BaseType "Coinage"
-	SetFontSize 35
-	SetTextColor 255 255 255
-	SetBorderColor 255 255 255
-	SetBackgroundColor 0 140 80 255
-	#PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
-
-Show # Expedition Logbook
-	BaseType "Expedition Logbook"
-	SetFontSize 45
-	SetTextColor 0 70 35 255
-	SetBorderColor 255 255 255
-	SetBackgroundColor 0 255 145 255
-	#PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 2 Yellow Circle	
-
-#*********************************
-#
-# RITUAL
-#
-#*********************************
-
-Show # Ritual Omens
-	Class "Omen"
-	BaseType "Omen of"
-	SetFontSize 45 
-	SetTextColor 255 110 0 255
-	SetBorderColor 255 110 0 255
-	SetBackgroundColor 90 40 0 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
-
-#*********************************
-#
-# EQUIPAMENTO
-#
-#*********************************
-
-Hide # Esconde equips Advanced no atlas
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Advanced "
-	AreaLevel > 65
-
-Hide # Equips sem qualificação (Advanced/Expert)
-	Class "Quiver" "Staff" "Wand" "Sceptre"
-	AreaLevel > 65
-	ItemLevel <= 80 # Para permitir bases vendáveis
-
-Hide # Esconde equips expert não-raros no atlas
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Expert "
-	Rarity < Rare
-	AreaLevel > 65
-	ItemLevel <= 80 #Para permitir bases vendáveis	
-
-Hide #Esconde todos os equipamentos de ilvl baixo nos mapas mais altos
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	AreaLevel >= 78
-	ItemLevel <= 80
-	#Identified False
-	#TierLevel < 5
-
-Show # Bases vendáveis com qualidade > 10
-	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
-	ItemLevel > 80
-	Quality > 10
-	AreaLevel > 65
-	SetBackgroundColor 255 150 200
-	SetTextColor 255 0 110
-	SetFontSize 36
-	SetBorderColor 0 255 255
-	PlayEffect Pink
-	PlayAlertSound 2 200
-	MinimapIcon 2 Pink Star
-
-Show # Bases vendáveis
-	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
-	ItemLevel > 80
-	AreaLevel > 65
-	SetBackgroundColor 255 150 200
-	SetTextColor 255 0 110
-	SetFontSize 30
-	SetBorderColor 255 255 0
-	PlayEffect Pink
-	PlayAlertSound 2 200
-	MinimapIcon 1 Pink Star
-
-Show # Bases muito desejaveis Armas com Qualidade > 10
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
-	AreaLevel < 78
-	ItemLevel > 80
-	Quality > 10
-	SetFontSize 36
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 5 300
-	MinimapIcon 2 Purple Star
-
-Show # Bases muito desejaveis Armas
-	Class "Bow" "Crossbow" "One Hand Mace" "Two Hand Mace" "Quarter" "Focus" "Wand" "Sceptre" "Staff" "Quiver" "Shield"
-	BaseType "Expert Bombard Crossbow" "Expert Dualstring Bow" "Expert Construct Hammer" "Expert Brigand Mace" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Barrier Quarterstaff" "Expert Slicing Quarterstaff" "Expert Long Quarterstaff" "Expert Gothic Quarterstaff" "Expert Plumed Focus" "Bone Wand" "Attuned Wand" "Volatile Wand" "Withered Wand" "Siphoning Wand" "Penetrating Quiver" "Primed Quiver" "Visceral Quiver" "Serrated Quiver" "Two-Point Quiver" "Volant Quiver" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Feathered Targe"
-	AreaLevel < 78	
-	ItemLevel > 80
-	SetFontSize 30
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	#SetBorderColor 0 255 255
-	#PlayAlertSound 5 300
-	MinimapIcon 0 Purple Star
-
-Show #BODY ARMOUR - Bases muito desejáveis com qualidade > 10
-	Class "Body Armour"
-	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
-	AreaLevel < 78
-	ItemLevel > 80
-	Quality > 10
-	SetFontSize 36
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 2 Purple Star
-
-Show #BODY ARMOUR - Bases muito desejáveis
-	Class "Body Armour"
-	BaseType "Expert Vaal Cuirass" "Expert Iron Cuirass" "Expert Steel Plate" "Expert Altar Robe" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Sacrificial Mantle" "Expert Pelt Mantle" "Expert Shaman Mantle" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Wayfarer Jacket"
-	AreaLevel < 78
-	ItemLevel > 80
-	SetFontSize 30
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	#SetBorderColor 0 255 255
-	#PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 1 Purple Star
-
-Show # HELMET - Bases muito desejáveis com qualidade > 10
-	Class "Helm"
-	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
-	AreaLevel < 78
-	ItemLevel > 80
-	Quality > 10
-	SetFontSize 36
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 2 Purple Star
-
-Show # HELMET - Bases muito desejáveis
-	Class "Helm"
-	BaseType "Expert Elite Greathelm" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Heavy Crown" "Expert Shielded Helm" "Expert Tribal Mask"
-	AreaLevel < 78
-	ItemLevel > 80
-	SetFontSize 30
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	#SetBorderColor 0 255 255
-	#PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 1 Purple Star
-
-Show # GLOVES - Bases muito desejáveis com qualidade > 10
-	Class "Gloves"
-	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
-	AreaLevel < 78
-	ItemLevel > 80
-	Quality > 10
-	SetFontSize 36
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 2 Purple Star
-
-Show # GLOVES - Bases muito desejáveis
-	Class "Gloves"
-	BaseType "Expert Moulded Mitts" "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Goldcast Cuffs" "Expert Doubled Gauntlets" "Expert Spiral Wraps"
-	AreaLevel < 78
-	ItemLevel > 80
-	SetFontSize 30
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	#SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 1 Purple Star
-
-Show # BOOTS - Bases muito desejáveis com qualidade > 10
-	Class "Boots"
-	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
-	AreaLevel < 78
-	ItemLevel > 80
-	Quality > 10
-	SetFontSize 36
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	SetBorderColor 0 255 255
-	PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 2 Purple Star
-
-Show # BOOTS - Bases muito desejáveis
-	Class "Boots"
-	BaseType "Expert Stone Greaves" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Hunting Shoes"
-	AreaLevel < 78
-	ItemLevel > 80
-	SetFontSize 30
-	SetTextColor 90 80 0
-	SetBackgroundColor 210 140 255
-	#SetBorderColor 0 255 255
-	#PlayEffect Purple
-	#PlayAlertSound 1 300
-	MinimapIcon 1 Purple Star
-
-Show # Equipamentos Expert Raros High level
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Expert "
-	Rarity >= Rare
-	AreaLevel < 78
-	ItemLevel <= 82
-	SetFontSize 24
-	SetBorderColor 255 255 0
-
-Show # Equipamentos Expert Raros Top level
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Expert "
-	Rarity >= Rare
-	ItemLevel > 82
-	SetFontSize 30
-	SetBackgroundColor 90 0 140 255
-	SetBorderColor 255 255 0 255
-	PlayEffect Purple
-	MinimapIcon 0 Purple Star
-
-Show # Equipamentos Expert Raros em mapas baixos
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	BaseType "Expert " "Advanced "
-	Rarity Rare
-	AreaLevel < 70
-	SetFontSize 26
-	SetBackgroundColor 90 0 140 255
-
-Hide #Esconde demais equips
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	Rarity < Rare
-	AreaLevel > 65
-
-#*********************************
-#
-# SOCKETABLES
-#
-#*********************************
-
-Show # Runes and Soul Cores
-	Class == "Socketable"
-	BaseType "Rune" "Soul Core"
-	SetFontSize 35
-	SetTextColor 0 255 255 255
-	SetBorderColor 0 255 255 255
-	SetBackgroundColor 0 70 70 255
-	PlayAlertSound 2 300
-	PlayEffect Cyan
-	MinimapIcon 1 Cyan Cross
-
-
-#*********************************
-#
-# CATALYSTS
-#
-#*********************************	
-
-Show # Breach Catalysts
-	Class == "Currency"
-	BaseType "Catalyst"
-	SetFontSize 38
-	SetTextColor 130 0 255 255
-	SetBorderColor 130 0 255 255
-	SetBackgroundColor 80 0 80 255
-	PlayAlertSound 2 300
-	PlayEffect Purple
-	MinimapIcon 1 Purple Star
-
-#*********************************
-#
-# DELIRIUM
-#
-#*********************************
-
-Show # Delirium Distillations
-	Class == "Currency"
-	BaseType "Distilled"
-	SetFontSize 38
-	SetTextColor 80 0 80 255
-	# SetBorderColor 80 0 80 255
-	SetBackgroundColor 100 0 190 255
-	PlayAlertSound 2 300
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle	
-
-#*********************************
-#
-# ITENS COM QUALITY OU SOCKETS
-#
-#*********************************
-
-Show # Qualidade 15+
-	Quality > 14
-	SetFontSize 36
-	SetBorderColor 0 255 255 255
-	PlayEffect Cyan
 
 #*********************************
 #
