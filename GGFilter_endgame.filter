@@ -418,10 +418,10 @@ Show # Scroll of Wisdom durante campanha
 Show # Essências e Destilados Maiores
 	Class "Currency"
 	BaseType "Greater Essence of" "Distilled Fear" "Distilled Despair"
-	SetFontSize 40
-	SetTextColor 190 0 130 255
-	SetBorderColor 190 0 130 255
-	SetBackgroundColor 85 0 60 255
+	SetFontSize 42
+	SetTextColor 255 0 175
+	SetBorderColor 255 0 175
+	SetBackgroundColor 85 0 60
 	PlayAlertSound 4 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink UpsideDownHouse
@@ -429,10 +429,10 @@ Show # Essências e Destilados Maiores
 Show # Essências, Destilados e Catalistas menores
 	Class "Currency"
 	BaseType "Essence of" "Distilled" "Catalyst"
-	SetFontSize 40
-	SetTextColor 190 0 130 255
-	SetBorderColor 190 0 130 255
-	SetBackgroundColor 85 0 60 255
+	SetFontSize 34
+	SetTextColor 255 0 175
+	SetBorderColor 255 0 175
+	SetBackgroundColor 85 0 60
 
 Show # Splinters
 	Class "Currency"
@@ -672,11 +672,17 @@ Show # All Unique Items
 
 Hide # Equipamento de nivel baixo em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	DropLevel < 70
+	DropLevel < 50
 	AreaLevel > 72
-	#Rarity < Rare
+	Rarity < Rare
 
-Hide # Equipamento de nivel baixo em mapas 14+
+Hide # Equipamento de nivel médio em mapas altos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	DropLevel < 70
+	AreaLevel > 78
+	Rarity < Rare
+
+Hide # Mostra apenas itens de ilvl alto em mapas 14+
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	ItemLevel < 80
 	AreaLevel > 80
