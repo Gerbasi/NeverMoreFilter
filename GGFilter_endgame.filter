@@ -679,7 +679,7 @@ Hide # Equipamento de nivel baixo em mapas altos
 Hide # Equipamento de nivel baixo em mapas 14+
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	ItemLevel < 78
-	AreaLevel > 80
+	AreaLevel > 78
 
 Show # Bases vendáveis com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
@@ -713,7 +713,7 @@ Show # Bases Raras a serem mostradas
 	SetBackgroundColor 60 0 100
 	SetTextColor 255 255 0
 	SetBorderColor 255 255 0
-	SetFontSize 40
+	SetFontSize 36
 	PlayEffect Purple Temp
 	MinimapIcon 1 Purple Star
 
@@ -724,7 +724,7 @@ Show # Bases Magicas a serem mostradas
 	SetBackgroundColor 60 0 100
 	SetTextColor 0 70 255
 	SetBorderColor 0 70 255
-	SetFontSize 36
+	SetFontSize 32
 	PlayEffect Purple Temp
 	MinimapIcon 2 Purple Star
 
