@@ -686,13 +686,13 @@ Show # All Unique Items
 
 Hide # Equipamento de nivel baixo em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	DropLevel < 50
+	DropLevel < 70
 	AreaLevel > 72
 	#Rarity < Rare
 
 Hide # Equipamento de nivel baixo em mapas 14+
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	ItemLevel < 78
+	ItemLevel < 80
 	AreaLevel > 80
 
 Show # Bases vendáveis com qualidade > 10
