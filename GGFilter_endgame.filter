@@ -674,12 +674,12 @@ Hide # Equipamento de nivel baixo em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	DropLevel < 50
 	AreaLevel > 72
-	Rarity < Rare
+	#Rarity < Rare
 
 Hide # Equipamento de nivel baixo em mapas 14+
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	ItemLevel < 78
-	AreaLevel > 78
+	AreaLevel > 80
 
 Show # Bases vendáveis com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
