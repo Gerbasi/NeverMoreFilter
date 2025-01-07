@@ -3,13 +3,13 @@
 <p>Saiba como instalar o filtro assistindo este clipe do VigiaBR (https://www.twitch.tv/vigiabr/clip/SincereAbstemiousTitanVoteNay-KDpYIpFkfYBRKs8Z).</p>
 <p>Soundpacks dos filtros com sons personalizáveis (GGFilter_Sound/GGFilter_endgame_Sound):</br>
 <ul>
-  <li>(SFW) Sound Pack do VigiaBR: https://drive.google.com/file/d/1CB9qw3ckl4cr5grM-V-8wgNTGJS5RyoE/view?usp=drive_link</li>
-  <li>(SFW) Sound Pack de Diablo 2 (by @SCHE_): https://drive.google.com/file/d/1FKqCkXoT1oFrraPHED59JBdr5g_LzKyS/view?usp=drive_link</li>
-  <li>(SFW) Sound Pack de Desenho Animado: https://drive.google.com/file/d/1S7rO-y3q8OP4lOewPE2J4AxrugS-pqgm/view?usp=drive_link</li>
-  <li>(NSFW) Sound Pack do Ndox_138: https://drive.google.com/file/d/1-LJlsz7nCm5r1Z6WqDcTwRkw98B9vWLN/view?usp=drive_link</li>
-  <li>(NSFW) Sound Pack do NDox_138 (Miau): https://drive.google.com/file/d/1cf76VsFhWhgxoNPedo3vv6WukOt9_bQM/view?usp=drive_link</li>
-  <li>(NSFW) Sound Pack do Velho_P: https://drive.google.com/file/d/1AceJuY7IM9GU9CT_At2AirEjAcUt99Im/view?usp=drive_link</li>
-  <li>(NSFW) Sound Pack da Michelle_Rezende: https://drive.google.com/file/d/1Ef5JWxTs_X3xRD_xCsy9fMvyuGxdyCtQ/view?usp=drive_link</li>
+  <li>(SFW) <a href="https://drive.google.com/file/d/1f8_0R40amY3N1e1jz5g6UqsjWSm4AcPl/view?usp=drive_link">Sound Pack do VigiaBR</a></li>
+  <li>(SFW) <a href="https://drive.google.com/file/d/1FKqCkXoT1oFrraPHED59JBdr5g_LzKyS/view?usp=drive_link">Sound Pack de Diablo 2 (by @SCHE_)</a></li>
+  <li>(SFW) <a href="https://drive.google.com/file/d/1S7rO-y3q8OP4lOewPE2J4AxrugS-pqgm/view?usp=drive_link">Sound Pack de Desenho Animado</a></li>
+  <li>(NSFW) <a href="https://drive.google.com/file/d/1_g9csDQUp90kqhrDe4xz0gBAg0SWdO_T/view?usp=drive_link">Sound Pack do Ndox_138</a></li>
+  <li>(NSFW) <a href="https://drive.google.com/file/d/1ZiUMzY7A5vd7YSFC5lxErCgzBCpBotAz/view?usp=drive_link">Sound Pack do NDox_138 (Miau)</a></li>
+  <li>(NSFW) <a href="https://drive.google.com/file/d/1AceJuY7IM9GU9CT_At2AirEjAcUt99Im/view?usp=drive_link">Sound Pack do Velho_P</a></li>
+  <li>(NSFW) <a href="https://drive.google.com/file/d/1Ef5JWxTs_X3xRD_xCsy9fMvyuGxdyCtQ/view?usp=drive_link">Sound Pack da Michelle_Rezende</a></li>
 </ul>
 
 </p>
