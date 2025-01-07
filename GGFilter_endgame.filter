@@ -419,8 +419,7 @@ Show # TIER 1 EXALTED
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 255 0 200 255
-	CustomAlertSound "currencyt1.mp3" 300 Optional
-	#CustomAlertSound "exalted.mp3" 300 Optional
+	PlayAlertSound 4 300
 	PlayEffect Yellow
 	MinimapIcon 0 Pink Triangle
 
