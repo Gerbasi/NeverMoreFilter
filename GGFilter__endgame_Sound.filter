@@ -13,7 +13,7 @@
 
 Show # Sekhema's Resolve
 	Rarity Unique
-	BaseType == "Ring"
+	BaseType "Ring"
 	Sockets > 0
 	SetFontSize 50
 	SetBorderColor 255 100 0
@@ -25,7 +25,7 @@ Show # Sekhema's Resolve
 
 Show # Outros uniques valiosos
 	Rarity Unique
-	BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
+	BaseType "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
 	SetFontSize 50
 	SetBorderColor 255 100 0
 	SetTextColor 255 100 0
@@ -107,7 +107,7 @@ Hide # Oculta stacks pequenos e médios de ouro no endgame
 	AreaLevel > 70
 	BaseType == "Gold"
 	StackSize < 500
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Yellow Cross
 
 Show #Stack grande de gold
 	BaseType == "Gold"
@@ -115,14 +115,14 @@ Show #Stack grande de gold
 	SetFontSize 30
 	SetBorderColor 170 140 60 180
 	PlayEffect Yellow Temp
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 1 Yellow Cross
 
 Show #Stack médio de gold
 	BaseType == "Gold"
 	StackSize > 500
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
-	MinimapIcon 2 Yellow Circle
+	MinimapIcon 2 Yellow Cross
 
 
 #*********************************
@@ -135,26 +135,65 @@ Hide # Gemas Suporte 1 e 2 no atlas
 	BaseType "Uncut Support Gem"
 	AreaLevel > 68
 	ItemLevel < 3
+	SetBorderColor 0 0 255
+	SetTextColor 0 0 255
+	SetFontSize 24
 
 Hide # Gemas Suporte 3 em mapas 14+
 	BaseType "Uncut Support Gem"
 	ItemLevel >= 3
 	AreaLevel > 77
+	SetBorderColor 0 0 255
+	SetTextColor 0 0 255
+	SetFontSize 24
 
 Hide #Gemas Uncut 16- em mapas 14+
-	BaseType "Uncut "
+	BaseType "Uncut Skill "
 	ItemLevel <= 16
 	AreaLevel > 77
+	SetBorderColor 255 0 0
+	SetTextColor 255 0 0
+	SetFontSize 24
+
+Hide #Gemas Uncut 16- em mapas 14+
+	BaseType "Uncut Spirit "
+	ItemLevel <= 16
+	AreaLevel > 77
+	SetBorderColor 0 255 0
+	SetTextColor 0 255 0
+	SetFontSize 24
 
 Hide # Gemas Uncut 10- em mapas 8-
-	BaseType "Uncut "	
+	BaseType "Uncut Skill "	
 	ItemLevel <= 10
 	AreaLevel > 73
+	SetBorderColor 255 0 0
+	SetTextColor 255 0 0
+	SetFontSize 24
+
+Hide # Gemas Uncut 10- em mapas 8-
+	BaseType "Uncut Spirit "	
+	ItemLevel <= 10
+	AreaLevel > 73
+	SetBorderColor 0 255 0 
+	SetTextColor 0 255 0
+	SetFontSize 24
 
 Hide # Gemas Uncut 5- no atlas
-	BaseType "Uncut "
+	BaseType "Uncut Skill "
 	ItemLevel <= 5
 	AreaLevel > 68
+	SetBorderColor 255 0 0
+	SetTextColor 255 0 0
+	SetFontSize 24
+
+Hide # Gemas Uncut 5- no atlas
+	BaseType "Uncut Spirit "
+	ItemLevel <= 5
+	AreaLevel > 68
+	SetBorderColor 0 255 0
+	SetTextColor 0 255 0
+	SetFontSize 24
 
 Show # Gemas Skill Tier 20
 	BaseType == "Uncut Skill Gem"
@@ -163,7 +202,7 @@ Show # Gemas Skill Tier 20
 	SetTextColor 200 0 0 255
 	SetBorderColor 200 0 0 255	
 	SetBackgroundColor 255 255 255 255	
-	CustomAlertSound "uncut.mp3" 300 Optional
+	PlayAlertSound 6 300
 	PlayEffect Red 
 	MinimapIcon 0 Red Hexagon
 
@@ -174,7 +213,7 @@ Show # Gemas Spirit Tier 20
 	SetTextColor 0 200 0 255
 	SetBorderColor 0 200  0 255	
 	SetBackgroundColor 255 255 255 255	
-	CustomAlertSound "uncut.mp3" 300 Optional
+	PlayAlertSound 6 300
 	PlayEffect Green
 	MinimapIcon 0 Green Hexagon
 
@@ -333,6 +372,9 @@ Show # Charms de Magic Find
 Hide # Charms em mapas altos
 	Class "Charms"
 	AreaLevel > 77
+	SetTextColor 0 255 255 255
+	SetBorderColor 0 255 255 255
+	SetBackgroundColor 0 70 70 255
 
 Show # Demais Charms
 	Class "Charms"
@@ -395,6 +437,10 @@ Hide # Transmute/Augment em mapas altos
 	Class == "Stackable Currency"
 	BaseType "Orb of Transmutation" "Orb of Augmentation"
 	AreaLevel > 74
+	SetFontSize 30
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255
+	SetBackgroundColor 180 0 150 255
 
 Show # TIER 4
 	Class == "Stackable Currency"
@@ -408,11 +454,15 @@ Hide # Regal Shards em mapas mais altos
 	Class == "Stackable Currency"	
 	BaseType "Regal Shard"
 	AreaLevel > 77
+	SetFontSize 26
+	SetBackgroundColor 80 0 60 255	
 
 Hide # Demais Shards no atlas
 	Class == "Stackable Currency"
 	BaseType " Shard"
 	AreaLevel > 68
+	SetFontSize 26
+	SetBackgroundColor 80 0 60 255
 
 Show # TIER 5 - Shards II (Até mapas baixos)
 	Class == "Stackable Currency"
@@ -420,8 +470,17 @@ Show # TIER 5 - Shards II (Até mapas baixos)
 	SetFontSize 26
 	SetBackgroundColor 80 0 60 255	
 
+Hide # Wisdom no atlas
+	BaseType == "Scroll of Wisdom"
+	AreaLevel >= 68
+	SetFontSize 26
+	SetTextColor 255 0 0 255
+	#SetBorderColor 255 0 0 255
+	SetBackgroundColor 0 0 0 255
+
 Show # Scroll of Wisdom durante campanha
 	BaseType == "Scroll of Wisdom"
+	AreaLevel < 68
 	SetFontSize 26
 	SetTextColor 255 0 0 255
 	#SetBorderColor 255 0 0 255
@@ -537,21 +596,50 @@ Show # Pinnacle Key
 #
 #*********************************
 
+Show # Waystones tier 14+
+	BaseType "Waystone"
+	WaystoneTier >= 14
+	SetFontSize 40
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 4 300
+	PlayEffect Red
+	MinimapIcon 0 Red Square
+
+Hide
+	BaseType "Waystone"
+	WaystoneTier <= 5
+	AreaLevel >= 75
+	SetFontSize 34
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	SetBackgroundColor 0 0 0 255
+
 Show # Waystones tier 5-
 	BaseType "Waystone"
 	WaystoneTier <= 5
 	AreaLevel < 75
 	SetFontSize 34
 	SetTextColor 255 255 255
-	SetBorderColor 255 255 255 255
+	SetBorderColor 255 255 255
 	SetBackgroundColor 0 0 0 255
 	PlayAlertSound 4 300
 	PlayEffect White
 	MinimapIcon 1 White Square
 
+Hide
+	BaseType "Waystone"
+	WaystoneTier < 11
+	AreaLevel >= 80
+	SetFontSize 34
+	SetTextColor 255 255 0
+	SetBorderColor 255 255 0 255
+	SetBackgroundColor 0 0 0 255
+
 Show # Waystones tier 10-
 	BaseType "Waystone"
-	WaystoneTier <= 10
+	WaystoneTier < 11
 	AreaLevel < 80
 	SetFontSize 34
 	SetTextColor 255 255 0
@@ -561,10 +649,19 @@ Show # Waystones tier 10-
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Square
 
+Hide # Esconder os Waystones 13-
+	BaseType "Waystone" 
+	WaystoneTier < 14
+	AreaLevel >= 82
+	SetFontSize 34
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 0
+
 Show # Waystones tier 13-
 	BaseType "Waystone"
 	WaystoneTier <= 13
-	AreaLevel < 85
+	AreaLevel < 82
 	SetFontSize 34
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0
@@ -573,21 +670,10 @@ Show # Waystones tier 13-
 	PlayEffect Red
 	MinimapIcon 1 Red Square
 
-Show # Waystones tier 14+
+Show # Mostrar todos as waystones não filtradas
 	BaseType "Waystone"
-	WaystoneTier >= 14
-	SetFontSize 40
-	SetTextColor 255 0 0
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
-	CustomAlertSound "waystone.mp3" 300 Optional
-	PlayEffect Red
-	MinimapIcon 0 Red Square
-
-Hide # Esconder os Waystones restantes
-	BaseType "Waystone" 
-	WaystoneTier < 14
-
+	SetFontSize 60
+	SetBorderColor 255 255 255
 
 #*********************************
 #
@@ -623,6 +709,8 @@ Show # Acessórios em mapas baixos
 
 Hide # Anéis, Amuletos e Cintos < Raro
 	Class "Ring" "Amulet" "Belt"
+	SetFontSize 26
+	SetBackgroundColor 0 70 70
 
 #*********************************
 #
@@ -684,24 +772,6 @@ Show # All Unique Items
 #
 #*********************************
 
-Hide # Equipamento de nivel baixo em mapas altos
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	DropLevel < 50
-	AreaLevel > 72
-	Rarity < Rare
-
-Hide # Equipamento de nivel médio em mapas altos
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	DropLevel < 78
-	AreaLevel > 78
-	Rarity < Rare
-
-Hide # Mostra apenas itens de ilvl alto em mapas 14+
-	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	Rarity <= Rare
-	ItemLevel < 82
-	AreaLevel > 80
-
 Show # Bases vendáveis com qualidade > 10
 	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
 	ItemLevel > 80
@@ -727,9 +797,39 @@ Show # Bases vendáveis
 	#PlayAlertSound 2 200
 	#MinimapIcon 1 Pink Star
 
+Hide # Demais bases vendáveis não capturadas
+	BaseType "Expert Slicing Quarterstaff" "Expert Gothic Quarterstaff" "Withered Wand" "Bone Wand" "Siphoning Wand" "Attuned Wand" "Expert Scalper's Jacket" "Expert Waxed Jacket" "Expert Studded Vest" "Expert Iron Cuirass"
+	SetFontSize 24
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+
+Hide #Bases vendáveis de nivel baixo em mapas altos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	AreaLevel > 78
+	ItemLevel < 82
+	SetFontSize 24
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+
+Hide #Equips Médios em mapas altos
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	AreaLevel > 73
+	ItemLevel < 75
+	SetFontSize 24
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+
+Hide #Itens não raros no atlas
+	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
+	AreaLevel > 68
+	Rarity < Rare
+	SetFontSize 24
+	SetBackgroundColor 255 150 200
+	SetTextColor 255 0 110
+
 Show # Bases Raras a serem mostradas
 	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
-	AreaLevel > 68
+	ItemLevel >= 80
 	Rarity >= Rare
 	SetBackgroundColor 60 0 100
 	SetTextColor 255 255 0
@@ -740,7 +840,7 @@ Show # Bases Raras a serem mostradas
 
 Show # Bases Magicas a serem mostradas
 	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
-	AreaLevel > 68
+	ItemLevel > 80
 	Rarity Magic
 	SetBackgroundColor 60 0 100
 	SetTextColor 0 70 255
@@ -751,7 +851,7 @@ Show # Bases Magicas a serem mostradas
 
 Show # Bases Normais a serem mostradas
 	BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff"
-	AreaLevel > 68
+	ItemLevel > 80
 	Rarity Normal
 	SetBackgroundColor 60 0 100
 	SetTextColor 255 255 255
@@ -775,7 +875,7 @@ Show # Itens com sockets
 Show # Mostrar demais equips por segurança
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	SetFontSize 26
-	SetBorderColor 0 0 255
+	SetBorderColor 255 255 255
 
 #*********************************
 #
@@ -788,10 +888,12 @@ Hide # Flasks Ultimate no atlas com qualidade < 10
 	BaseType "Ultimate "
 	Quality <= 10
 	AreaLevel > 65
+	SetBackgroundColor 0 100 100
 
 Hide # Todos os outros flasks no atlas
 	Class "Flasks"
 	AreaLevel > 65
+	SetBackgroundColor 0 100 100
 
 Show # Mostra Flasks no atlas que tiverem qualidade > 10
 	Class "Flasks"
