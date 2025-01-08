@@ -109,7 +109,6 @@ Hide # Oculta stacks pequenos e médios de ouro no endgame
 	AreaLevel > 70
 	BaseType == "Gold"
 	StackSize < 500
-	MinimapIcon 2 Yellow Cross
 	SetFontSize 28
 	SetBorderColor 170 140 60 180
 
@@ -345,7 +344,7 @@ Show # Anéis de Fenda Raros
 Show # Anéis de Fenda Magicos/Normais
 	BaseType == "Breach Ring"
 	Rarity < Rare
-	SetFontSize 32
+	SetFontSize 36
 	SetBorderColor 255 255 0
 	SetTextColor 255 255 0
 	SetBackgroundColor 0 120 130
@@ -640,7 +639,7 @@ Show # Waystones tier 5-
 Hide
 	BaseType "Waystone"
 	WaystoneTier < 11
-	AreaLevel >= 80
+	AreaLevel > 77
 	SetFontSize 34
 	SetTextColor 255 255 0
 	SetBorderColor 255 255 0 255
@@ -661,7 +660,7 @@ Show # Waystones tier 10-
 Hide # Esconder os Waystones 13-
 	BaseType "Waystone" 
 	WaystoneTier < 14
-	AreaLevel >= 82
+	AreaLevel > 80
 	SetFontSize 34
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0
@@ -814,7 +813,7 @@ Hide # Demais bases vendáveis não capturadas
 
 Hide #Bases vendáveis de nivel baixo em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	AreaLevel > 78
+	AreaLevel >= 78
 	ItemLevel < 82
 	SetFontSize 24
 	SetBackgroundColor 255 150 200
@@ -822,8 +821,8 @@ Hide #Bases vendáveis de nivel baixo em mapas altos
 
 Hide #Equips Médios em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	AreaLevel > 73
-	ItemLevel < 75
+	AreaLevel >= 73
+	ItemLevel <= 75
 	SetFontSize 24
 	SetBackgroundColor 255 150 200
 	SetTextColor 255 0 110
@@ -831,7 +830,7 @@ Hide #Equips Médios em mapas altos
 Hide #Itens não raros no atlas
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
 	AreaLevel > 68
-	Rarity < Rare
+	Rarity <= Rare
 	SetFontSize 24
 	SetBackgroundColor 255 150 200
 	SetTextColor 255 0 110
