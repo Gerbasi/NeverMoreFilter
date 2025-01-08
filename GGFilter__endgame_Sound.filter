@@ -630,7 +630,7 @@ Show # Waystones tier 14+
 Hide
 	BaseType "Waystone"
 	WaystoneTier <= 5
-	AreaLevel >= 75
+	AreaLevel >= 74
 	SetFontSize 34
 	SetTextColor 255 255 255
 	SetBorderColor 255 255 255
@@ -651,7 +651,7 @@ Show # Waystones tier 5-
 Hide
 	BaseType "Waystone"
 	WaystoneTier < 11
-	AreaLevel > 77
+	AreaLevel >= 77
 	SetFontSize 34
 	SetTextColor 255 255 0
 	SetBorderColor 255 255 0 255
@@ -833,7 +833,7 @@ Hide #Bases vendáveis de nivel baixo em mapas altos
 
 Hide #Equips Médios em mapas altos
 	Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Quarter" "Bow" "Crossbow" "Quiver" "Staff" "Wand" "Sceptre" "Focus"
-	AreaLevel >= 73
+	AreaLevel >= 74
 	ItemLevel <= 75
 	SetFontSize 24
 	SetBackgroundColor 255 150 200
