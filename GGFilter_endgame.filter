@@ -515,7 +515,7 @@ Show # Essências, Destilados e Catalistas menores
 
 Show # Splinters
 	Class "Currency"
-	BaseType "Breach Splinter" "Simulacrum Splinter" " Artifact"
+	BaseType == "Breach Splinter" "Simulacrum Splinter"
 	SetFontSize 40
 	SetTextColor 0 0 0 255
 	SetBorderColor 255 255 255 255
@@ -548,11 +548,11 @@ Show # Currencies diversas
 #*********************************
 
 Show # Fragments
-	BaseType "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+	BaseType == "Breachstone" "Simulacrum" "An Audience with the King" "Cowardly Fate" "Deadly Fate" "Victorious Fate"
 	SetFontSize 40
-	SetTextColor 170 0 25 255
-	SetBorderColor 170 0 25 255
-	SetBackgroundColor 0 255 180 255
+	SetTextColor 37 0 74
+	SetBorderColor 255 255 255
+	SetBackgroundColor 128 0 255
 	PlayAlertSound 6 300
 	PlayEffect Yellow
 	MinimapIcon 0 Cyan Star
